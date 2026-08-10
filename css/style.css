@@ -362,6 +362,16 @@ ul {
     border-left: 4px solid var(--secondary);
 }
 
+.timeline-content ol li {
+    margin-bottom: 1rem;
+    padding-left: 0.25rem;
+}
+
+.timeline-content ol li::marker {
+    font-weight: 700;
+    color: var(--primary);
+}
+
 .day-header {
     display: flex;
     justify-content: space-between;
@@ -616,6 +626,9 @@ footer {
         gap: 1rem;
         padding: 1rem;
     }
+    .container {
+        padding: 0 1rem;
+    }
     .nav-links {
         display: flex;
         overflow-x: auto;
@@ -635,7 +648,14 @@ footer {
     }
     
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2rem !important;
+    }
+    .hero-subtitle {
+        font-size: 1rem !important;
+    }
+    
+    .glass-card {
+        padding: 1.25rem !important;
     }
     
     .timeline::after {
@@ -644,7 +664,7 @@ footer {
     
     .timeline-item {
         padding-left: 50px;
-        padding-right: 10px;
+        padding-right: 5px;
     }
     
     .timeline-dot {
@@ -656,10 +676,12 @@ footer {
         left: 0;
         top: 0;
         margin-bottom: 10px;
+        font-size: 1.25rem;
         display: inline-block;
     }
     
     .timeline-content {
         margin-top: 10px;
+        padding: 1.25rem;
     }
 }
