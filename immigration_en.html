@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Itinerary - Japan Immigration</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1e293b;
+            --border: #e2e8f0;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #0f172a;
+            line-height: 1.4;
+            background-color: #f8fafc;
+            margin: 0;
+            padding: 20px;
+        }
+        .a4-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 30px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            font-size: 1.5rem;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 0;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 10px;
+        }
+        .section-title {
+            font-size: 1.1rem;
+            color: var(--primary);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 5px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        .info-box {
+            background: #f1f5f9;
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+        }
+        .info-box h3 {
+            margin: 0 0 8px 0;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            color: #475569;
+        }
+        .info-row {
+            display: flex;
+            margin-bottom: 4px;
+            font-size: 0.9rem;
+            align-items: center;
+        }
+        .info-label {
+            font-weight: 600;
+            width: 100px;
+            flex-shrink: 0;
+        }
+        .print-input {
+            border: none;
+            border-bottom: 1px dashed #94a3b8;
+            background: transparent;
+            font-size: 1rem;
+            font-family: inherit;
+            color: var(--primary);
+            width: 350px;
+            outline: none;
+            padding: 2px 5px;
+            font-weight: 500;
+        }
+        .print-input:focus {
+            border-bottom: 1px solid var(--primary);
+        }
+        .print-input.short {
+            width: 200px;
+        }
+        .itinerary-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 5px;
+        }
+        .itinerary-table th, .itinerary-table td {
+            border: 1px solid var(--border);
+            padding: 10px 12px;
+            text-align: left;
+            font-size: 0.9rem;
+            vertical-align: top;
+        }
+        .itinerary-table th {
+            background-color: #f1f5f9;
+            font-weight: 600;
+            color: var(--primary);
+        }
+        .date-col {
+            width: 120px;
+            font-weight: 600;
+        }
+        .accommodation-col {
+            width: 200px;
+            font-size: 0.85rem;
+            color: #475569;
+        }
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 15px;
+            text-decoration: none;
+            color: #4f46e5;
+            font-weight: 500;
+        }
+        .print-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 20px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        .print-btn:hover {
+            background: #1e293b;
+        }
+        @media print {
+            @page { margin: 10mm; }
+            body { background: white; padding: 0; color: #000; }
+            .a4-container { box-shadow: none; padding: 0; max-width: 100%; }
+            .back-btn, .print-btn { display: none !important; }
+            .info-box { background: white; border: 1px solid #ccc; }
+            .itinerary-table th { background-color: #f8f9fa; color: #000; }
+            .print-input { border-bottom: 1px solid #000; color: #000; }
+            .print-input::placeholder { color: transparent; }
+        }
+        @media (max-width: 600px) {
+            .info-grid { grid-template-columns: 1fr; }
+            .a4-container { padding: 15px; }
+            .print-input { width: 100%; }
+            .itinerary-table th, .itinerary-table td { display: block; width: 100%; box-sizing: border-box; }
+            .itinerary-table tr { margin-bottom: 10px; display: block; border: 1px solid var(--border); }
+            .itinerary-table th { display: none; }
+            .date-col { background: #f1f5f9; }
+        }
+    </style>
+</head>
+<body>
+    <div style="max-width: 800px; margin: 0 auto;">
+        <a href="index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to Main Guide</a>
+    </div>
+
+    <div class="a4-container">
+        <h1>Travel Itinerary (Japan)</h1>
+
+        <div class="section-title">1. Traveler Information</div>
+        <div class="info-row" style="margin-bottom: 12px;">
+            <div class="info-label">Name:</div>
+            <div><input type="text" class="print-input" placeholder="Enter Full Name (Same as Passport)"></div>
+        </div>
+        <div class="info-row">
+            <div class="info-label">Passport No:</div>
+            <div><input type="text" class="print-input short" placeholder="Enter Passport No."></div>
+        </div>
+
+        <div class="section-title">2. Flight Details</div>
+        <div class="info-grid">
+            <div class="info-box">
+                <h3><i class="fa-solid fa-plane-arrival"></i> Arrival (To Japan)</h3>
+                <div class="info-row"><div class="info-label">Date:</div><div>12 Mar 2027</div></div>
+                <div class="info-row"><div class="info-label">Flight:</div><div>VZ 820 (Thai Vietjet)</div></div>
+                <div class="info-row"><div class="info-label">Route:</div><div>BKK (00:25) ➔ KIX (07:55)</div></div>
+            </div>
+            <div class="info-box">
+                <h3><i class="fa-solid fa-plane-departure"></i> Departure (From Japan)</h3>
+                <div class="info-row"><div class="info-label">Date:</div><div>15 Mar 2027</div></div>
+                <div class="info-row"><div class="info-label">Flight:</div><div>MM 91 (Peach)</div></div>
+                <div class="info-row"><div class="info-label">Route:</div><div>KIX (19:15) ➔ BKK (23:55)</div></div>
+            </div>
+        </div>
+
+        <div class="section-title">3. Accommodation Details</div>
+        <div class="info-box" style="margin-bottom: 15px;">
+            <div class="info-row"><div class="info-label">Hotel Name:</div><div style="font-weight: 600;">123 Guesthouse (Shiba Building)</div></div>
+            <div class="info-row"><div class="info-label">Address:</div><div>1-chōme-9 Namba, Chuo Ward, Osaka, 542-0076, Japan</div></div>
+            <div class="info-row"><div class="info-label">Check-in:</div><div>12 Mar 2027</div></div>
+            <div class="info-row"><div class="info-label">Check-out:</div><div>15 Mar 2027</div></div>
+        </div>
+
+        <div class="section-title">4. Schedule of Stay</div>
+        <table class="itinerary-table">
+            <thead>
+                <tr>
+                    <th class="date-col">Date</th>
+                    <th>Activity / Places to Visit</th>
+                    <th class="accommodation-col">Accommodation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="date-col">12 Mar 2027<br>(Day 1)</td>
+                    <td>
+                        • Arrive at Kansai International Airport (KIX)<br>
+                        • Travel to Namba Station<br>
+                        • Drop luggage at 123 Guesthouse<br>
+                        • Visit Osaka Castle<br>
+                        • Sightseeing & Dinner at Dotonbori area
+                    </td>
+                    <td class="accommodation-col">
+                        123 Guesthouse<br>
+                        1-chōme-9 Namba, Chuo Ward, Osaka
+                    </td>
+                </tr>
+                <tr>
+                    <td class="date-col">13 Mar 2027<br>(Day 2)</td>
+                    <td>
+                        • Travel to Kobe City<br>
+                        • Sightseeing at Kobe Port Tower & Harborland<br>
+                        • Visit Rokko Snow Park (Mt. Rokko)
+                    </td>
+                    <td class="accommodation-col">Same as above</td>
+                </tr>
+                <tr>
+                    <td class="date-col">14 Mar 2027<br>(Day 3)</td>
+                    <td>
+                        • Travel to Kyoto City<br>
+                        • Visit Fushimi Inari Taisha (Shrine)<br>
+                        • Travel to Uji City<br>
+                        • Visit Byodo-in Temple & Uji Matcha Street
+                    </td>
+                    <td class="accommodation-col">Same as above</td>
+                </tr>
+                <tr>
+                    <td class="date-col">15 Mar 2027<br>(Day 4)</td>
+                    <td>
+                        • Check-out from 123 Guesthouse<br>
+                        • Visit Kuromon Ichiba Market<br>
+                        • Sightseeing at Shinsekai & Tsutenkaku Tower<br>
+                        • Depart from Kansai International Airport (KIX)
+                    </td>
+                    <td class="accommodation-col">N/A (Departure)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <button onclick="window.print()" class="print-btn"><i class="fa-solid fa-print"></i> Print or Save as PDF</button>
+    </div>
+</body>
+</html>
