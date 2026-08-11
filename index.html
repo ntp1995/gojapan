@@ -121,21 +121,45 @@
                             </div>
                         </div>
 
-                        <!-- Flight Price Tracker -->
+                        <!-- Flight Booking Breakdown -->
                         <div class="price-tracker" style="margin-top: 1.5rem; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 15px; position: relative; overflow: hidden;">
                             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-                                <span style="font-size: 0.85rem; color: #64748b; font-weight: 600;"><i class="fa-solid fa-chart-line"></i> ราคาตั๋ว (ไป-กลับ)</span>
+                                <span style="font-size: 0.85rem; color: #64748b; font-weight: 600;"><i class="fa-solid fa-receipt"></i> สรุปรายการจอง (2 ท่าน)</span>
                                 <span class="pulse-dot" style="display: flex; align-items: center; gap: 5px; font-size: 0.75rem; color: #10b981; font-weight: 600;">
-                                    <span style="width: 8px; height: 8px; background: #10b981; border-radius: 50%; display: inline-block; box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); animation: pulse 2s infinite;"></span>
-                                    สถานะ: อิงราคาโดยประมาณ
+                                    <span style="width: 8px; height: 8px; background: #10b981; border-radius: 50%; display: inline-block;"></span>
+                                    ยืนยันแล้ว (Gother)
                                 </span>
                             </div>
-                            <div style="font-size: 1.5rem; font-weight: 700; color: var(--dark); margin-bottom: 5px;">~12,844 ฿ <span style="font-size: 0.85rem; color: #64748b; font-weight: 400;">/ คน (รวม 25,687 ฿ / 2 คน)</span></div>
-                            <p style="font-size: 0.75rem; color: #94a3b8; margin-bottom: 15px; line-height: 1.4;">
-                                *เนื่องจากระบบของ Google Flights ไม่อนุญาตให้ดึงราคาอัตโนมัติ (CORS/Security) กรุณากดปุ่มด้านล่างเพื่อเช็คราคาแบบ Real-time ณ ปัจจุบัน
-                            </p>
-                            <a href="https://www.google.com/travel/flights/booking?tfs=CBwQAho_EgoyMDI3LTAzLTEyIh8KA0JLSxIKMjAyNy0wMy0xMhoDS0lYKgJWWjIDODIwagcIARIDQktLcgcIARIDS0lYGj4SCjIwMjctMDMtMTUiHgoDS0lYEgoyMDI3LTAzLTE1GgNCS0sqAk1NMgI5MWoHCAESA0tJWHIHCAESA0JLS0ABQAFIAXABggELCP___________wGYAQE&tfu=CmhDalJJYTNCRFpuUktiV3RxVTBWQlZ6UjBjSGRDUnkwdExTMHRMUzF6YlhSNk5pMXVNa0ZCUVVGQlIzQTFNMEozU0U5SVNXMUJFZ0V3R2dzSXNNb0JFQUFhQTFSSVFqZ1hjTHZrQkE9PRIGCAAQABgA" target="_blank" class="btn btn-primary" style="width: 100%; text-align: center; font-size: 0.95rem; display: flex; justify-content: center; align-items: center; gap: 10px; background: #10b981; border: none; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);">
-                                <i class="fa-solid fa-satellite-dish"></i> ดึงราคาปัจจุบันจากระบบ Google
+                            
+                            <ul style="list-style: none; padding: 0; margin: 15px 0 0 0; font-size: 0.85rem; color: #475569;">
+                                <li style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                                    <span>ค่าโดยสารผู้ใหญ่ x2</span>
+                                    <span>26,659.88 ฿</span>
+                                </li>
+                                <li style="display: flex; justify-content: space-between; margin-bottom: 8px; color: #10b981;">
+                                    <span>ส่วนลด Gother x2</span>
+                                    <span>-1,068.00 ฿</span>
+                                </li>
+                                <li style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                                    <span>สัมภาระ (15kg และ 20kg อย่างละ 2)</span>
+                                    <span>5,310.00 ฿</span>
+                                </li>
+                                <li style="display: flex; justify-content: space-between; margin-bottom: 8px; border-bottom: 1px dashed #cbd5e1; padding-bottom: 12px;">
+                                    <span>เลือกที่นั่ง x2</span>
+                                    <span>480.00 ฿</span>
+                                </li>
+                                <li style="display: flex; justify-content: space-between; margin-top: 12px; font-weight: 700; font-size: 1.1rem; color: var(--dark);">
+                                    <span>ราคารวมทั้งหมด</span>
+                                    <span>31,421.88 ฿</span>
+                                </li>
+                                <li style="display: flex; justify-content: space-between; margin-top: 5px; font-weight: 600; font-size: 0.95rem; color: #4f46e5; background: rgba(79, 70, 229, 0.1); padding: 5px 10px; border-radius: 6px; margin-left: -10px; margin-right: -10px;">
+                                    <span>ตกคนละ (เฉลี่ย)</span>
+                                    <span>15,710.94 ฿</span>
+                                </li>
+                            </ul>
+                            
+                            <a href="https://www.gother.com/th-th/flights/search/roundtrip/BKK-KIX/2027-03-12/KIX-BKK/2027-03-15?adults=2&cabin=Y&session=00b836ea09835cd85ec8afebf4124b56cdace53e535911fba3b4914f18acdf78&utm_source=google_flight&utm_medium=meta_search&utmid=53&hash=XF3Qs1B2rrPxuyYDnTNyVcK2qS3Ki7kJFES4MBZLFY3GJfDPRLVzG2uS8XxW9ZcmPhLTXNaVRHCakrJmyPHktfqVduvoqdzVC6EppxJhYxodUWpiz5HVGaAu1umkBUieaQMwybv1AJFn48x7ziXzU6oDmHLBMoHrMZrrNQvEWbj5PU5sKRUEkMMCFy6nFDT5CddR1CfDXaGg43pBagTeueamobtyUzbvn75C9mtq61nzQ1Guswnj477cfMLk48hTTgy8X6j7sAf9fLbp1ZjCfvKfjX11WzmbwLctheHYkfvHkUk83UPyDznxJ2W8e7zaCwGsV4jFFSRgy8ya9SzS3hM5GgxoNBKmHkux5nha4uUPbbr32t6FjyNC4dg6ppmu1HmUqCaaFeLekFPSL39xuismu9PV6yZQjcUA9eocuviA7RT76wAw3S8PCPwa6fWAtvtFwjmQmTjxu54b55CYgXHeVDPQcvTANkCbJeJUfkgtNXs8b6DUiyUXK68SQF4Ck1zGwfGGfUi2KC3uGJuAYd33jRzmpkYdnbnDX7fyqrWqGpmxWyJhmRep&fallBackLink=amlfbF9hYGFjXGMtY3BwaG45Li1wb3AqX2dvYVJtKl9naC5zZiZsYSteZGRgVW9vK2tgYHFhYSdra21mX21fZGwrOkZKLElCUCguKCoyJh0uKS0qKkpIViY6REcnKisrJCgsLyUsND5fXW1lcGs1LR9QXF5lZjhYJXFea2xlZ2Y4KR1dNC8uYGAvNzErLl9cMDBeUDNdYl1dZTMvKyxbMS5bX1pQYDEvXTAyNDcqKV9eWStdLSYsMGIpM2BiYl8vMTxZX2VsUWJdZmtjY2Y=&summary=true&departure=Tm28683469&return=Mnabc87fb9" target="_blank" class="btn btn-primary" style="width: 100%; text-align: center; font-size: 0.95rem; display: flex; justify-content: center; align-items: center; gap: 10px; background: #0f172a; border: none; box-shadow: 0 4px 15px rgba(15, 23, 42, 0.2); margin-top: 15px;">
+                                <i class="fa-solid fa-plane-circle-check"></i> ดูรายละเอียดการจองบน Gother
                             </a>
                         </div>
                         <style>
@@ -199,6 +223,14 @@
                             <li><strong>วิธีซื้อ:</strong> สามารถจองออนไลน์ล่วงหน้าเพื่อรับราคาพิเศษ หรือไปแลกรับที่สนามบิน/สถานีรถไฟ</li>
                         </ul>
                         <a href="https://www.klook.com/th/activity/11515-osaka-metro-pass/" target="_blank" class="btn btn-primary" style="margin-top: 1rem; padding: 0.5rem 1rem; font-size: 0.9rem; width: 100%; background: #ff5a5f; border-color: #ff5a5f;"><i class="fa-solid fa-bag-shopping"></i> เช็คราคา / จองผ่าน Klook</a>
+                    </div>
+                    <div class="glass-card">
+                        <h3 style="color: #0ea5e9;"><i class="fa-solid fa-wifi"></i> ซิมเน็ต (eSIM) แบบเน็ตไม่อั้น</h3>
+                        <ul style="margin-top: 1rem; list-style: disc; margin-left: 1.5rem; color: #475569;">
+                            <li><strong>คำแนะนำ:</strong> หากเป็นคนชอบเล่นโซเชียล อัปสตอรี่ตลอดเวลา หรือต้องคอล/ดูวิดีโอ แนะนำให้ซื้อแบบ <strong>Unlimited Data (เน็ตไม่อั้น)</strong> ไปเลยครับ จะได้เที่ยวแบบสบายใจ ไม่ต้องกังวลว่าเน็ตจะตัดหรือช้าลง</li>
+                            <li><strong>แพลตฟอร์มที่แนะนำ:</strong> <br>1. <strong>แอป Klook หรือ KKday</strong> - ตอนค้นหาให้เลือกแพ็กเกจที่เขียนว่า "ข้อมูลไม่จำกัด (Unlimited)" ราคาจะอยู่ที่ประมาณ ~500-600 บาท สำหรับ 5 วัน (แนะนำให้เลือกเครือข่าย Softbank หรือ Docomo)<br>2. <strong>แอป Vacay / Gohub</strong> - เป็นเว็บ/แอปขายซิมโดยเฉพาะ มีแพ็กเกจเน็ตไม่อั้นให้เลือกเช่นกัน</li>
+                            <li><strong>วิธีใช้:</strong> ซื้อล่วงหน้า สแกน QR Code ติดตั้งลงเครื่องตั้งแต่ที่ไทย (ตอนสแกนต้องมีเน็ต/WiFi) พอเครื่องลงจอดปุ๊บ เปิด Data Roaming เน็ตจะติดพร้อมใช้ทันทีครับ</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -276,7 +308,7 @@
                         <ul class="activity-list" style="font-size: 1.1rem;">
                             <li style="justify-content: space-between; border-bottom: 1px dashed #ccc; padding-bottom: 10px;">
                                 <span>✈️ ค่าตั๋วเครื่องบิน & กระเป๋า</span>
-                                <strong>15,421 บาท</strong>
+                                <strong>15,711 บาท</strong>
                             </li>
                             <li style="justify-content: space-between; border-bottom: 1px dashed #ccc; padding-bottom: 10px;">
                                 <span>🚌 ค่าเดินทางในไทย (ไป-กลับ กทม. & สนามบิน)</span>
@@ -299,6 +331,10 @@
                                 <strong>~2,100 บาท</strong>
                             </li>
                             <li style="justify-content: space-between; border-bottom: 1px dashed #ccc; padding-bottom: 10px;">
+                                <span>📱 ค่าอินเทอร์เน็ต (eSIM ญี่ปุ่นแบบ Unlimited)</span>
+                                <strong>~600 บาท</strong>
+                            </li>
+                            <li style="justify-content: space-between; border-bottom: 1px dashed #ccc; padding-bottom: 10px;">
                                 <span>👘 ค่าเข้าสถานที่ & กิโมโน</span>
                                 <strong>~2,500 บาท</strong>
                             </li>
@@ -308,13 +344,16 @@
                             </li>
                             <li style="justify-content: space-between; padding-top: 10px; color: var(--primary); font-size: 1.3rem;">
                                 <strong>รวมค่าใช้จ่ายคงที่</strong>
-                                <strong>~33,607 บาท</strong>
+                                <strong>~34,497 บาท</strong>
                             </li>
                         </ul>
                         <div style="background: rgba(16, 185, 129, 0.1); padding: 1.5rem; border-radius: 10px; margin-top: 1.5rem; text-align: center;">
                             <h3 style="color: #10b981; margin-bottom: 0.5rem;"><i class="fa-solid fa-gift"></i> ยอดเงินเหลือสำหรับช้อปปิ้ง</h3>
-                            <p style="font-size: 1.5rem; font-weight: 700; color: #059669;">6,393 บาท</p>
-                            <p style="font-size: 0.9rem; color: #64748b;">แลกเป็นเงินเยน หรือเตรียมบัตรรูดเที่ยว (Travel Card เช่น YouTrip, Planet SCB) ไว้ใช้ที่ญี่ปุ่น</p>
+                            <p style="font-size: 1.5rem; font-weight: 700; color: #059669;">5,503 บาท</p>
+                            <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 15px;">เตรียมแลกเป็นเงินเยนเข้า Travel Card (เช่น YouTrip) เก็บไว้ล่วงหน้าได้เลยครับ</p>
+                            <a href="exchange_tracker.html" class="btn btn-primary" style="width: 100%; background: #10b981; border: none; padding: 12px; font-size: 1rem; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3); display: flex; justify-content: center; align-items: center; gap: 8px;">
+                                <i class="fa-solid fa-chart-line"></i> ระบบเช็คเรทแลกเงิน & คำนวณยอด YouTrip
+                            </a>
                         </div>
                     </div>
                 </div>

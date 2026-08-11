@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTrip JPY Exchange Tracker</title>
+    <!-- PWA Meta Tags -->
+    <link rel="manifest" href="manifest_exchange.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="YT Exchange">
+    <link rel="apple-touch-icon" href="icons/exchange-192.png">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            background-color: #f8fafc;
+            color: var(--dark);
+            padding-bottom: 2rem;
+        }
+        .header {
+            background: linear-gradient(135deg, #0ea5e9, #4f46e5);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            position: relative;
+        }
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.2);
+            padding: 8px 15px;
+            border-radius: 50px;
+            backdrop-filter: blur(5px);
+        }
+        .container {
+            padding: 0 1rem;
+            max-width: 600px;
+            margin: -30px auto 0;
+            position: relative;
+            z-index: 10;
+        }
+        .rate-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(255,255,255,0.5);
+        }
+        .rate-title {
+            font-size: 1rem;
+            color: #64748b;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        .rate-value {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--dark);
+            line-height: 1.2;
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+            gap: 10px;
+        }
+        .rate-unit {
+            font-size: 1rem;
+            color: #64748b;
+            font-weight: 400;
+        }
+        .status-badge {
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-top: 15px;
+            animation: pulse 2s infinite;
+        }
+        .status-excellent { background: rgba(16, 185, 129, 0.15); color: #059669; }
+        .status-good { background: rgba(245, 158, 11, 0.15); color: #d97706; }
+        .status-wait { background: rgba(239, 68, 68, 0.15); color: #b91c1c; }
+        
+        .gauge-container {
+            margin-top: 2rem;
+            text-align: left;
+        }
+        .gauge-track {
+            height: 12px;
+            background: linear-gradient(to right, #10b981, #f59e0b, #ef4444);
+            border-radius: 10px;
+            position: relative;
+            margin: 10px 0;
+        }
+        .gauge-marker {
+            width: 16px;
+            height: 24px;
+            background: white;
+            border: 3px solid var(--dark);
+            border-radius: 8px;
+            position: absolute;
+            top: -6px;
+            transform: translateX(-50%);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transition: left 0.5s ease-out;
+        }
+        .gauge-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: #94a3b8;
+            font-weight: 500;
+        }
+        
+        .calc-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+        .calc-input-group {
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        .calc-input-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #475569;
+        }
+        .calc-input-group input {
+            width: 100%;
+            padding: 15px 50px 15px 15px;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            outline: none;
+            transition: border-color 0.3s;
+            font-family: inherit;
+        }
+        .calc-input-group input:focus {
+            border-color: #4f46e5;
+        }
+        .currency-symbol {
+            position: absolute;
+            right: 15px;
+            top: 45px;
+            font-weight: 700;
+            color: #94a3b8;
+        }
+        .result-box {
+            background: rgba(79, 70, 229, 0.05);
+            border: 1px dashed #4f46e5;
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        .result-box h4 {
+            color: #4f46e5;
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+        }
+        .result-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--dark);
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .loading-overlay {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(255,255,255,0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 16px;
+            z-index: 100;
+            font-weight: 600;
+            color: #4f46e5;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <a href="index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> กลับ</a>
+        <h1 style="margin-top: 20px; font-size: 1.8rem;"><i class="fa-brands fa-cc-visa"></i> YouTrip Exchange</h1>
+        <p style="opacity: 0.9; margin-top: 5px;">ระบบช่วยตัดสินใจแลกเงินเยน (JPY)</p>
+    </header>
+
+    <div class="container">
+        <!-- Rate Display Card -->
+        <div class="rate-card" style="position: relative;">
+            <div id="loading" class="loading-overlay">
+                <i class="fa-solid fa-spinner fa-spin" style="margin-right: 10px;"></i> กำลังดึงเรทล่าสุด...
+            </div>
+            
+            <div class="rate-title">เรทเงินตามแอป YouTrip (100 JPY)</div>
+            <div class="rate-value">
+                <span id="current-rate">--.--</span>
+                <span class="rate-unit">THB</span>
+            </div>
+            <div style="font-size: 0.95rem; color: #0ea5e9; font-weight: 500; margin-bottom: 10px;">
+                ( เทียบเท่า 1 บาท = <span id="thb-to-jpy-rate">--.--</span> เยน )
+            </div>
+            <div style="font-size: 0.8rem; color: #94a3b8;"><i class="fa-solid fa-clock"></i> อัปเดตล่าสุด: <span id="update-time">--:--</span></div>
+            
+            <div id="status-badge" class="status-badge status-good">
+                <i class="fa-solid fa-circle-notch fa-spin"></i> วิเคราะห์...
+            </div>
+            
+            <div class="gauge-container">
+                <div class="rate-title" style="text-align: center; font-size: 0.85rem; margin-bottom: 5px;">เข็มวัดความถูก/แพง (อิงจาก 22.50 - 25.50)</div>
+                <div class="gauge-track">
+                    <div id="gauge-marker" class="gauge-marker" style="left: 50%;"></div>
+                </div>
+                <div class="gauge-labels">
+                    <span>ถูกมาก (22.50)</span>
+                    <span>แพง (25.50)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Calculator Card -->
+        <div class="calc-card">
+            <h3 style="margin-bottom: 1.5rem; text-align: center; color: var(--dark);"><i class="fa-solid fa-calculator"></i> เครื่องคิดเลข YouTrip</h3>
+            <p style="font-size: 0.85rem; color: #64748b; text-align: center; margin-bottom: 1.5rem;">สามารถกรอกตัวเลขในช่องเงินบาท หรือ เงินเยน ก็ได้ ระบบจะแปลงกลับให้อัตโนมัติ</p>
+            
+            <div class="calc-input-group">
+                <label for="thb-input">มีเงินบาท (THB)</label>
+                <input type="number" id="thb-input" placeholder="เช่น 10000" inputmode="numeric">
+                <span class="currency-symbol">฿</span>
+            </div>
+            
+            <div style="text-align: center; color: #4f46e5; font-size: 1.2rem; margin: -10px 0 10px 0;">
+                <i class="fa-solid fa-arrow-right-arrow-left fa-rotate-90"></i>
+            </div>
+            
+            <div class="calc-input-group">
+                <label for="jpy-input">แลกได้เงินเยน (JPY)</label>
+                <input type="number" id="jpy-input" placeholder="เช่น 40000" inputmode="numeric">
+                <span class="currency-symbol">¥</span>
+            </div>
+            
+            <button onclick="window.location.reload();" class="btn btn-primary" style="width: 100%; margin-top: 1.5rem; border-radius: 12px; padding: 12px;"><i class="fa-solid fa-rotate-right"></i> รีเฟรชดึงเรทใหม่ล่าสุด</button>
+        </div>
+
+        <!-- How it works Card -->
+        <div class="calc-card" style="margin-top: 1.5rem; margin-bottom: 2rem; background: rgba(255, 255, 255, 0.9);">
+            <h3 style="margin-bottom: 1rem; color: #10b981; font-size: 1.1rem;"><i class="fa-solid fa-lightbulb"></i> ทริค: แลกเงินเข้าบัตร YouTrip</h3>
+            <ol style="margin-left: 1.2rem; font-size: 0.9rem; color: #475569; line-height: 1.6;">
+                <li style="margin-bottom: 8px;"><strong>เติมเงินบาท (THB):</strong> ผูกและเติมเงินจากแอป K PLUS เข้าแอป YouTrip</li>
+                <li style="margin-bottom: 8px;"><strong>แลกเป็นเยนตุนไว้ (Lock Rate):</strong> พอแอปนี้ขึ้นป้าย 🟢 <em>"เรทถูกมาก แลกเก็บด่วน!"</em> ให้รีบเข้าแอป YouTrip แล้วกดแลกเงินบาทเป็นเงินเยนเก็บไว้เลยครับ</li>
+                <li style="margin-bottom: 8px;"><strong>รูดจ่ายสบายใจ (No Fee 2.5%):</strong> เงินเยนที่คุณแลกจะถูกล็อคเรทที่ดีที่สุดนั้นไว้ เมื่อไปรูดหรือแตะจ่ายบัตรที่ญี่ปุ่น ระบบจะหักเงินจากยอดเยนนั้นโดยอัตโนมัติ <strong>ไม่มีการชาร์จค่าธรรมเนียมความเสี่ยง 2.5%</strong> เหมือนบัตรเครดิตทั่วไปครับ</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        // Config Thresholds
+        const EXCELLENT_THRESHOLD = 23.50; // Below this is excellent
+        const GOOD_THRESHOLD = 24.00;      // Below this is good
+        
+        // Gauge bounds (for visual display)
+        const GAUGE_MIN = 22.50;
+        const GAUGE_MAX = 25.50;
+        
+        let currentRatePer100 = 0;
+
+        async function fetchExchangeRate() {
+            try {
+                const response = await fetch('https://open.er-api.com/v6/latest/JPY');
+                const data = await response.json();
+                
+                // API gives 1 JPY to THB, we want 100 JPY to THB
+                const rate1JPY = data.rates.THB;
+                currentRatePer100 = rate1JPY * 100;
+                
+                updateUI();
+                
+                // Hide loading
+                document.getElementById('loading').style.display = 'none';
+                
+            } catch (error) {
+                console.error("Error fetching rates:", error);
+                document.getElementById('current-rate').innerText = "Error";
+                document.getElementById('status-badge').innerText = "ไม่สามารถเชื่อมต่อเซิร์ฟเวอร์ได้";
+                document.getElementById('status-badge').className = "status-badge status-wait";
+                document.getElementById('loading').style.display = 'none';
+            }
+        }
+
+        function updateUI() {
+            // Update Rate Text
+            document.getElementById('current-rate').innerText = currentRatePer100.toFixed(2);
+            
+            // Calculate and Update 1 THB = X JPY
+            const jpyPerThb = 100 / currentRatePer100;
+            document.getElementById('thb-to-jpy-rate').innerText = jpyPerThb.toFixed(2);
+            
+            // Update Time
+            const now = new Date();
+            document.getElementById('update-time').innerText = now.toLocaleTimeString('th-TH');
+            
+            // Update Status Badge
+            const badge = document.getElementById('status-badge');
+            if (currentRatePer100 <= EXCELLENT_THRESHOLD) {
+                badge.innerHTML = '<i class="fa-solid fa-check-circle"></i> เรทถูกมาก! แลกเก็บด่วน';
+                badge.className = 'status-badge status-excellent';
+            } else if (currentRatePer100 <= GOOD_THRESHOLD) {
+                badge.innerHTML = '<i class="fa-solid fa-thumbs-up"></i> เรทดี ทยอยแลกได้ครับ';
+                badge.className = 'status-badge status-good';
+            } else {
+                badge.innerHTML = '<i class="fa-solid fa-hand"></i> เรทค่อนข้างสูง รอก่อนดีกว่า';
+                badge.className = 'status-badge status-wait';
+            }
+            
+            // Update Gauge Position (Clamp between MIN and MAX)
+            let gaugePercent = ((currentRatePer100 - GAUGE_MIN) / (GAUGE_MAX - GAUGE_MIN)) * 100;
+            gaugePercent = Math.max(0, Math.min(100, gaugePercent)); // Clamp 0-100%
+            document.getElementById('gauge-marker').style.left = gaugePercent + '%';
+            
+            // Trigger calculation if input already has value (sync JPY to THB)
+            if (document.getElementById('jpy-input').value) {
+                const jpy = parseFloat(document.getElementById('jpy-input').value);
+                const thb = (jpy / 100) * currentRatePer100;
+                document.getElementById('thb-input').value = thb.toFixed(2);
+            } else if (document.getElementById('thb-input').value) {
+                const thb = parseFloat(document.getElementById('thb-input').value);
+                const jpy = (thb / currentRatePer100) * 100;
+                document.getElementById('jpy-input').value = Math.floor(jpy);
+            }
+        }
+
+        // Two-way calculation logic
+        const jpyInput = document.getElementById('jpy-input');
+        const thbInput = document.getElementById('thb-input');
+        
+        jpyInput.addEventListener('input', () => {
+            if (!jpyInput.value || currentRatePer100 === 0) {
+                thbInput.value = "";
+                return;
+            }
+            const jpy = parseFloat(jpyInput.value);
+            const thb = (jpy / 100) * currentRatePer100;
+            thbInput.value = thb.toFixed(2);
+        });
+        
+        thbInput.addEventListener('input', () => {
+            if (!thbInput.value || currentRatePer100 === 0) {
+                jpyInput.value = "";
+                return;
+            }
+            const thb = parseFloat(thbInput.value);
+            const jpy = (thb / currentRatePer100) * 100;
+            jpyInput.value = Math.floor(jpy); // Floor to nearest Yen
+        });
+
+        // Fetch on load
+        window.addEventListener('load', fetchExchangeRate);
+
+        // Register Service Worker for PWA Installation
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw_exchange.js')
+                    .then(registration => {
+                        console.log('Exchange SW registered:', registration.scope);
+                    })
+                    .catch(error => {
+                        console.log('Exchange SW registration failed:', error);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>
