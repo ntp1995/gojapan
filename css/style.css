@@ -768,3 +768,234 @@ footer {
     color: var(--primary);
     font-size: 1.2rem;
 }
+
+
+/* UI Enhancements for Daily Guide */
+.badge {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+.badge-icoca { background: #0ea5e9;
+    color: white;
+}
+.badge-walk { background: #f1f5f9;
+    color: #475569;
+    border: 1px solid #cbd5e1;
+}
+.badge-train-nankai { background: #f97316; /* Orange */
+    color: white;
+}
+.badge-train-midosuji { background: #ef4444; /* Red */
+    color: white;
+}
+.badge-train-sakaisuji { background: #795548; /* Brown */
+    color: white;
+}
+.badge-train-jr { background: #3b82f6; /* Blue */
+    color: white;
+}
+.badge-train-hankyu { background: #8b5a2b; /* Maroon/Brown */
+    color: white;
+}
+.badge-train-chuo { background: #10b981; /* Green */
+    color: white;
+}
+.badge-train-sennichimae { background: #ec4899; /* Pink */
+    color: white;
+}
+.badge-bus { background: #8b5cf6; /* Purple */
+    color: white;
+}
+
+.route-flow {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: #334155;
+    font-weight: 500;
+    line-height: 1.6;
+}
+.route-flow span {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+.route-flow i {
+    color: #94a3b8;
+    margin: 0 5px;
+    font-size: 0.8rem;
+}
+
+.details-btn {
+    background: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #4f46e5;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s;
+    user-select: none;
+}
+.details-btn:hover {
+    background: #e2e8f0;
+}
+details[open] .details-btn i.fa-chevron-down {
+    transform: rotate(180deg);
+}
+.details-content {
+    background: white;
+    border-left: 3px solid #4f46e5;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+}
+
+
+
+/* --- Premium Boarding Pass Redesign --- */
+.boarding-pass {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e2e8f0;
+}
+.boarding-pass:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+.bp-header {
+    padding: 12px 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+.bp-header.vietjet {
+    background: linear-gradient(135deg, #ef4444, #f59e0b);
+}
+.bp-header.peach {
+    background: linear-gradient(135deg, #ec4899, #a855f7);
+}
+.bp-body {
+    padding: 25px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px dashed #cbd5e1;
+}
+.bp-airport {
+    text-align: center;
+    width: 60px;
+}
+.bp-airport h2 {
+    font-size: 2.2rem;
+    margin: 0;
+    color: #1e293b;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -1px;
+}
+.bp-airport p {
+    margin: 5px 0 0;
+    color: #64748b;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+.bp-route {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 15px;
+}
+.bp-plane-icon {
+    font-size: 1.2rem;
+    color: #94a3b8;
+    margin-bottom: 5px;
+}
+.bp-line {
+    width: 100%;
+    height: 2px;
+    background: repeating-linear-gradient(to right, #cbd5e1 0, #cbd5e1 6px, transparent 6px, transparent 12px);
+    position: relative;
+}
+.bp-route-text {
+    font-size: 0.75rem;
+    color: #64748b;
+    margin-top: 5px;
+    font-weight: 600;
+}
+.bp-footer {
+    padding: 15px 20px;
+    background: #f8fafc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bp-details {
+    display: flex;
+    gap: 25px;
+}
+.bp-detail-item span {
+    display: block;
+    font-size: 0.7rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+}
+.bp-detail-item strong {
+    font-size: 1rem;
+    color: #334155;
+    font-weight: 700;
+}
+.bp-barcode {
+    height: 35px;
+    width: 80px;
+    background-image: repeating-linear-gradient(
+        to right,
+        #334155 0,
+        #334155 2px,
+        transparent 2px,
+        transparent 4px,
+        #334155 4px,
+        #334155 7px,
+        transparent 7px,
+        transparent 9px,
+        #334155 9px,
+        #334155 10px,
+        transparent 10px,
+        transparent 12px,
+        #334155 12px,
+        #334155 15px,
+        transparent 15px,
+        transparent 18px
+    );
+    opacity: 0.7;
+}
+@media (max-width: 400px) {
+    .bp-details { gap: 15px; }
+    .bp-airport h2 { font-size: 1.8rem; }
+    .bp-barcode { display: none; } /* Hide barcode on very small screens to save space */
+}

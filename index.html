@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?v=1786535019141">
+    <link rel="stylesheet" href="css/style.css?v=1786545872898">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
@@ -82,49 +82,84 @@ summary i {
                             <div>
                         
                         <!-- Flight 1: Outbound -->
-                        <div class="flight-ticket">
-                            <div class="flight-header">
-                                <span><i class="fa-solid fa-plane-departure"></i> Thai Vietjet (VZ)</span>
-                                <span>12 มี.ค. 2027</span>
-                            </div>
-                            <div class="flight-body">
-                                <div class="flight-airport">
-                                    <h2>BKK</h2>
-                                    <p>00:25</p>
-                                </div>
-                                <div class="flight-route">
-                                    <div class="flight-line"><i class="fa-solid fa-plane"></i></div>
-                                    <p style="font-size: 0.75rem; color: #64748b; margin-top: 5px;">บินตรง</p>
-                                </div>
-                                <div class="flight-airport">
-                                    <h2>KIX</h2>
-                                    <p>07:55</p>
-                                </div>
-                            </div>
-                        </div>
-
+                          <div class="boarding-pass">
+                              <div class="bp-header vietjet">
+                                  <span><i class="fa-solid fa-plane-departure"></i> Thai Vietjet (VZ)</span>
+                                  <span>12 มี.ค. 2027</span>
+                              </div>
+                              <div class="bp-body">
+                                  <div class="bp-airport">
+                                      <h2>BKK</h2>
+                                      <p>00:25</p>
+                                  </div>
+                                  <div class="bp-route">
+                                      <i class="fa-solid fa-plane bp-plane-icon"></i>
+                                      <div class="bp-line"></div>
+                                      <span class="bp-route-text">เที่ยวบินตรง (Direct)</span>
+                                  </div>
+                                  <div class="bp-airport">
+                                      <h2>KIX</h2>
+                                      <p>07:55</p>
+                                  </div>
+                              </div>
+                              <div class="bp-footer">
+                                  <div class="bp-details">
+                                      <div class="bp-detail-item">
+                                          <span>Flight</span>
+                                          <strong>VZ822</strong>
+                                      </div>
+                                      <div class="bp-detail-item">
+                                          <span>Class</span>
+                                          <strong>Eco</strong>
+                                      </div>
+                                      <div class="bp-detail-item">
+                                          <span>Seat</span>
+                                          <strong>TBD</strong>
+                                      </div>
+                                  </div>
+                                  <div class="bp-barcode"></div>
+                              </div>
+                          </div>
                         </div><div>
                         <!-- Flight 2: Inbound -->
-                        <div class="flight-ticket" style="border-left-color: #d946ef;">
-                            <div class="flight-header">
-                                <span><i class="fa-solid fa-plane-arrival" style="color: #d946ef;"></i> Peach (MM)</span>
-                                <span>15 มี.ค. 2027</span>
-                            </div>
-                            <div class="flight-body">
-                                <div class="flight-airport">
-                                    <h2 style="color: #d946ef;">KIX</h2>
-                                    <p>19:15</p>
-                                </div>
-                                <div class="flight-route">
-                                    <div class="flight-line"><i class="fa-solid fa-plane" style="color: #d946ef;"></i></div>
-                                    <p style="font-size: 0.75rem; color: #64748b; margin-top: 5px;">บินตรง</p>
-                                </div>
-                                <div class="flight-airport">
-                                    <h2 style="color: #d946ef;">BKK</h2>
-                                    <p>23:55</p>
-                                </div>
-                            </div>
-                        </div>
+                          <div class="boarding-pass">
+                              <div class="bp-header peach">
+                                  <span><i class="fa-solid fa-plane-arrival"></i> Peach Aviation (MM)</span>
+                                  <span>15 มี.ค. 2027</span>
+                              </div>
+                              <div class="bp-body">
+                                  <div class="bp-airport">
+                                      <h2>KIX</h2>
+                                      <p>19:15</p>
+                                  </div>
+                                  <div class="bp-route">
+                                      <i class="fa-solid fa-plane bp-plane-icon" style="transform: scaleX(-1);"></i>
+                                      <div class="bp-line"></div>
+                                      <span class="bp-route-text">เที่ยวบินตรง (Direct)</span>
+                                  </div>
+                                  <div class="bp-airport">
+                                      <h2>BKK</h2>
+                                      <p>23:55</p>
+                                  </div>
+                              </div>
+                              <div class="bp-footer">
+                                  <div class="bp-details">
+                                      <div class="bp-detail-item">
+                                          <span>Flight</span>
+                                          <strong>MM091</strong>
+                                      </div>
+                                      <div class="bp-detail-item">
+                                          <span>Class</span>
+                                          <strong>Value</strong>
+                                      </div>
+                                      <div class="bp-detail-item">
+                                          <span>Term</span>
+                                          <strong>T2</strong>
+                                      </div>
+                                  </div>
+                                  <div class="bp-barcode"></div>
+                              </div>
+                          </div>
 
                         </div>
                         </div>
