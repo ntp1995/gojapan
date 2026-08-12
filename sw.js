@@ -21,40 +21,33 @@ self.addEventListener('install', event => {
 });
 
 self.addEventListener('fetch', event => {
+  // Only handle GET requests
+  if (event.request.method !== 'GET') return;
+
   event.respondWith(
-    caches.match(event.request)
+    fetch(event.request)
       .then(response => {
-        // Return cached response if found
-        if (response) {
-          return response;
-        }
-        // Else fetch from network
-        return fetch(event.request).then(
-          function(response) {
-            // Check if we received a valid response
-            if(!response || response.status !== 200 || response.type !== 'basic') {
-              return response;
-            }
-
-            // Clone the response
-            var responseToCache = response.clone();
-
-            caches.open(CACHE_NAME)
-              .then(function(cache) {
-                // Ignore caching external API requests if any, but we cache normal assets
-                if (event.request.url.startsWith('http')) {
-                  cache.put(event.request, responseToCache);
-                }
-              });
-
-            return response;
+        // Network was successful, save a copy to cache for offline use
+        const responseClone = response.clone();
+        caches.open(CACHE_NAME).then(cache => {
+          // Only cache our own app files or fonts, not external APIs
+          if (!event.request.url.includes('open.er-api.com')) {
+            cache.put(event.request, responseClone);
           }
-        );
-      }).catch(() => {
-        // Fallback for offline if page not cached
-        if (event.request.mode === 'navigate') {
-          return caches.match('./index.html');
-        }
+        });
+        return response;
+      })
+      .catch(() => {
+        // Network failed (offline), try fetching from cache
+        return caches.match(event.request).then(cachedResponse => {
+          if (cachedResponse) {
+            return cachedResponse;
+          }
+          // If completely offline and not in cache, fallback to index
+          if (event.request.mode === 'navigate') {
+            return caches.match('./index.html');
+          }
+        });
       })
   );
 });

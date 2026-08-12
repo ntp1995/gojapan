@@ -18,13 +18,24 @@ self.addEventListener('install', event => {
 });
 
 self.addEventListener('fetch', event => {
+  // Only handle GET requests
+  if (event.request.method !== 'GET') return;
+
   event.respondWith(
-    caches.match(event.request)
+    fetch(event.request)
       .then(response => {
-        if (response) {
-          return response;
-        }
-        return fetch(event.request);
+        // Network was successful, save a copy to cache for offline use
+        const responseClone = response.clone();
+        caches.open(CACHE_NAME).then(cache => {
+          if (!event.request.url.includes('open.er-api.com')) {
+            cache.put(event.request, responseClone);
+          }
+        });
+        return response;
+      })
+      .catch(() => {
+        // Network failed (offline), try fetching from cache
+        return caches.match(event.request);
       })
   );
 });

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Price Tracker</title>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            background-color: #f8fafc;
+            color: var(--dark);
+            padding-bottom: 2rem;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            position: relative;
+        }
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.2);
+            padding: 8px 15px;
+            border-radius: 50px;
+            backdrop-filter: blur(5px);
+        }
+        .container {
+            padding: 0 1rem;
+            max-width: 600px;
+            margin: -30px auto 0;
+            position: relative;
+            z-index: 10;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 1.5rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(255,255,255,0.5);
+        }
+        .route-badge {
+            background: rgba(59, 130, 246, 0.1);
+            color: #2563eb;
+            padding: 5px 12px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .google-btn {
+            background: #fff;
+            color: #333;
+            border: 1px solid #ddd;
+            padding: 12px;
+            border-radius: 12px;
+            width: 100%;
+            font-size: 1rem;
+            font-weight: 600;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
+        .google-btn:active {
+            transform: scale(0.98);
+        }
+        .google-btn img {
+            width: 24px;
+            height: 24px;
+        }
+        .input-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .input-group input {
+            flex: 1;
+            padding: 12px 15px;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            outline: none;
+            font-family: inherit;
+        }
+        .input-group input:focus {
+            border-color: #3b82f6;
+        }
+        .input-group button {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 0 20px;
+            border-radius: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: inherit;
+        }
+        .history-list {
+            margin-top: 15px;
+            max-height: 150px;
+            overflow-y: auto;
+        }
+        .history-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #f1f5f9;
+            font-size: 0.9rem;
+        }
+        .history-item:last-child {
+            border-bottom: none;
+        }
+        .price-up { color: #ef4444; }
+        .price-down { color: #10b981; }
+        .price-same { color: #94a3b8; }
+        .delete-btn {
+            color: #ef4444;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 0.8rem;
+            padding: 0 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <a href="index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> กลับ</a>
+        <h1 style="margin-top: 20px; font-size: 1.8rem;"><i class="fa-solid fa-plane-departure"></i> Flight Tracker</h1>
+        <p style="opacity: 0.9; margin-top: 5px;">สมุดจดบันทึกและดูกราฟราคาตั๋วเครื่องบิน</p>
+    </header>
+
+    <div class="container">
+        
+        <!-- Flight Info & Portal Card -->
+        <div class="card" style="text-align: center;">
+            <div class="route-badge"><i class="fa-solid fa-map-location-dot"></i> BKK <i class="fa-solid fa-arrow-right-long" style="margin: 0 5px;"></i> KIX</div>
+            <h3 style="margin-bottom: 5px;">เดินทาง 12 - 15 มี.ค. 2027</h3>
+            <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 15px;">VietJet Air / Peach Aviation (บินตรง)</p>
+            
+            <a href="https://www.google.com/travel/flights/booking?tfs=CBwQAho_EgoyMDI3LTAzLTEyIh8KA0JLSxIKMjAyNy0wMy0xMhoDS0lYKgJWWjIDODIwagcIARIDQktLcgcIARIDS0lYGj4SCjIwMjctMDMtMTUiHgoDS0lYEgoyMDI3LTAzLTE1GgNCS0sqAk1NMgI5MWoHCAESA0tJWHIHCAESA0JLS0ABQAFIAXABggELCP___________wGYAQE&tfu=CmxDalJJVGs0emNVOXRhV3czWDFWQlFYWkNaMUZDUnkwdExTMHRMUzB0TFhObFkyVjFNMEZCUVVGQlIzQTNObVJqUTBkWmFHMUJFZ1JOVFRreEdnc0lvc29CRUFBYUExUklRamdjY1BMaUJBPT0SAggAIgA&hl=th&gl=TH" target="_blank" class="google-btn">
+                <i class="fa-brands fa-google" style="color: #4285F4; font-size: 1.2rem;"></i> เช็คราคาล่าสุดบน Google Flights
+            </a>
+        </div>
+
+        <!-- Logging Card -->
+        <div class="card">
+            <h3 style="color: var(--dark); font-size: 1.1rem; margin-bottom: 5px;"><i class="fa-solid fa-pen-to-square"></i> จดราคาที่เห็นวันนี้</h3>
+            <p style="font-size: 0.85rem; color: #64748b;">กดปุ่มด้านบนเพื่อดูราคา พอเห็นราคาแล้วนำมากรอกเก็บไว้ตรงนี้ เพื่อดูแนวโน้มกราฟครับ</p>
+            
+            <div class="input-group">
+                <input type="number" id="price-input" placeholder="เช่น 15700" inputmode="numeric">
+                <button onclick="savePrice()"><i class="fa-solid fa-floppy-disk"></i> บันทึก</button>
+            </div>
+        </div>
+
+        <!-- Chart Card -->
+        <div class="card">
+            <h3 style="color: var(--dark); font-size: 1.1rem; margin-bottom: 15px;"><i class="fa-solid fa-chart-area"></i> กราฟแนวโน้มราคา (THB)</h3>
+            <div style="position: relative; height:200px; width:100%">
+                <canvas id="priceChart"></canvas>
+            </div>
+            
+            <hr style="border: 0; border-top: 1px dashed #e2e8f0; margin: 15px 0;">
+            
+            <h4 style="font-size: 0.95rem; color: #475569; margin-bottom: 10px;">ประวัติการจดบันทึก</h4>
+            <div class="history-list" id="history-list">
+                <!-- History items injected here -->
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        const STORAGE_KEY = 'flight_prices_bkk_kix';
+        let priceChart = null;
+
+        function getPrices() {
+            const data = localStorage.getItem(STORAGE_KEY);
+            return data ? JSON.parse(data) : [];
+        }
+
+        function savePrice() {
+            const input = document.getElementById('price-input');
+            const price = parseFloat(input.value);
+            
+            if (isNaN(price) || price <= 0) {
+                alert('กรุณากรอกราคาให้ถูกต้องครับ');
+                return;
+            }
+
+            const prices = getPrices();
+            const now = new Date();
+            const dateStr = now.toLocaleDateString('th-TH', { day: 'numeric', month: 'short' });
+            const timeStr = now.toLocaleTimeString('th-TH', { hour: '2-digit', minute: '2-digit' });
+            
+            prices.push({
+                price: price,
+                date: `${dateStr} ${timeStr}`,
+                timestamp: now.getTime()
+            });
+
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(prices));
+            input.value = '';
+            
+            updateUI();
+        }
+
+        function deletePrice(index) {
+            if(confirm("ต้องการลบราคานี้ใช่ไหม?")) {
+                const prices = getPrices();
+                prices.splice(index, 1);
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(prices));
+                updateUI();
+            }
+        }
+
+        function updateUI() {
+            const prices = getPrices();
+            
+            // Update History List
+            const listEl = document.getElementById('history-list');
+            listEl.innerHTML = '';
+            
+            if (prices.length === 0) {
+                listEl.innerHTML = '<div style="text-align:center; color:#94a3b8; padding:10px 0; font-size:0.85rem;">ยังไม่มีข้อมูล ลองจดราคาดูสิครับ!</div>';
+            } else {
+                // Show in reverse order (newest top)
+                for (let i = prices.length - 1; i >= 0; i--) {
+                    const item = prices[i];
+                    let iconHtml = '<span class="price-same">-</span>';
+                    
+                    if (i > 0) {
+                        const prevPrice = prices[i-1].price;
+                        if (item.price > prevPrice) {
+                            iconHtml = '<span class="price-up"><i class="fa-solid fa-arrow-trend-up"></i> แพงขึ้น</span>';
+                        } else if (item.price < prevPrice) {
+                            iconHtml = '<span class="price-down"><i class="fa-solid fa-arrow-trend-down"></i> ถูกลง!</span>';
+                        }
+                    }
+                    
+                    listEl.innerHTML += `
+                        <div class="history-item">
+                            <div>
+                                <strong style="color: #1e293b;">${item.price.toLocaleString()} ฿</strong>
+                                <span style="color: #94a3b8; font-size: 0.8rem; margin-left: 5px;">${item.date}</span>
+                            </div>
+                            <div>
+                                ${iconHtml}
+                                <button class="delete-btn" onclick="deletePrice(${i})"><i class="fa-solid fa-trash"></i></button>
+                            </div>
+                        </div>
+                    `;
+                }
+            }
+
+            // Update Chart
+            updateChart(prices);
+        }
+
+        function updateChart(prices) {
+            const ctx = document.getElementById('priceChart').getContext('2d');
+            
+            const labels = prices.map(p => p.date.split(' ')[0]); // Just date for chart
+            const data = prices.map(p => p.price);
+            
+            if (priceChart) {
+                priceChart.destroy();
+            }
+            
+            if (prices.length === 0) {
+                return; // Don't render empty chart
+            }
+            
+            // Gradient fill
+            let gradient = ctx.createLinearGradient(0, 0, 0, 200);
+            gradient.addColorStop(0, 'rgba(59, 130, 246, 0.4)');
+            gradient.addColorStop(1, 'rgba(59, 130, 246, 0.0)');
+
+            priceChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'ราคาตั๋ว (บาท)',
+                        data: data,
+                        borderColor: '#3b82f6',
+                        backgroundColor: gradient,
+                        borderWidth: 2,
+                        pointBackgroundColor: '#fff',
+                        pointBorderColor: '#3b82f6',
+                        pointBorderWidth: 2,
+                        pointRadius: 4,
+                        fill: true,
+                        tension: 0.3
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return context.raw.toLocaleString() + ' ฿';
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: false,
+                            grid: { color: '#f1f5f9' },
+                            ticks: {
+                                callback: function(value) {
+                                    return value.toLocaleString();
+                                }
+                            }
+                        },
+                        x: {
+                            grid: { display: false }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Initialize
+        window.addEventListener('load', updateUI);
+    </script>
+</body>
+</html>

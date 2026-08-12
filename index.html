@@ -122,16 +122,17 @@
                         </div>
 
                         <!-- Flight Booking Breakdown -->
-                        <div class="price-tracker" style="margin-top: 1.5rem; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 15px; position: relative; overflow: hidden;">
-                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-                                <span style="font-size: 0.85rem; color: #64748b; font-weight: 600;"><i class="fa-solid fa-receipt"></i> สรุปรายการจอง (2 ท่าน)</span>
+                        <details class="price-tracker" style="margin-top: 1.5rem; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; position: relative; overflow: hidden; cursor: pointer;">
+                            <summary style="padding: 15px; display: flex; justify-content: space-between; align-items: center; list-style: none; outline: none;">
+                                <span style="font-size: 0.9rem; color: #1e293b; font-weight: 600;"><i class="fa-solid fa-receipt"></i> ดูสรุปการจองตั๋ว & เครื่องมือ <i class="fa-solid fa-chevron-down" style="font-size: 0.7rem; margin-left: 5px;"></i></span>
                                 <span class="pulse-dot" style="display: flex; align-items: center; gap: 5px; font-size: 0.75rem; color: #10b981; font-weight: 600;">
                                     <span style="width: 8px; height: 8px; background: #10b981; border-radius: 50%; display: inline-block;"></span>
-                                    ยืนยันแล้ว (Gother)
+                                    ยืนยันแล้ว
                                 </span>
-                            </div>
+                            </summary>
                             
-                            <ul style="list-style: none; padding: 0; margin: 15px 0 0 0; font-size: 0.85rem; color: #475569;">
+                            <div style="padding: 0 15px 15px 15px; border-top: 1px dashed #cbd5e1; cursor: default;">
+                                <ul style="list-style: none; padding: 0; margin: 15px 0 0 0; font-size: 0.85rem; color: #475569;">
                                 <li style="display: flex; justify-content: space-between; margin-bottom: 8px;">
                                     <span>ค่าโดยสารผู้ใหญ่ x2</span>
                                     <span>26,659.88 ฿</span>
@@ -161,7 +162,16 @@
                             <a href="https://www.gother.com/th-th/flights/search/roundtrip/BKK-KIX/2027-03-12/KIX-BKK/2027-03-15?adults=2&cabin=Y&session=00b836ea09835cd85ec8afebf4124b56cdace53e535911fba3b4914f18acdf78&utm_source=google_flight&utm_medium=meta_search&utmid=53&hash=XF3Qs1B2rrPxuyYDnTNyVcK2qS3Ki7kJFES4MBZLFY3GJfDPRLVzG2uS8XxW9ZcmPhLTXNaVRHCakrJmyPHktfqVduvoqdzVC6EppxJhYxodUWpiz5HVGaAu1umkBUieaQMwybv1AJFn48x7ziXzU6oDmHLBMoHrMZrrNQvEWbj5PU5sKRUEkMMCFy6nFDT5CddR1CfDXaGg43pBagTeueamobtyUzbvn75C9mtq61nzQ1Guswnj477cfMLk48hTTgy8X6j7sAf9fLbp1ZjCfvKfjX11WzmbwLctheHYkfvHkUk83UPyDznxJ2W8e7zaCwGsV4jFFSRgy8ya9SzS3hM5GgxoNBKmHkux5nha4uUPbbr32t6FjyNC4dg6ppmu1HmUqCaaFeLekFPSL39xuismu9PV6yZQjcUA9eocuviA7RT76wAw3S8PCPwa6fWAtvtFwjmQmTjxu54b55CYgXHeVDPQcvTANkCbJeJUfkgtNXs8b6DUiyUXK68SQF4Ck1zGwfGGfUi2KC3uGJuAYd33jRzmpkYdnbnDX7fyqrWqGpmxWyJhmRep&fallBackLink=amlfbF9hYGFjXGMtY3BwaG45Li1wb3AqX2dvYVJtKl9naC5zZiZsYSteZGRgVW9vK2tgYHFhYSdra21mX21fZGwrOkZKLElCUCguKCoyJh0uKS0qKkpIViY6REcnKisrJCgsLyUsND5fXW1lcGs1LR9QXF5lZjhYJXFea2xlZ2Y4KR1dNC8uYGAvNzErLl9cMDBeUDNdYl1dZTMvKyxbMS5bX1pQYDEvXTAyNDcqKV9eWStdLSYsMGIpM2BiYl8vMTxZX2VsUWJdZmtjY2Y=&summary=true&departure=Tm28683469&return=Mnabc87fb9" target="_blank" class="btn btn-primary" style="width: 100%; text-align: center; font-size: 0.95rem; display: flex; justify-content: center; align-items: center; gap: 10px; background: #0f172a; border: none; box-shadow: 0 4px 15px rgba(15, 23, 42, 0.2); margin-top: 15px;">
                                 <i class="fa-solid fa-plane-circle-check"></i> ดูรายละเอียดการจองบน Gother
                             </a>
-                        </div>
+                            <a href="flight_tracker.html" class="btn btn-primary" style="width: 100%; text-align: center; font-size: 0.95rem; display: flex; justify-content: center; align-items: center; gap: 10px; background: #3b82f6; border: none; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3); margin-top: 10px;">
+                                <i class="fa-solid fa-chart-line"></i> สมุดจดและดูกราฟราคาตั๋ว (Google Flights)
+                            </a>
+
+                            <div style="margin-top: 15px; padding: 12px; background: rgba(245, 158, 11, 0.1); border-left: 4px solid #f59e0b; border-radius: 4px 8px 8px 4px; font-size: 0.85rem; color: #b45309; line-height: 1.5;">
+                                <strong style="display: block; margin-bottom: 4px;"><i class="fa-solid fa-triangle-exclamation"></i> คำแนะนำก่อนจอง Gother:</strong>
+                                Gother เป็นแพลตฟอร์มคนไทยที่เชื่อถือได้และมักมีโปรโมชั่นดี แต่หลังจากจองและได้อีเมลยืนยันแล้ว แนะนำให้นำ <strong>หมายเลขการจอง (PNR 6 หลัก)</strong> ไปเช็คในหน้าเว็บของสายการบิน (VietJet/Peach) โดยตรงอีกครั้ง เพื่อความชัวร์ 100% ว่าตั๋วเข้าระบบสายการบินเรียบร้อยแล้วครับ
+                            </div>
+                            </div>
+                        </details>
                         <style>
                             @keyframes pulse {
                                 0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
