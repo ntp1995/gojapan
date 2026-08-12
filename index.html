@@ -14,34 +14,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        .tip-box {
-            background-color: #fffbeb;
-            border-left: 4px solid #f59e0b;
-            padding: 1rem;
-            margin-top: 1rem;
-            border-radius: 0 8px 8px 0;
-            font-size: 0.95rem;
-        }
-        .tip-box h5 {
-            color: #d97706;
-            margin-bottom: 0.25rem;
-            font-size: 1rem;
-        }
-    </style>
+
+<style>
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details[open] summary i {
+    transform: rotate(180deg);
+}
+summary i {
+    transition: transform 0.2s ease-in-out;
+}
+</style>
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#" class="logo">
+            <a href="index.html" class="logo">
                 <i class="fa-solid fa-plane-departure"></i> Go Japan
             </a>
             <ul class="nav-links">
-                <li><a href="#overview">ภาพรวม</a></li>
-                <li><a href="#guide">ไกด์มือใหม่</a></li>
-                <li><a href="#itinerary">แผนการเดินทาง</a></li>
-                <li><a href="#prep">สิ่งที่ต้องเตรียม</a></li>
-                <li><a href="#budget">งบประมาณ</a></li>
+                <li><a href="index.html">ภาพรวม</a></li>
+                <li><a href="newbie_guide.html">ไกด์มือใหม่</a></li>
+                <li><a href="daily_guide.html">แผนการเดินทาง</a></li>
+                <li><a href="prep_list.html">สิ่งที่ต้องเตรียม</a></li>
+                <li><a href="insurance_guide.html">ประกันเดินทาง</a></li>
             </ul>
         </div>
     </nav>
@@ -60,7 +57,7 @@
                     <i class="fa-solid fa-wallet"></i> งบ 40,000 บาท/คน
                 </div>
             </div>
-            <a href="#itinerary" class="btn btn-primary">ดูแผนการเดินทาง <i class="fa-solid fa-arrow-down"></i></a>
+            <a href="daily_guide.html" class="btn btn-primary">ดูแผนการเดินทาง <i class="fa-solid fa-arrow-down"></i></a>
         </div>
     </header>
 
@@ -73,9 +70,11 @@
                     <p>สรุปข้อมูลสำคัญก่อนเริ่มออกเดินทาง</p>
                 </div>
                 <div class="grid overview-grid">
-                    <div class="card glass-card">
+                    <div class="card glass-card" style="grid-column: 1 / -1;">
                         <div class="card-icon"><i class="fa-solid fa-plane"></i></div>
-                        <h3>ตั๋วเครื่องบินของคุณ</h3>
+                        <h3>ตั๋วเครื่องบิน & การจอง</h3>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+                            <div>
                         
                         <!-- Flight 1: Outbound -->
                         <div class="flight-ticket">
@@ -99,6 +98,7 @@
                             </div>
                         </div>
 
+                        </div><div>
                         <!-- Flight 2: Inbound -->
                         <div class="flight-ticket" style="border-left-color: #d946ef;">
                             <div class="flight-header">
@@ -121,6 +121,8 @@
                             </div>
                         </div>
 
+                        </div>
+                        </div>
                         <!-- Flight Booking Breakdown -->
                         <details class="price-tracker" style="margin-top: 1.5rem; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; position: relative; overflow: hidden; cursor: pointer;">
                             <summary style="padding: 15px; display: flex; justify-content: space-between; align-items: center; list-style: none; outline: none;">
@@ -159,26 +161,18 @@
                                 </li>
                             </ul>
                             
-                            <a href="https://www.gother.com/th-th/flights/search/roundtrip/BKK-KIX/2027-03-12/KIX-BKK/2027-03-15?adults=2&cabin=Y&session=00b836ea09835cd85ec8afebf4124b56cdace53e535911fba3b4914f18acdf78&utm_source=google_flight&utm_medium=meta_search&utmid=53&hash=XF3Qs1B2rrPxuyYDnTNyVcK2qS3Ki7kJFES4MBZLFY3GJfDPRLVzG2uS8XxW9ZcmPhLTXNaVRHCakrJmyPHktfqVduvoqdzVC6EppxJhYxodUWpiz5HVGaAu1umkBUieaQMwybv1AJFn48x7ziXzU6oDmHLBMoHrMZrrNQvEWbj5PU5sKRUEkMMCFy6nFDT5CddR1CfDXaGg43pBagTeueamobtyUzbvn75C9mtq61nzQ1Guswnj477cfMLk48hTTgy8X6j7sAf9fLbp1ZjCfvKfjX11WzmbwLctheHYkfvHkUk83UPyDznxJ2W8e7zaCwGsV4jFFSRgy8ya9SzS3hM5GgxoNBKmHkux5nha4uUPbbr32t6FjyNC4dg6ppmu1HmUqCaaFeLekFPSL39xuismu9PV6yZQjcUA9eocuviA7RT76wAw3S8PCPwa6fWAtvtFwjmQmTjxu54b55CYgXHeVDPQcvTANkCbJeJUfkgtNXs8b6DUiyUXK68SQF4Ck1zGwfGGfUi2KC3uGJuAYd33jRzmpkYdnbnDX7fyqrWqGpmxWyJhmRep&fallBackLink=amlfbF9hYGFjXGMtY3BwaG45Li1wb3AqX2dvYVJtKl9naC5zZiZsYSteZGRgVW9vK2tgYHFhYSdra21mX21fZGwrOkZKLElCUCguKCoyJh0uKS0qKkpIViY6REcnKisrJCgsLyUsND5fXW1lcGs1LR9QXF5lZjhYJXFea2xlZ2Y4KR1dNC8uYGAvNzErLl9cMDBeUDNdYl1dZTMvKyxbMS5bX1pQYDEvXTAyNDcqKV9eWStdLSYsMGIpM2BiYl8vMTxZX2VsUWJdZmtjY2Y=&summary=true&departure=Tm28683469&return=Mnabc87fb9" target="_blank" class="btn btn-primary" style="width: 100%; text-align: center; font-size: 0.95rem; display: flex; justify-content: center; align-items: center; gap: 10px; background: #0f172a; border: none; box-shadow: 0 4px 15px rgba(15, 23, 42, 0.2); margin-top: 15px;">
+                            <a href="https://www.gother.com" target="_blank" class="btn btn-primary" style="width: 100%; text-align: center; font-size: 0.95rem; display: flex; justify-content: center; align-items: center; gap: 10px; background: #0f172a; border: none; margin-top: 15px;">
                                 <i class="fa-solid fa-plane-circle-check"></i> ดูรายละเอียดการจองบน Gother
                             </a>
-                            <a href="flight_tracker.html" class="btn btn-primary" style="width: 100%; text-align: center; font-size: 0.95rem; display: flex; justify-content: center; align-items: center; gap: 10px; background: #3b82f6; border: none; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3); margin-top: 10px;">
-                                <i class="fa-solid fa-chart-line"></i> สมุดจดและดูกราฟราคาตั๋ว (Google Flights)
-                            </a>
-
                             <div style="margin-top: 15px; padding: 12px; background: rgba(245, 158, 11, 0.1); border-left: 4px solid #f59e0b; border-radius: 4px 8px 8px 4px; font-size: 0.85rem; color: #b45309; line-height: 1.5;">
                                 <strong style="display: block; margin-bottom: 4px;"><i class="fa-solid fa-triangle-exclamation"></i> คำแนะนำก่อนจอง Gother:</strong>
                                 Gother เป็นแพลตฟอร์มคนไทยที่เชื่อถือได้และมักมีโปรโมชั่นดี แต่หลังจากจองและได้อีเมลยืนยันแล้ว แนะนำให้นำ <strong>หมายเลขการจอง (PNR 6 หลัก)</strong> ไปเช็คในหน้าเว็บของสายการบิน (VietJet/Peach) โดยตรงอีกครั้ง เพื่อความชัวร์ 100% ว่าตั๋วเข้าระบบสายการบินเรียบร้อยแล้วครับ
                             </div>
+                            <a href="flight_tracker.html" class="btn btn-primary" style="width: 100%; text-align: center; font-size: 0.95rem; display: flex; justify-content: center; align-items: center; gap: 10px; background: #3b82f6; border: none; margin-top: 10px;">
+                                <i class="fa-solid fa-chart-line"></i> สมุดจดและดูกราฟราคาตั๋ว
+                            </a>
                             </div>
                         </details>
-                        <style>
-                            @keyframes pulse {
-                                0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
-                                70% { box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
-                                100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
-                            }
-                        </style>
                     </div>
                     <div class="card glass-card">
                         <div class="card-icon"><i class="fa-solid fa-hotel"></i></div>
@@ -202,45 +196,145 @@
             </div>
         </section>
 
-        <!-- Section: Newbie Guide -->
-        <section id="guide" class="section section-alt">
+        <!-- Section: Budget (Added Today) -->
+        <section id="budget" class="section section-alt" style="background-color: transparent;">
             <div class="container">
                 <div class="section-header">
-                    <h2><i class="fa-solid fa-book-open"></i> คู่มือเอาตัวรอดสำหรับมือใหม่</h2>
+                    <h2><i class="fa-solid fa-wallet"></i> สรุปงบประมาณ (Budget)</h2>
+                    <p>สรุปค่าใช้จ่ายหลัก 40,000 บาท / ท่าน</p>
                 </div>
                 <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-                    <div class="glass-card">
-                        <h3 style="color: var(--primary);"><i class="fa-solid fa-train"></i> การใช้รถไฟญี่ปุ่น</h3>
-                        <ul style="margin-top: 1rem; list-style: disc; margin-left: 1.5rem; color: #475569;">
-                            <li><strong>สังเกตสีและชื่อสาย:</strong> เช่น สายสีแดง Midosuji Line ให้มองหาป้ายวงกลมสีแดง ตัว M</li>
-                            <li><strong>ดูป้ายปลายทาง (For...):</strong> รถไฟจะบอกทิศทางด้วยสถานีสุดสาย เช่น For Shin-Osaka ให้เปิด Google Maps ดูว่าเราต้องไปทางทิศไหน</li>
-                            <li><strong>ประเภทรถไฟ:</strong> Local (จอดทุกป้าย ช้าสุด), Express (จอดเฉพาะป้ายใหญ่), Limited Express (เร็วสุด แต่อาจต้องเสียเงินเพิ่ม อย่าขึ้นมั่วถ้าไม่แน่ใจ!)</li>
+                    <div class="glass-card" style="border-left: 4px solid #4f46e5;">
+                        <ul class="activity-list" style="list-style: none; padding: 0;">
+                            <!-- Item 1 -->
+                            <li style="border-bottom: 1px dashed rgba(0,0,0,0.1); padding-bottom: 10px; margin-bottom: 10px;">
+                                <details style="cursor: pointer;">
+                                    <summary style="display:flex; justify-content:space-between; list-style: none; outline: none; transition: color 0.2s;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color=''">
+                                        <span><i class="fa-solid fa-chevron-down" style="font-size: 0.7rem; color: #94a3b8; margin-right: 5px;"></i> ✈️ ค่าตั๋วเครื่องบิน & กระเป๋า</span><strong>15,711 บาท</strong>
+                                    </summary>
+                                    <ul style="list-style: none; padding-left: 1.5rem; margin-top: 10px; font-size: 0.85rem; color: #64748b;">
+                                        <li style="display:flex; justify-content:space-between; margin-bottom: 5px;"><span>ค่าโดยสารไป-กลับ</span><span>13,330 บาท</span></li>
+                                        <li style="display:flex; justify-content:space-between; margin-bottom: 5px;"><span>น้ำหนักกระเป๋า (ขาไป 15kg, กลับ 20kg)</span><span>2,655 บาท</span></li>
+                                        <li style="display:flex; justify-content:space-between; margin-bottom: 5px;"><span>ค่าเลือกที่นั่ง (ขากลับ)</span><span>240 บาท</span></li>
+                                        <li style="display:flex; justify-content:space-between; margin-bottom: 5px;"><span>ส่วนลด Gother</span><span style="color: #10b981;">-514 บาท</span></li>
+                                    </ul>
+                                </details>
+                            </li>
+
+                            <!-- Item 2 -->
+                            <li style="border-bottom: 1px dashed rgba(0,0,0,0.1); padding-bottom: 10px; margin-bottom: 10px;">
+                                <details style="cursor: pointer;">
+                                    <summary style="display:flex; justify-content:space-between; list-style: none; outline: none; transition: color 0.2s;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color=''">
+                                        <span><i class="fa-solid fa-chevron-down" style="font-size: 0.7rem; color: #94a3b8; margin-right: 5px;"></i> 🚌 ค่าเดินทางในไทย</span><strong>1,786 บาท</strong>
+                                    </summary>
+                                    <ul style="list-style: none; padding-left: 1.5rem; margin-top: 10px; font-size: 0.85rem; color: #64748b;">
+                                        <li style="display:flex; justify-content:space-between; margin-bottom: 5px;"><span>รถทัวร์ แพร่ - กรุงเทพฯ (ไป-กลับ)</span><span>~1,300 บาท</span></li>
+                                        <li style="display:flex; justify-content:space-between; margin-bottom: 5px;"><span>รถไฟฟ้า/แท็กซี่ ไป-กลับสนามบิน</span><span>~486 บาท</span></li>
+                                    </ul>
+                                </details>
+                            </li>
+
+                            <!-- Item 3 -->
+                            <li style="border-bottom: 1px dashed rgba(0,0,0,0.1); padding-bottom: 10px; margin-bottom: 10px;">
+                                <details style="cursor: pointer;">
+                                    <summary style="display:flex; justify-content:space-between; list-style: none; outline: none; transition: color 0.2s;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color=''">
+                                        <span><i class="fa-solid fa-chevron-down" style="font-size: 0.7rem; color: #94a3b8; margin-right: 5px;"></i> 🛂 ค่าทำพาสปอร์ต</span><strong>1,500 บาท</strong>
+                                    </summary>
+                                    <ul style="list-style: none; padding-left: 1.5rem; margin-top: 10px; font-size: 0.85rem; color: #64748b;">
+                                        <li style="display:flex; justify-content:space-between; margin-bottom: 5px;"><span>ค่าทำพาสปอร์ตอายุ 10 ปี (เล่มใหม่)</span><span>1,500 บาท</span></li>
+                                    </ul>
+                                </details>
+                            </li>
+
+                            <!-- Item 4 -->
+                            <li style="border-bottom: 1px dashed rgba(0,0,0,0.1); padding-bottom: 10px; margin-bottom: 10px;">
+                                <details style="cursor: pointer;">
+                                    <summary style="display:flex; justify-content:space-between; list-style: none; outline: none; transition: color 0.2s;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color=''">
+                                        <span><i class="fa-solid fa-chevron-down" style="font-size: 0.7rem; color: #94a3b8; margin-right: 5px;"></i> 🏨 ที่พักโอซาก้า 3 คืน</span><strong>~3,000 บาท</strong>
+                                    </summary>
+                                    <ul style="list-style: none; padding-left: 1.5rem; margin-top: 10px; font-size: 0.85rem; color: #64748b;">
+                                        <li style="display:flex; justify-content:space-between; margin-bottom: 5px;"><span>โรงแรมย่าน Namba/Dotonbori</span><span>คืนละ ~1,000 บ./คน</span></li>
+                                        <li style="display:flex; justify-content:space-between; margin-bottom: 5px; color: #f59e0b; font-size: 0.75rem;"><i class="fa-solid fa-circle-info"></i> จองผ่าน Agoda ล่วงหน้า 2-3 เดือนจะได้ราคาดี</li>
+                                    </ul>
+                                </details>
+                            </li>
+
+                            <!-- Item 5 -->
+                            <li style="border-bottom: 1px dashed rgba(0,0,0,0.1); padding-bottom: 10px; margin-bottom: 10px;">
+                                <details style="cursor: pointer;">
+                                    <summary style="display:flex; justify-content:space-between; list-style: none; outline: none; transition: color 0.2s;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color=''">
+                                        <span><i class="fa-solid fa-chevron-down" style="font-size: 0.7rem; color: #94a3b8; margin-right: 5px;"></i> 🏨 ที่พักกทม. 1 คืน</span><strong>~800 บาท</strong>
+                                    </summary>
+                                    <ul style="list-style: none; padding-left: 1.5rem; margin-top: 10px; font-size: 0.85rem; color: #64748b;">
+                                        <li style="display:flex; justify-content:space-between; margin-bottom: 5px;"><span>ที่พักใกล้สนามบินสุวรรณภูมิ (ขากลับ)</span><span>~800 บ./คน</span></li>
+                                    </ul>
+                                </details>
+                            </li>
+
+                            <!-- Item 6 -->
+                            <li style="border-bottom: 1px dashed rgba(0,0,0,0.1); padding-bottom: 10px; margin-bottom: 10px;">
+                                <details style="cursor: pointer;">
+                                    <summary style="display:flex; justify-content:space-between; list-style: none; outline: none; transition: color 0.2s;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color=''">
+                                        <span><i class="fa-solid fa-chevron-down" style="font-size: 0.7rem; color: #94a3b8; margin-right: 5px;"></i> 🚆 ค่าเดินทางในญี่ปุ่น</span><strong>~2,100 บาท</strong>
+                                    </summary>
+                                    <ul style="list-style: none; padding-left: 1.5rem; margin-top: 10px; font-size: 0.85rem; color: #64748b;">
+                                        <li style="display:flex; justify-content:space-between; margin-bottom: 5px;"><span>ค่ามัดจำ + เติมเงินบัตร ICOCA</span><span>~1,500 บาท</span></li>
+                                        <li style="display:flex; justify-content:space-between; margin-bottom: 5px;"><span>ตั๋วรถไฟเข้าเมือง Nankai Airport</span><span>~250 บาท</span></li>
+                                        <li style="display:flex; justify-content:space-between; margin-bottom: 5px;"><span>ตั๋วเคเบิลคาร์ Rokko (ไป-กลับ)</span><span>~350 บาท</span></li>
+                                    </ul>
+                                </details>
+                            </li>
+
+                            <!-- Item 7 -->
+                            <li style="border-bottom: 1px dashed rgba(0,0,0,0.1); padding-bottom: 10px; margin-bottom: 10px;">
+                                <details style="cursor: pointer;">
+                                    <summary style="display:flex; justify-content:space-between; list-style: none; outline: none; transition: color 0.2s;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color=''">
+                                        <span><i class="fa-solid fa-chevron-down" style="font-size: 0.7rem; color: #94a3b8; margin-right: 5px;"></i> 📱 ค่าเน็ต & ประกัน</span><strong>~600 บาท</strong>
+                                    </summary>
+                                    <ul style="list-style: none; padding-left: 1.5rem; margin-top: 10px; font-size: 0.85rem; color: #64748b;">
+                                        <li style="display:flex; justify-content:space-between; margin-bottom: 5px;"><span>แพ็กเกจ eSIM 5 วัน (เน็ตไม่อั้น)</span><span>~399 บาท</span></li>
+                                        <li style="display:flex; justify-content:space-between; margin-bottom: 5px;"><span>ประกันเดินทาง Sompo (กันไฟลต์ดีเลย์)</span><span>~200 บาท</span></li>
+                                    </ul>
+                                </details>
+                            </li>
+
+                            <!-- Item 8 -->
+                            <li style="border-bottom: 1px dashed rgba(0,0,0,0.1); padding-bottom: 10px; margin-bottom: 10px;">
+                                <details style="cursor: pointer;">
+                                    <summary style="display:flex; justify-content:space-between; list-style: none; outline: none; transition: color 0.2s;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color=''">
+                                        <span><i class="fa-solid fa-chevron-down" style="font-size: 0.7rem; color: #94a3b8; margin-right: 5px;"></i> 👘 ค่าเข้าสถานที่ & กิโมโน</span><strong>~2,500 บาท</strong>
+                                    </summary>
+                                    <ul style="list-style: none; padding-left: 1.5rem; margin-top: 10px; font-size: 0.85rem; color: #64748b;">
+                                        <li style="display:flex; justify-content:space-between; margin-bottom: 5px;"><span>ค่าเข้า + เช่ากระดานเลื่อนลานหิมะ</span><span>~600 บาท</span></li>
+                                        <li style="display:flex; justify-content:space-between; margin-bottom: 5px;"><span>ค่าเช่าชุดกิโมโนพร้อมทำผม (เกียวโต)</span><span>~1,500 บาท</span></li>
+                                        <li style="display:flex; justify-content:space-between; margin-bottom: 5px;"><span>ค่าเข้าปราสาทโอซาก้า / วัดน้ำใส</span><span>~400 บาท</span></li>
+                                    </ul>
+                                </details>
+                            </li>
+
+                            <!-- Item 9 -->
+                            <li style="border-bottom: 1px dashed rgba(0,0,0,0.1); padding-bottom: 10px; margin-bottom: 10px;">
+                                <details style="cursor: pointer;">
+                                    <summary style="display:flex; justify-content:space-between; list-style: none; outline: none; transition: color 0.2s;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color=''">
+                                        <span><i class="fa-solid fa-chevron-down" style="font-size: 0.7rem; color: #94a3b8; margin-right: 5px;"></i> 🥩 ค่าอาหาร</span><strong>~6,500 บาท</strong>
+                                    </summary>
+                                    <ul style="list-style: none; padding-left: 1.5rem; margin-top: 10px; font-size: 0.85rem; color: #64748b;">
+                                        <li style="display:flex; justify-content:space-between; margin-bottom: 5px;"><span>ค่ากินจิปาถะ & สตรีทฟู้ด (เฉลี่ยวันละ 1,200)</span><span>~4,800 บาท</span></li>
+                                        <li style="display:flex; justify-content:space-between; margin-bottom: 5px;"><span>เผื่อมื้อพิเศษ (เช่น เนื้อโกเบ)</span><span>~1,700 บาท</span></li>
+                                    </ul>
+                                </details>
+                            </li>
+
+                            <li style="padding-top: 15px; margin-top: 10px; color: #4f46e5; font-size: 1.2rem; font-weight: 700; display:flex; justify-content:space-between; border-top: 2px solid rgba(79, 70, 229, 0.2);">
+                                <span>รวมค่าใช้จ่ายคงที่</span><strong>~34,497 บาท</strong>
+                            </li>
                         </ul>
                     </div>
-                    <div class="glass-card">
-                        <h3 style="color: var(--secondary);"><i class="fa-solid fa-id-card"></i> บัตร ICOCA (อิโคกะ)</h3>
-                        <ul style="margin-top: 1rem; list-style: disc; margin-left: 1.5rem; color: #475569;">
-                            <li><strong>คืออะไร:</strong> บัตรเติมเงินแบบ Rabbit ใช้แตะขึ้นรถไฟ รถบัส ซื้อของร้านสะดวกซื้อ และตู้กดน้ำได้หมด</li>
-                            <li><strong>วิธีซื้อ:</strong> กดที่ตู้ตั๋วอัตโนมัติสีฟ้า/ชมพูที่สถานี เลือก English > Purchase ICOCA ใส่เงิน 2,000 เยน (มัดจำ 500 ใช้ได้ 1,500)</li>
-                            <li><strong>วิธีใช้:</strong> นำบัตรไปแตะที่จุดเซนเซอร์สีฟ้าตรงทางเข้าประตูสถานีรถไฟได้เลย</li>
-                        </ul>
-                    </div>
-                    <div class="glass-card">
-                        <h3 style="color: #ec4899;"><i class="fa-solid fa-ticket-simple"></i> บัตร Osaka Metro Pass</h3>
-                        <ul style="margin-top: 1rem; list-style: disc; margin-left: 1.5rem; color: #475569;">
-                            <li><strong>คืออะไร:</strong> บัตรเหมานั่งรถไฟใต้ดิน (Osaka Metro) และรถบัสในเมืองโอซาก้าได้แบบไม่จำกัดรอบ (มีแบบ 1 วัน และ 2 วัน)</li>
-                            <li><strong>ความคุ้มค่า:</strong> หากใน 1 วันต้องขึ้นลงใต้ดินเกิน 3-4 ครั้ง บัตรนี้จะคุ้มกว่าการใช้ ICOCA แตะจ่ายรายเที่ยวมาก (เหมาะกับ Day 1 และ Day 4)</li>
-                            <li><strong>วิธีซื้อ:</strong> สามารถจองออนไลน์ล่วงหน้าเพื่อรับราคาพิเศษ หรือไปแลกรับที่สนามบิน/สถานีรถไฟ</li>
-                        </ul>
-                        <a href="https://www.klook.com/th/activity/11515-osaka-metro-pass/" target="_blank" class="btn btn-primary" style="margin-top: 1rem; padding: 0.5rem 1rem; font-size: 0.9rem; width: 100%; background: #ff5a5f; border-color: #ff5a5f;"><i class="fa-solid fa-bag-shopping"></i> เช็คราคา / จองผ่าน Klook</a>
-                    </div>
-                    <div class="glass-card">
-                        <h3 style="color: #0ea5e9;"><i class="fa-solid fa-wifi"></i> ซิมเน็ต (eSIM) แบบเน็ตไม่อั้น</h3>
-                        <ul style="margin-top: 1rem; list-style: disc; margin-left: 1.5rem; color: #475569;">
-                            <li><strong>คำแนะนำ:</strong> หากเป็นคนชอบเล่นโซเชียล อัปสตอรี่ตลอดเวลา หรือต้องคอล/ดูวิดีโอ แนะนำให้ซื้อแบบ <strong>Unlimited Data (เน็ตไม่อั้น)</strong> ไปเลยครับ จะได้เที่ยวแบบสบายใจ ไม่ต้องกังวลว่าเน็ตจะตัดหรือช้าลง</li>
-                            <li><strong>แพลตฟอร์มที่แนะนำ:</strong> <br>1. <strong>แอป Klook หรือ KKday</strong> - ตอนค้นหาให้เลือกแพ็กเกจที่เขียนว่า "ข้อมูลไม่จำกัด (Unlimited)" ราคาจะอยู่ที่ประมาณ ~500-600 บาท สำหรับ 5 วัน (แนะนำให้เลือกเครือข่าย Softbank หรือ Docomo)<br>2. <strong>แอป Vacay / Gohub</strong> - เป็นเว็บ/แอปขายซิมโดยเฉพาะ มีแพ็กเกจเน็ตไม่อั้นให้เลือกเช่นกัน</li>
-                            <li><strong>วิธีใช้:</strong> ซื้อล่วงหน้า สแกน QR Code ติดตั้งลงเครื่องตั้งแต่ที่ไทย (ตอนสแกนต้องมีเน็ต/WiFi) พอเครื่องลงจอดปุ๊บ เปิด Data Roaming เน็ตจะติดพร้อมใช้ทันทีครับ</li>
-                        </ul>
+                    
+                    <div style="background: rgba(16, 185, 129, 0.05); padding: 2rem; border-radius: 20px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; border: 1px solid rgba(16, 185, 129, 0.1);">
+                        <h3 style="color: #10b981; margin-bottom: 0.5rem; font-size: 1.2rem;"><i class="fa-solid fa-gift"></i> ยอดเงินเหลือสำหรับช้อปปิ้ง</h3>
+                        <p style="font-size: 3rem; font-weight: 700; color: #10b981; margin: 10px 0; font-family: 'Inter', sans-serif;">5,503 <span style="font-size: 1.5rem">THB</span></p>
+                        <p style="font-size: 1rem; color: #64748b; margin-bottom: 20px;">เตรียมแลกเป็นเงินเยนเข้า YouTrip ได้เลยครับ</p>
                     </div>
                 </div>
             </div>
@@ -254,118 +348,87 @@
                     <p>ดูภาพรวมแต่ละวัน และคลิกอ่านคู่มือรายวันฉบับเต็มเพื่อการเดินทางจริง</p>
                 </div>
                 
-                <div style="overflow-x: auto; margin-bottom: 2rem;">
-                    <table style="width: 100%; border-collapse: collapse; background: #fff; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-radius: 12px; overflow: hidden;">
-                        <thead>
-                            <tr style="background: var(--primary); color: #fff;">
-                                <th style="padding: 15px; text-align: left;">วันที่</th>
-                                <th style="padding: 15px; text-align: left;">เมือง</th>
-                                <th style="padding: 15px; text-align: left;">ไฮไลท์การเดินทาง</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr style="border-bottom: 1px solid #e2e8f0; background: #f8fafc;">
-                                <td style="padding: 15px; font-weight: 600;">Day 0 (11 มี.ค.)</td>
-                                <td style="padding: 15px;"><span class="day-tag" style="background: rgba(245, 158, 11, 0.1); color: #f59e0b; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: 500;">Thailand</span></td>
-                                <td style="padding: 15px; color: var(--gray);">แพร่ - กรุงเทพฯ (รถทัวร์) - สุวรรณภูมิ</td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid #e2e8f0;">
-                                <td style="padding: 15px; font-weight: 600;">Day 1 (12 มี.ค.)</td>
-                                <td style="padding: 15px;"><span class="day-tag" style="background: rgba(59, 130, 246, 0.1); color: #3b82f6; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: 500;">Osaka</span></td>
-                                <td style="padding: 15px; color: var(--gray);">แลนดิ้งคันไซ - ปราสาทโอซาก้า - โดทงโบริ</td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid #e2e8f0; background: #f8fafc;">
-                                <td style="padding: 15px; font-weight: 600;">Day 2 (13 มี.ค.)</td>
-                                <td style="padding: 15px;"><span class="day-tag" style="background: rgba(79, 70, 229, 0.1); color: var(--primary); padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: 500;">Kobe</span></td>
-                                <td style="padding: 15px; color: var(--gray);">ลานหิมะ Rokko - หอคอยโกเบ - ดินเนอร์เนื้อโกเบ</td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid #e2e8f0;">
-                                <td style="padding: 15px; font-weight: 600;">Day 3 (14 มี.ค.)</td>
-                                <td style="padding: 15px;"><span class="day-tag" style="background: rgba(16, 185, 129, 0.1); color: #10b981; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: 500;">Kyoto</span></td>
-                                <td style="padding: 15px; color: var(--gray);">วัดเบียวโดอิน - เสาแดงฟุชิมิอินาริ - วัดน้ำใส</td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid #e2e8f0; background: #f8fafc;">
-                                <td style="padding: 15px; font-weight: 600;">Day 4 (15 มี.ค.)</td>
-                                <td style="padding: 15px;"><span class="day-tag" style="background: rgba(59, 130, 246, 0.1); color: #3b82f6; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: 500;">Osaka</span></td>
-                                <td style="padding: 15px; color: var(--gray);">ตลาดคุโรมง - หอคอยซึเทนคาคุ - บินกลับไทย</td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid #e2e8f0;">
-                                <td style="padding: 15px; font-weight: 600;">Day 5 (16 มี.ค.)</td>
-                                <td style="padding: 15px;"><span class="day-tag" style="background: rgba(245, 158, 11, 0.1); color: #f59e0b; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: 500;">Thailand</span></td>
-                                <td style="padding: 15px; color: var(--gray);">สุวรรณภูมิ - กรุงเทพฯ - เดินทางกลับแพร่</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="text-center" style="margin-top: 2rem;">
-                    <a href="daily_guide.html" class="btn btn-primary" style="font-size: 1.2rem; padding: 1rem 2rem; box-shadow: 0 4px 15px rgba(79, 70, 229, 0.4); border-radius: 50px;">
-                        <i class="fa-solid fa-book-open"></i> อ่านคู่มือรายวันแบบละเอียด (มีแผนสำรอง)
-                    </a>
+                                <div class="timeline" style="margin-bottom: 2rem;">
+                    <!-- Day 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">Day 1: 12 มีนาคม 2027</div>
+                        <a href="daily_guide.html#day1" class="glass-card" style="display: block; text-decoration: none;">
+                            <h3 style="color: var(--dark); margin-bottom: 10px;"><i class="fa-solid fa-city" style="color: var(--primary);"></i> โอซาก้า (Osaka)</h3>
+                            <p style="color: var(--text-muted); font-weight: 500;">แลนดิ้งสนามบินคันไซ ➔ ฝากกระเป๋า Namba ➔ ปราสาทโอซาก้า ➔ ศาลเจ้าหัวสิงโต ➔ ช้อปปิ้งชินไซบาชิ ➔ ดองกี้โดทงโบริ</p>
+                        </a>
+                    </div>
+                    
+                    <!-- Day 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">Day 2: 13 มีนาคม 2027</div>
+                        <a href="daily_guide.html#day2" class="glass-card" style="display: block; text-decoration: none;">
+                            <h3 style="color: var(--dark); margin-bottom: 10px;"><i class="fa-regular fa-snowflake" style="color: var(--primary);"></i> โกเบ & ร็อคโกะ (Kobe & Rokko)</h3>
+                            <p style="color: var(--text-muted); font-weight: 500;">นั่งรถไฟไปโกเบ ➔ ขึ้นเคเบิลคาร์ ➔ ลานหิมะร็อคโกะ (Rokko Snow Park) ➔ หอคอยพอร์ตทาวเวอร์ ➔ ดินเนอร์เนื้อโกเบ</p>
+                        </a>
+                    </div>
+                    
+                    <!-- Day 3 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">Day 3: 14 มีนาคม 2027</div>
+                        <a href="daily_guide.html#day3" class="glass-card" style="display: block; text-decoration: none;">
+                            <h3 style="color: var(--dark); margin-bottom: 10px;"><i class="fa-brands fa-envira" style="color: var(--primary);"></i> เกียวโต & อูจิ (Kyoto & Uji)</h3>
+                            <p style="color: var(--text-muted); font-weight: 500;">วัดเบียวโดอิน (อูจิ) ➔ ศาลเจ้าจิ้งจอก (เกียวโต) ➔ ใส่กิโมโน ➔ วัดน้ำใส ➔ ซื้อฟิกเกอร์ย่าน Den Den Town</p>
+                        </a>
+                    </div>
+                    
+                    <!-- Day 4 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">Day 4: 15 มีนาคม 2027</div>
+                        <a href="daily_guide.html#day4" class="glass-card" style="display: block; text-decoration: none;">
+                            <h3 style="color: var(--dark); margin-bottom: 10px;"><i class="fa-solid fa-plane-departure" style="color: var(--primary);"></i> วันกลับ (Departure)</h3>
+                            <p style="color: var(--text-muted); font-weight: 500;">ตลาดปลาคุโรมง ➔ หอคอยซึเทนคาคุ (Shinsekai) ➔ <strong style="color: var(--primary);">ทำ Tax Refund ที่สนามบิน</strong> ➔ บินกลับไทย</p>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
-
-        <!-- Section: Budget -->
-        <section id="budget" class="section">
+        
+        /<!-- Dashboard Navigation Grid \(Added Today\) -->/
+        <section class="section">
             <div class="container">
-                <div class="section-header text-center">
-                    <h2><i class="fa-solid fa-wallet"></i> สรุปงบประมาณ (Budget)</h2>
-                    <p>งบประมาณ 40,000 บาท / ท่าน</p>
-                </div>
-                <div class="grid" style="grid-template-columns: 1fr; max-width: 600px; margin: 0 auto;">
-                    <div class="glass-card" style="border-left: 5px solid var(--primary);">
-                        <ul class="activity-list" style="font-size: 1.1rem;">
-                            <li style="justify-content: space-between; border-bottom: 1px dashed #ccc; padding-bottom: 10px;">
-                                <span>✈️ ค่าตั๋วเครื่องบิน & กระเป๋า</span>
-                                <strong>15,711 บาท</strong>
-                            </li>
-                            <li style="justify-content: space-between; border-bottom: 1px dashed #ccc; padding-bottom: 10px;">
-                                <span>🚌 ค่าเดินทางในไทย (ไป-กลับ กทม. & สนามบิน)</span>
-                                <strong>1,786 บาท</strong>
-                            </li>
-                            <li style="justify-content: space-between; border-bottom: 1px dashed #ccc; padding-bottom: 10px;">
-                                <span>🛂 ค่าทำพาสปอร์ต</span>
-                                <strong>1,500 บาท</strong>
-                            </li>
-                            <li style="justify-content: space-between; border-bottom: 1px dashed #ccc; padding-bottom: 10px;">
-                                <span>🏨 ที่พักโอซาก้า 3 คืน (ราคาต่อคน/หาร 2 แล้ว)</span>
-                                <strong>~3,000 บาท</strong>
-                            </li>
-                            <li style="justify-content: space-between; border-bottom: 1px dashed #ccc; padding-bottom: 10px;">
-                                <span>🏨 ที่พักกรุงเทพฯ 1 คืน (หลังกลับถึงไทย/หาร 2 แล้ว)</span>
-                                <strong>~800 บาท</strong>
-                            </li>
-                            <li style="justify-content: space-between; border-bottom: 1px dashed #ccc; padding-bottom: 10px;">
-                                <span>🚆 ค่าเดินทางในญี่ปุ่น (ICOCA)</span>
-                                <strong>~2,100 บาท</strong>
-                            </li>
-                            <li style="justify-content: space-between; border-bottom: 1px dashed #ccc; padding-bottom: 10px;">
-                                <span>📱 ค่าอินเทอร์เน็ต (eSIM ญี่ปุ่นแบบ Unlimited)</span>
-                                <strong>~600 บาท</strong>
-                            </li>
-                            <li style="justify-content: space-between; border-bottom: 1px dashed #ccc; padding-bottom: 10px;">
-                                <span>👘 ค่าเข้าสถานที่ & กิโมโน</span>
-                                <strong>~2,500 บาท</strong>
-                            </li>
-                            <li style="justify-content: space-between; border-bottom: 1px dashed #ccc; padding-bottom: 10px;">
-                                <span>🥩 ค่าอาหาร (รวมเนื้อโกเบ)</span>
-                                <strong>~6,500 บาท</strong>
-                            </li>
-                            <li style="justify-content: space-between; padding-top: 10px; color: var(--primary); font-size: 1.3rem;">
-                                <strong>รวมค่าใช้จ่ายคงที่</strong>
-                                <strong>~34,497 บาท</strong>
-                            </li>
-                        </ul>
-                        <div style="background: rgba(16, 185, 129, 0.1); padding: 1.5rem; border-radius: 10px; margin-top: 1.5rem; text-align: center;">
-                            <h3 style="color: #10b981; margin-bottom: 0.5rem;"><i class="fa-solid fa-gift"></i> ยอดเงินเหลือสำหรับช้อปปิ้ง</h3>
-                            <p style="font-size: 1.5rem; font-weight: 700; color: #059669;">5,503 บาท</p>
-                            <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 15px;">เตรียมแลกเป็นเงินเยนเข้า Travel Card (เช่น YouTrip) เก็บไว้ล่วงหน้าได้เลยครับ</p>
-                            <a href="exchange_tracker.html" class="btn btn-primary" style="width: 100%; background: #10b981; border: none; padding: 12px; font-size: 1rem; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3); display: flex; justify-content: center; align-items: center; gap: 8px;">
-                                <i class="fa-solid fa-chart-line"></i> ระบบเช็คเรทแลกเงิน & คำนวณยอด YouTrip
-                            </a>
+                <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
+                    <a href="newbie_guide.html" class="glass-card text-center" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem 1rem; border-radius: 20px; background: white; border-bottom: 5px solid #4f46e5; box-shadow: 0 10px 25px -5px rgba(79, 70, 229, 0.15); transition: transform 0.2s;">
+                        <div style="background: rgba(79, 70, 229, 0.1); width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                            <i class="fa-solid fa-book-open" style="font-size: 2rem; color: #4f46e5;"></i>
                         </div>
-                    </div>
+                        <h3 style="color: #1e293b; margin: 0; font-size: 1.2rem;">ไกด์มือใหม่</h3>
+                    </a>
+                    
+                    <a href="daily_guide.html" class="glass-card text-center" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem 1rem; border-radius: 20px; background: white; border-bottom: 5px solid #ec4899; box-shadow: 0 10px 25px -5px rgba(236, 72, 153, 0.15); transition: transform 0.2s;">
+                        <div style="background: rgba(236, 72, 153, 0.1); width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                            <i class="fa-solid fa-route" style="font-size: 2rem; color: #ec4899;"></i>
+                        </div>
+                        <h3 style="color: #1e293b; margin: 0; font-size: 1.2rem;">แผนเที่ยวรายวัน</h3>
+                    </a>
+                    
+                    <a href="prep_list.html" class="glass-card text-center" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem 1rem; border-radius: 20px; background: white; border-bottom: 5px solid #0ea5e9; box-shadow: 0 10px 25px -5px rgba(14, 165, 233, 0.15); transition: transform 0.2s;">
+                        <div style="background: rgba(14, 165, 233, 0.1); width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                            <i class="fa-solid fa-suitcase" style="font-size: 2rem; color: #0ea5e9;"></i>
+                        </div>
+                        <h3 style="color: #1e293b; margin: 0; font-size: 1.2rem;">เช็คลิสต์ก่อนบิน</h3>
+                    </a>
+                    
+                    <a href="exchange_tracker.html" class="glass-card text-center" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem 1rem; border-radius: 20px; background: white; border-bottom: 5px solid #10b981; box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.15); transition: transform 0.2s;">
+                        <div style="background: rgba(16, 185, 129, 0.1); width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                            <i class="fa-solid fa-calculator" style="font-size: 2rem; color: #10b981;"></i>
+                        </div>
+                        <h3 style="color: #1e293b; margin: 0; font-size: 1.2rem;">เครื่องมือการเงิน</h3>
+                    </a>
+                    <a href="insurance_guide.html" class="glass-card text-center" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem 1rem; border-radius: 20px; background: white; border-bottom: 5px solid #f59e0b; box-shadow: 0 10px 25px -5px rgba(245, 158, 11, 0.15); transition: transform 0.2s;">
+                        <div style="background: rgba(245, 158, 11, 0.1); width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                            <i class="fa-solid fa-shield-heart" style="font-size: 2rem; color: #f59e0b;"></i>
+                        </div>
+                        <h3 style="color: #1e293b; margin: 0; font-size: 1.2rem;">ประกันเดินทาง</h3>
+                    </a>
                 </div>
             </div>
         </section>
@@ -377,7 +440,6 @@
             <p>&copy; 2027 TripPlanner. Crafted with <i class="fa-solid fa-heart" style="color: #ff4757;"></i> for your perfect journey.</p>
         </div>
     </footer>
-
     <script src="js/script.js"></script>
 </body>
 </html>

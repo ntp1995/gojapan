@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newbie Guide | คู่มือมือใหม่</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-header {
+            background: linear-gradient(135deg, var(--secondary) 0%, #2563eb 100%);
+            color: white;
+            padding: 3rem 1rem 2rem;
+            text-align: center;
+            border-radius: 0 0 20px 20px;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        .back-btn {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 500;
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            transition: background 0.3s;
+        }
+        .back-btn:hover {
+            background: rgba(255,255,255,0.3);
+        }
+    </style>
+</head>
+<body style="background-color: #f8fafc; font-family: 'Prompt', sans-serif;">
+    <div class="page-header">
+        <a href="index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> กลับหน้าหลัก</a>
+        <i class="fa-solid fa-book-open" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+        <h1 style="font-size: 1.8rem; font-family: 'Prompt', sans-serif;">คู่มือเอาตัวรอดสำหรับมือใหม่</h1>
+        <p style="opacity: 0.9; margin-top: 0.5rem;">รวบรวมทริคและเทคนิคการเดินทางในญี่ปุ่น</p>
+    </div>
+
+    <div class="container" style="max-width: 900px; padding: 0 1rem; margin-bottom: 3rem;">
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+            
+            <!-- Visit Japan Web -->
+            <div class="glass-card" style=" background: var(--glass-bg); padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
+                <h3 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.2rem;"><i class="fa-solid fa-qrcode"></i> ลงทะเบียน Visit Japan Web</h3>
+                <ul style="list-style: disc; margin-left: 1.5rem; color: #475569; line-height: 1.6;">
+                    <li style="margin-bottom: 0.5rem;"><strong>คืออะไร:</strong> เว็บไซต์ทางการของ ตม. และศุลกากรญี่ปุ่น ใช้กรอกข้อมูลล่วงหน้าแทนการเขียนใบกระดาษบนเครื่องบิน</li>
+                    <li style="margin-bottom: 0.5rem;"><strong>สิ่งที่ได้:</strong> <strong>QR Code 1 อัน</strong> ใช้แสกนผ่านด่าน ตม. และศุลกากร (ช่องทางด่วน)</li>
+                    <li style="margin-bottom: 0.5rem;"><strong>วิธีทำ:</strong> เข้าเว็บ <a href="https://www.vjw.digital.go.jp/" target="_blank" style="color: var(--primary); text-decoration: underline;">www.vjw.digital.go.jp</a> ท าล่วงหน้าก่อนบิน 1-2 สัปดาห์</li>
+                    <li style="margin-bottom: 0.5rem;"><strong>เรื่องภาษาไทย:</strong> <strong>ไม่มีเมนูภาษาไทยครับ</strong> แนะนำให้เปิดผ่าน Chrome/Safari ในมือถือ แล้วใช้เมนู "แปลภาษา (Translate)" เอาครับ</li>
+                    <li style="margin-bottom: 0.5rem;"><strong>ข้อควรระวัง:</strong> ระวังเว็บปลอม! เว็บจริง <strong>ฟรี 100%</strong> ควรแคปหน้าจอ QR Code เก็บไว้ในมือถือเผื่อเน็ตพัง</li>
+                </ul>
+            </div>
+
+            <!-- Trains -->
+            <div class="glass-card" style="background: var(--glass-bg); padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
+                <h3 style="color: var(--secondary); margin-bottom: 1rem; font-size: 1.2rem;"><i class="fa-solid fa-train"></i> การใช้รถไฟญี่ปุ่น</h3>
+                <ul style="list-style: disc; margin-left: 1.5rem; color: #475569; line-height: 1.6;">
+                    <li style="margin-bottom: 0.5rem;"><strong>สังเกตสีและชื่อสาย:</strong> เช่น สายสีแดง Midosuji Line ให้มองหาป้ายวงกลมสีแดง ตัว M</li>
+                    <li style="margin-bottom: 0.5rem;"><strong>ดูป้ายปลายทาง (For...):</strong> รถไฟจะบอกทิศทางด้วยสถานีสุดสาย เช่น For Shin-Osaka ให้ดู Google Maps ว่าไปทางทิศไหน</li>
+                    <li style="margin-bottom: 0.5rem;"><strong>ประเภทรถไฟ:</strong> Local (จอดทุกป้าย ช้าสุด), Express (จอดเฉพาะป้ายใหญ่), Limited Express (เร็วสุด เสียเงินเพิ่ม)</li>
+                </ul>
+            </div>
+
+            <!-- Bus -->
+            <div class="glass-card" style="background: var(--glass-bg); padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
+                <h3 style="color: #D4A373; margin-bottom: 1rem; font-size: 1.2rem;"><i class="fa-solid fa-bus"></i> การขึ้นรถบัส (โดยเฉพาะเกียวโต)</h3>
+                <ul style="list-style: disc; margin-left: 1.5rem; color: #475569; line-height: 1.6;">
+                    <li style="margin-bottom: 0.5rem;"><strong>ดูสายรถ:</strong> Google Maps จะบอก "หมายเลขรถ" (เช่น 205) และ "ตัวอักษรป้าย" (เช่น ป้าย A1)</li>
+                    <li style="margin-bottom: 0.5rem;"><strong>ขึ้นกลาง ลงหน้า:</strong> ขึ้นที่ "ประตูกลาง/หลัง" (แตะบัตร ICOCA) และลงที่ "ประตูด้านหน้า" ข้างคนขับ (แตะบัตร ICOCA ตัดเงิน)</li>
+                    <li style="margin-bottom: 0.5rem;"><strong>รู้ได้ไงว่าใกล้ถึง?:</strong> เปิด Google Maps ดูจุดสีฟ้าของเรา พอใกล้ป้ายเป้าหมายก็เตรียมตัวกดกริ่ง</li>
+                    <li style="margin-bottom: 0.5rem;"><strong>มารยาทสำคัญ:</strong> <strong>ห้ามลุกเดินเด็ดขาดขณะรถวิ่ง!</strong> กดกริ่งแล้วรอจน <strong>รถจอดสนิท</strong> ค่อยลุกเดินไปประตู</li>
+                </ul>
+            </div>
+
+            <!-- ICOCA -->
+            <div class="glass-card" style="background: var(--glass-bg); padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
+                <h3 style="color: var(--dark); margin-bottom: 1rem; font-size: 1.2rem;"><i class="fa-solid fa-id-card"></i> บัตร ICOCA (อิโคกะ)</h3>
+                <ul style="list-style: disc; margin-left: 1.5rem; color: #475569; line-height: 1.6;">
+                    <li style="margin-bottom: 0.5rem;"><strong>คืออะไร:</strong> บัตรเติมเงินอเนกประสงค์ ใช้แตะขึ้นรถไฟ รถบัส ซื้อของเซเว่น และตู้กดน้ำ</li>
+                    <li style="margin-bottom: 0.5rem;"><strong>วิธีซื้อ:</strong> กดที่ตู้ตั๋วสีฟ้า/ชมพูที่สถานี เลือก English > Purchase ICOCA (มัดจำ 500 ใช้ได้ 1,500 เยน) หรือผูกเข้า Apple Wallet</li>
+                    <li style="margin-bottom: 0.5rem;"><strong>วิธีใช้:</strong> แตะที่จุดเซนเซอร์สีฟ้าตอนเข้าและออกสถานี</li>
+                </ul>
+            </div>
+
+            <!-- Metro Pass -->
+            <div class="glass-card" style="background: var(--glass-bg); padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
+                <h3 style="color: var(--primary-light); margin-bottom: 1rem; font-size: 1.2rem;"><i class="fa-solid fa-ticket-simple"></i> บัตร Osaka Metro Pass</h3>
+                <ul style="list-style: disc; margin-left: 1.5rem; color: #475569; line-height: 1.6;">
+                    <li style="margin-bottom: 0.5rem;"><strong>คืออะไร:</strong> บัตรเหมานั่งรถไฟใต้ดินโอซาก้าแบบไม่จำกัดรอบ</li>
+                    <li style="margin-bottom: 0.5rem;"><strong>ความคุ้มค่า:</strong> หากวันไหนขึ้นลงเกิน 3-4 ครั้ง (เช่น Day 1, Day 4) บัตรนี้จะคุ้มกว่า ICOCA</li>
+                    <li style="margin-bottom: 0.5rem;"><strong>วิธีซื้อ:</strong> ซื้อล่วงหน้าผ่าน Klook และไปสแกนรับบัตรรถไฟที่ตู้ที่โอซาก้า</li>
+                </ul>
+                <a href="https://www.klook.com/th/activity/11515-osaka-metro-pass/" target="_blank" class="btn btn-primary" style="margin-top: 1rem; width: 100%; text-align: center; display: block; padding: 10px; background: var(--primary-light); border: none;"><i class="fa-solid fa-bag-shopping"></i> ซื้อผ่าน Klook</a>
+            </div>
+
+            <!-- eSIM -->
+            <div class="glass-card" style="background: var(--glass-bg); padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
+                <h3 style="color: #6E6B65; margin-bottom: 1rem; font-size: 1.2rem;"><i class="fa-solid fa-wifi"></i> ซิมเน็ต (eSIM) แบบเน็ตไม่อั้น</h3>
+                <ul style="list-style: disc; margin-left: 1.5rem; color: #475569; line-height: 1.6;">
+                    <li style="margin-bottom: 0.5rem;"><strong>คำแนะนำ:</strong> แนะนำให้ซื้อแบบ <strong>Unlimited Data (เน็ตไม่อั้น)</strong> จะได้ดูแมพ/วิดีโอสบายใจ</li>
+                    <li style="margin-bottom: 0.5rem;"><strong>แพลตฟอร์ม:</strong> ซื้อผ่านแอป Klook หรือ Vacay (เลือกเครือข่าย Softbank หรือ Docomo)</li>
+                    <li style="margin-bottom: 0.5rem;"><strong>วิธีใช้:</strong> สแกน QR Code ติดตั้งลงเครื่องตั้งแต่ไทย พอเครื่องลงจอดปุ๊บ เปิด Data Roaming ใช้ได้เลย</li>
+                </ul>
+            </div>
+
+        
+            
+            <!-- Shopping & Tax -->
+            <div class="glass-card" style="border-left: 4px solid #ef4444; background: var(--glass-bg); padding: 1.5rem; border-radius: 12px; grid-column: 1 / -1; box-shadow: var(--shadow);">
+                <h3 style="color: #ef4444; margin-bottom: 1rem; font-size: 1.3rem;"><i class="fa-solid fa-triangle-exclamation"></i> คู่มือขอคืนภาษีระบบใหม่ (Tax Refund 2026)</h3>
+                <p style="color: var(--dark); margin-bottom: 1rem; font-weight: bold;">🚨 กฎใหม่เริ่มใช้ พ.ย. 2026 (ทริปของคุณต้องใช้กฎนี้!)</p>
+                
+                <div style="display: grid; grid-template-columns: 1fr; gap: 1rem; color: var(--dark); line-height: 1.6;">
+                    
+                    <div style="background: rgba(239, 68, 68, 0.05); padding: 1rem; border-radius: 8px; border: 1px solid rgba(239, 68, 68, 0.2);">
+                        <h4 style="color: #ef4444; font-size: 1.1rem; margin-bottom: 0.5rem;"><i class="fa-solid fa-shop"></i> 1. ขั้นตอนตอนซื้อของที่ร้าน</h4>
+                        <ul style="list-style: disc; margin-left: 1.5rem;">
+                            <li><strong>ขั้นต่ำ:</strong> ซื้อครบ 5,500 เยน (รวมภาษี) ต่อ 1 ใบเสร็จ</li>
+                            <li><strong>วิธีจ่ายเงิน:</strong> คุณจะต้อง <strong>"จ่ายราคาเต็มที่รวมภาษี 10%"</strong> ไปก่อน (ระบบเก่าจะหักภาษีให้เลย แต่ระบบใหม่ไม่หักให้แล้ว)</li>
+                            <li><strong>ลงทะเบียน:</strong> ยื่นพาสปอร์ตให้พนักงาน และนำข้อมูลใบเสร็จไปลงทะเบียนในเว็บ <strong>Visit Japan Web</strong> พร้อมกรอกเลข <strong>"บัตรเครดิต"</strong> เพื่อรอรับเงินโอนคืน</li>
+                            <li><strong style="color: red;">กฎเหล็กห้ามแกะ:</strong> <strong>"ห้ามแกะใช้สินค้าในญี่ปุ่นเด็ดขาด!"</strong> หากใน 1 ใบเสร็จมีของ 10 ชิ้น แล้วคุณเผลอแกะกิน/แกะใช้ไปแค่ 1 ชิ้น คุณจะถูก <strong>ตัดสิทธิ์การคืนภาษีของบิลนั้นทั้งใบ!</strong> (ถ้าจะแกะใช้ชิ้นไหน ให้บอกพนักงานคิดเงินแยกบิลไปเลยตั้งแต่แรก)</li>
+                        </ul>
+                    </div>
+
+                    <div style="background: rgba(239, 68, 68, 0.05); padding: 1rem; border-radius: 8px; border: 1px solid rgba(239, 68, 68, 0.2);">
+                        <h4 style="color: #ef4444; font-size: 1.1rem; margin-bottom: 0.5rem;"><i class="fa-solid fa-plane-departure"></i> 2. ขั้นตอนขอคืนเงินที่สนามบิน (วันกลับ)</h4>
+                        <ul style="list-style: disc; margin-left: 1.5rem;">
+                            <li><strong style="color: red; font-size: 1.1rem;">ห้ามเช็คอินโหลดกระเป๋าก่อนเด็ดขาด!</strong></li>
+                            <li>เมื่อถึงสนามบินคันไซ ให้พุ่งตัวไปหา <strong>ตู้ Kiosk สำหรับ Tax Refund</strong> ก่อนเลย (อาจจะใช้มือถือต่อ Wi-Fi สนามบินทำรายการแทนได้)</li>
+                            <li>นำพาสปอร์ตไปสแกนที่ตู้ Kiosk ระบบจะขึ้นไฟ 2 สี:
+                                <ul style="list-style: circle; margin-left: 1.5rem; margin-top: 0.5rem; margin-bottom: 0.5rem;">
+                                    <li>🟢 <strong>ไฟสีเขียว:</strong> ผ่าน! นำกระเป๋าไปโหลดที่เคาน์เตอร์สายการบินได้เลย รอรับเงินเข้าบัตรเครดิต</li>
+                                    <li>🔴 <strong>ไฟสีแดง (โดนสุ่มตรวจ):</strong> ห้ามโหลดกระเป๋า! ต้องลากกระเป๋าไปที่จุดตรวจศุลกากร เพื่อเปิดกระเป๋าโชว์ของทุกชิ้นที่ซื้อมาให้เจ้าหน้าที่ดู ถ้าของอยู่ครบถึงจะได้เงินคืน (ถ้าเผลอโหลดกระเป๋าไปแล้ว = ชวดเงินคืนทันที)</li>
+                                </ul>
+                            </li>
+                            <li><strong>เผื่อเวลา:</strong> วันกลับต้องมาถึงสนามบินล่วงหน้าอย่างน้อย 3-4 ชั่วโมงเผื่อคิวสแกนยาวครับ</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tax Custom & Shopping Basic Rules -->
+            <div class="glass-card" style="border-left: 4px solid var(--secondary); background: var(--glass-bg); padding: 1.5rem; border-radius: 12px; grid-column: 1 / -1; box-shadow: var(--shadow); margin-top: 2rem;">
+                <h3 style="color: var(--secondary); margin-bottom: 1rem; font-size: 1.2rem;"><i class="fa-solid fa-bag-shopping"></i> เกร็ดความรู้: การช้อปปิ้ง & การนำของกลับเข้าไทย</h3>
+                
+                <div style="display: grid; grid-template-columns: 1fr; gap: 1rem; color: var(--dark); line-height: 1.6;">
+                    <div style="background: rgba(16, 185, 129, 0.05); padding: 1rem; border-radius: 8px;">
+                        <h4 style="color: var(--secondary); font-size: 1.1rem; margin-bottom: 0.5rem;"><i class="fa-solid fa-box-open"></i> ของใช้สิ้นเปลือง vs ของใช้ทั่วไป</h4>
+                        <ul style="list-style: disc; margin-left: 1.5rem;">
+                            <li><strong>ของใช้สิ้นเปลือง (ขนม/เครื่องสำอาง/ยา):</strong> ถ้าทำ Tax Refund พนักงานจะซีลใส่ถุงพลาสติกใส ปิดผนึกแน่นหนา <strong>"ห้ามแกะถุงเด็ดขาดจนกว่าจะถึงไทย!"</strong></li>
+                            <li><strong>ของใช้ทั่วไป (เสื้อผ้า/รองเท้า/ฟิกเกอร์):</strong> ถ้าไม่ได้ซีลถุง สามารถแกะใส่หรือแกะเล่นที่ญี่ปุ่นได้เลยครับ</li>
+                        </ul>
+                    </div>
+
+                    <div style="background: rgba(200, 42, 58, 0.05); padding: 1rem; border-radius: 8px;">
+                        <h4 style="color: var(--primary); font-size: 1.1rem; margin-bottom: 0.5rem;"><i class="fa-solid fa-plane-arrival"></i> การนำของกลับเข้าไทย (โดนภาษีไหม?)</h4>
+                        <ul style="list-style: disc; margin-left: 1.5rem;">
+                            <li><strong>โควต้าส่วนตัว:</strong> ศุลกากรไทยอนุญาตให้นำของใช้ส่วนตัวเข้ามาได้มูลค่ารวม <strong>ไม่เกิน 20,000 บาท/คน</strong> โดยไม่ต้องเสียภาษี</li>
+                            <li><strong>ของฝากทั่วไป (ขนม, ฟิกเกอร์ 1-2 ตัว, เสื้อผ้า):</strong> ถ้าซื้อมาในปริมาณที่ดูเป็นของฝากหรือของใช้ส่วนตัว (ไม่ได้ซื้อมาเป็นลังๆ หรือซ้ำกันเป็นสิบชิ้นเพื่อไปขาย) จะ <strong>ไม่โดนภาษีครับ</strong> เดินออกช่องเขียว (Nothing to Declare) ได้สบายๆ</li>
+                            <li><strong>ทริคเล็กๆ น้อยๆ:</strong> เสื้อผ้า Uniqlo หรือรองเท้าผ้าใบ ถ้ากลัวเกินงบ ให้ <strong>"ตัดป้ายราคาออก"</strong> แล้วพับใส่กระเป๋าแบบของใช้ส่วนตัวไปเลย จะปลอดภัยที่สุดครับ ส่วนฟิกเกอร์ก็แกะป้ายราคาออกเช่นกัน</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Insider Tips -->
+            <div class="glass-card" style=" background: var(--glass-bg); padding: 1.5rem; border-radius: 12px; grid-column: 1 / -1; box-shadow: var(--shadow);">
+                <h3 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.2rem;"><i class="fa-solid fa-lightbulb"></i> เคล็ดลับฉบับคนเคยไป (Insider Tips)</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                    <div style="background: rgba(200, 42, 58, 0.05); padding: 1rem; border-radius: 8px;">
+                        <h4 style="color: var(--primary); margin-bottom: 0.5rem; font-size: 1rem;"><i class="fa-solid fa-plane-arrival"></i> การเข้าเมืองจากสนามบิน</h4>
+                        <p style="font-size: 0.9rem; color: var(--gray);">แนะนำให้นั่ง <strong>Airport Bus</strong> เข้าเมือง เพราะสะดวกและไม่ต้องลากกระเป๋าเดินไกลตามสถานีรถไฟ</p>
+                    </div>
+                    <div style="background: rgba(200, 42, 58, 0.05); padding: 1rem; border-radius: 8px;">
+                        <h4 style="color: var(--primary); margin-bottom: 0.5rem; font-size: 1rem;"><i class="fa-solid fa-ticket"></i> ตั๋วรถไฟ Haruka</h4>
+                        <p style="font-size: 0.9rem; color: var(--gray);">ถ้าจำเป็นต้องนั่ง Haruka <strong>ควรซื้อตั๋วกระดาษ</strong> เพราะตั๋วแบบ QR Code ระบบชอบมีปัญหาขัดข้องบ่อยมาก</p>
+                    </div>
+                    <div style="background: rgba(200, 42, 58, 0.05); padding: 1rem; border-radius: 8px;">
+                        <h4 style="color: var(--primary); margin-bottom: 0.5rem; font-size: 1rem;"><i class="fa-solid fa-plane-departure"></i> เตือน! ขากลับสายการบิน Peach</h4>
+                        <p style="font-size: 0.9rem; color: var(--gray);">Peach Aviation บินออกจาก <strong>Terminal 2</strong> ซึ่งต้องนั่ง Shuttle Bus ไปอีกไกลและหาที่นั่งยากมาก <strong>ต้องเผื่อเวลาให้ดีครับ!</strong></p>
+                    </div>
+                    <div style="background: rgba(200, 42, 58, 0.05); padding: 1rem; border-radius: 8px;">
+                        <h4 style="color: var(--primary); margin-bottom: 0.5rem; font-size: 1rem;"><i class="fa-solid fa-toilet"></i> มารยาทการใช้ห้องน้ำ</h4>
+                        <p style="font-size: 0.9rem; color: var(--gray);">ห้องน้ำเป็นระบบอัตโนมัติ <strong>ใช้ทิชชู่เสร็จแล้วให้ทิ้งลงชักโครกกดน้ำไปเลย</strong> ห้ามทิ้งลงถังขยะเด็ดขาด!</p>
+                    </div>
+                    <div style="background: rgba(200, 42, 58, 0.05); padding: 1rem; border-radius: 8px;">
+                        <h4 style="color: var(--primary); margin-bottom: 0.5rem; font-size: 1rem;"><i class="fa-solid fa-fish"></i> การซื้อซูชิ</h4>
+                        <p style="font-size: 0.9rem; color: var(--gray);">ไม่แนะนำให้ซื้อซูชิแบบกล่องสำเร็จรูป แนะนำให้ไปทานซูชิปั้นสดที่ร้านจะได้ความอร่อยและคุ้มค่ากว่ามาก</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

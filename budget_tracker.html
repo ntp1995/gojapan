@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget & Finance | งบประมาณและการเงิน</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-header {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 3rem 1rem 2rem;
+            text-align: center;
+            border-radius: 0 0 20px 20px;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        .back-btn {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 500;
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            transition: background 0.3s;
+        }
+        .back-btn:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        .activity-list li {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px dashed #e2e8f0;
+            padding: 12px 0;
+            font-size: 1.05rem;
+            color: #475569;
+        }
+        .activity-list li:last-child {
+            border-bottom: none;
+        }
+        .activity-list li strong {
+            color: #0f172a;
+        }
+    </style>
+</head>
+<body style="background-color: #f8fafc; font-family: 'Prompt', sans-serif;">
+    <div class="page-header">
+        <a href="index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> กลับหน้าหลัก</a>
+        <i class="fa-solid fa-wallet" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+        <h1 style="font-size: 1.8rem; font-family: 'Prompt', sans-serif;">งบประมาณ (Budget)</h1>
+        <p style="opacity: 0.9; margin-top: 0.5rem;">สรุปงบประมาณ 40,000 บาท / ท่าน</p>
+    </div>
+
+    <div class="container" style="max-width: 600px; padding: 0 1rem; margin-bottom: 3rem;">
+        
+        <div class="glass-card" style=" background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
+            <ul class="activity-list">
+                <li>
+                    <span>✈️ ค่าตั๋วเครื่องบิน & กระเป๋า</span>
+                    <strong>15,711 บาท</strong>
+                </li>
+                <li>
+                    <span>🚌 ค่าเดินทางในไทย (ไป-กลับ กทม. & สนามบิน)</span>
+                    <strong>1,786 บาท</strong>
+                </li>
+                <li>
+                    <span>🛂 ค่าทำพาสปอร์ต</span>
+                    <strong>1,500 บาท</strong>
+                </li>
+                <li>
+                    <span>🏨 ที่พักโอซาก้า 3 คืน (หาร 2 แล้ว)</span>
+                    <strong>~3,000 บาท</strong>
+                </li>
+                <li>
+                    <span>🏨 ที่พักกรุงเทพฯ 1 คืน (หาร 2 แล้ว)</span>
+                    <strong>~800 บาท</strong>
+                </li>
+                <li>
+                    <span>🚆 ค่าเดินทางในญี่ปุ่น (ICOCA)</span>
+                    <strong>~2,100 บาท</strong>
+                </li>
+                <li>
+                    <span>📱 ค่าอินเทอร์เน็ต (eSIM Unlimited)</span>
+                    <strong>~600 บาท</strong>
+                </li>
+                <li>
+                    <span>👘 ค่าเข้าสถานที่ & กิโมโน</span>
+                    <strong>~2,500 บาท</strong>
+                </li>
+                <li>
+                    <span>🥩 ค่าอาหาร (รวมเนื้อโกเบ)</span>
+                    <strong>~6,500 บาท</strong>
+                </li>
+                <li style="padding-top: 15px; margin-top: 10px; color: #10b981; font-size: 1.2rem; font-weight: 700; border-top: 2px solid #e2e8f0; border-bottom: none;">
+                    <span style="color: #10b981;">รวมค่าใช้จ่ายคงที่</span>
+                    <strong style="color: #10b981;">~34,497 บาท</strong>
+                </li>
+            </ul>
+        </div>
+
+        <div style="background: rgba(16, 185, 129, 0.1); padding: 1.5rem; border-radius: 12px; margin-top: 1.5rem; text-align: center;">
+            <h3 style="color: #10b981; margin-bottom: 0.5rem; font-size: 1.2rem;"><i class="fa-solid fa-gift"></i> ยอดเงินเหลือสำหรับช้อปปิ้ง</h3>
+            <p style="font-size: 2rem; font-weight: 700; color: #059669; margin: 10px 0;">5,503 บาท</p>
+            <p style="font-size: 0.95rem; color: #475569; margin-bottom: 20px;">เตรียมแลกเป็นเงินเยนเข้า Travel Card เก็บไว้ล่วงหน้าได้เลยครับ</p>
+            
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+                <a href="exchange_tracker.html" class="btn btn-primary" style="background: #10b981; border: none; padding: 12px; font-size: 1rem; border-radius: 8px; font-weight: 500; display: flex; justify-content: center; align-items: center; gap: 8px;">
+                    <i class="fa-solid fa-chart-line"></i> ระบบคำนวณเรทแลกเงิน YouTrip
+                </a>
+                <a href="flight_tracker.html" class="btn btn-primary" style="background: #3b82f6; border: none; padding: 12px; font-size: 1rem; border-radius: 8px; font-weight: 500; display: flex; justify-content: center; align-items: center; gap: 8px;">
+                    <i class="fa-solid fa-plane"></i> เช็คราคาตั๋วเครื่องบิน
+                </a>
+                <a href="insurance_guide.html" class="btn btn-primary" style="background: #f59e0b; border: none; padding: 12px; font-size: 1rem; border-radius: 8px; font-weight: 500; display: flex; justify-content: center; align-items: center; gap: 8px;">
+                    <i class="fa-solid fa-shield-halved"></i> คำแนะนำเรื่องประกันเดินทาง
+                </a>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
