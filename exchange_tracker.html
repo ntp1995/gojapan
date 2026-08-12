@@ -20,7 +20,7 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css?v=1786545872898">
+    <link rel="stylesheet" href="css/style.css?v=1786547300874">
     <style>
         body {
             background-color: #f8fafc;
@@ -273,6 +273,39 @@
             <button onclick="window.location.reload();" class="btn btn-primary" style="width: 100%; margin-top: 1.5rem; border-radius: 12px; padding: 12px;"><i class="fa-solid fa-rotate-right"></i> รีเฟรชดึงเรทใหม่ล่าสุด</button>
         </div>
 
+        <!-- Tax Refund Calculator Card -->
+        <div class="calc-card" style="margin-top: 1.5rem;">
+            <h3 style="margin-bottom: 1.5rem; text-align: center; color: var(--dark);"><i class="fa-solid fa-receipt"></i> คำนวณเงินคืนภาษี (Tax Refund)</h3>
+            <p style="font-size: 0.85rem; color: #64748b; text-align: center; margin-bottom: 1.5rem;">กรอกยอดบิลรวมสินค้า (รวมภาษี 10%) เพื่อดูยอดเงินที่จะได้คืน</p>
+            
+            <div class="calc-input-group">
+                <label for="tax-input">ยอดซื้อรวมทั้งหมด (JPY)</label>
+                <input type="number" id="tax-input" placeholder="เช่น 11000" inputmode="numeric">
+                <span class="currency-symbol">¥</span>
+            </div>
+            
+            <div id="tax-warning" style="display: none; background: #fee2e2; color: #b91c1c; padding: 10px; border-radius: 8px; font-size: 0.85rem; margin-bottom: 15px; text-align: center;">
+                <i class="fa-solid fa-triangle-exclamation"></i> ยอดไม่ถึง 5,500 เยน (รวมภาษี) ทำ Tax-Free ไม่ได้ครับ
+            </div>
+            
+            <div class="result-box" style="margin-bottom: 15px; background: rgba(16, 185, 129, 0.05); border-color: #10b981;">
+                <h4 style="color: #059669;">🎉 จะได้ภาษีคืน (Refund)</h4>
+                <div style="font-size: 2rem; font-weight: 700; color: #059669;">
+                    <span id="tax-refund-jpy">0</span> <span style="font-size: 1rem;">¥</span>
+                </div>
+                <div style="font-size: 1rem; color: #64748b; font-weight: 500; margin-top: 5px;">
+                    ≈ <span id="tax-refund-thb">0.00</span> บาท
+                </div>
+            </div>
+            
+            <div class="result-box" style="background: rgba(245, 158, 11, 0.05); border-color: #f59e0b;">
+                <h4 style="color: #d97706;">🛍️ ยอดจ่ายจริง (Net Price)</h4>
+                <div style="font-size: 1.5rem; font-weight: 700; color: var(--dark);">
+                    <span id="tax-net-jpy">0</span> <span style="font-size: 1rem;">¥</span>
+                </div>
+            </div>
+        </div>
+
         <!-- How it works Card -->
         <div class="calc-card" style="margin-top: 1.5rem; margin-bottom: 2rem; background: rgba(255, 255, 255, 0.9);">
             <h3 style="margin-bottom: 1rem; color: #10b981; font-size: 1.1rem;"><i class="fa-solid fa-lightbulb"></i> ทริค: แลกเงินเข้าบัตร YouTrip</h3>
@@ -358,6 +391,8 @@
                 const jpy = (thb / currentRatePer100) * 100;
                 document.getElementById('jpy-input').value = Math.floor(jpy);
             }
+            
+            if (typeof calculateTax === 'function') calculateTax();
         }
 
         // Two-way calculation logic
@@ -383,6 +418,47 @@
             const jpy = (thb / currentRatePer100) * 100;
             jpyInput.value = Math.floor(jpy); // Floor to nearest Yen
         });
+
+        // Tax Refund Logic
+        const taxInput = document.getElementById('tax-input');
+        const warningBox = document.getElementById('tax-warning');
+        
+        function calculateTax() {
+            if (!taxInput.value || parseFloat(taxInput.value) <= 0) {
+                document.getElementById('tax-refund-jpy').innerText = "0";
+                document.getElementById('tax-refund-thb').innerText = "0.00";
+                document.getElementById('tax-net-jpy').innerText = "0";
+                warningBox.style.display = 'none';
+                return;
+            }
+            
+            const totalJpy = parseFloat(taxInput.value);
+            
+            // Check minimum
+            if (totalJpy > 0 && totalJpy < 5500) {
+                warningBox.style.display = 'block';
+                document.getElementById('tax-refund-jpy').innerText = "0";
+                document.getElementById('tax-refund-thb').innerText = "0.00";
+                document.getElementById('tax-net-jpy').innerText = totalJpy.toLocaleString();
+                return;
+            } else {
+                warningBox.style.display = 'none';
+            }
+            
+            // Calculate refund (10% of base price)
+            const basePrice = totalJpy / 1.1;
+            const refundJpy = Math.round(basePrice * 0.1);
+            const netJpy = Math.round(totalJpy - refundJpy);
+            
+            // Convert to THB
+            const refundThb = (refundJpy / 100) * currentRatePer100;
+            
+            document.getElementById('tax-refund-jpy').innerText = refundJpy.toLocaleString();
+            document.getElementById('tax-refund-thb').innerText = refundThb.toFixed(2);
+            document.getElementById('tax-net-jpy').innerText = netJpy.toLocaleString();
+        }
+        
+        taxInput.addEventListener('input', calculateTax);
 
         // Fetch on load
         window.addEventListener('load', fetchExchangeRate);
