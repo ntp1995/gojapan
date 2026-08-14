@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?v=1786547300874">
+    <link rel="stylesheet" href="css/style.css?v=1786729775604">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
@@ -60,7 +60,7 @@ summary i {
                     <i class="fa-regular fa-calendar"></i> 11 - 16 มีนาคม 2027
                 </div>
                 <div class="meta-item">
-                    <i class="fa-solid fa-wallet"></i> งบ 40,000 บาท/คน
+                    <i class="fa-solid fa-wallet"></i> งบ 45,000 บาท/คน
                 </div>
             </div>
             <a href="daily_guide.html" class="btn btn-primary">ดูแผนการเดินทาง <i class="fa-solid fa-arrow-down"></i></a>
@@ -68,7 +68,67 @@ summary i {
     </header>
 
     <main>
-        <!-- Section: Overview -->
+        <!-- Dashboard Navigation Grid (Added Today) -->
+        <section class="section">
+            <div class="container">
+                <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
+                    <a href="newbie_guide.html" class="glass-card text-center" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem 1rem; border-radius: 20px; background: white; border-bottom: 5px solid #4f46e5; box-shadow: 0 10px 25px -5px rgba(79, 70, 229, 0.15); transition: transform 0.2s;">
+                        <div style="background: rgba(79, 70, 229, 0.1); width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                            <i class="fa-solid fa-book-open" style="font-size: 2rem; color: #4f46e5;"></i>
+                        </div>
+                        <h3 style="color: #1e293b; margin: 0; font-size: 1.2rem;">ไกด์มือใหม่</h3>
+                    </a>
+                    
+                    <a href="tax_guide.html" class="glass-card text-center" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem 1rem; border-radius: 20px; background: white; border-bottom: 5px solid #f59e0b; box-shadow: 0 10px 25px -5px rgba(245, 158, 11, 0.15); transition: transform 0.2s;">
+                        <div style="background: rgba(245, 158, 11, 0.1); width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                            <i class="fa-solid fa-bag-shopping" style="font-size: 2rem; color: #f59e0b;"></i>
+                        </div>
+                        <h3 style="color: #1e293b; margin: 0; font-size: 1.2rem;">คู่มือช้อป & คืนภาษี</h3>
+                    </a>
+                    
+                    <a href="daily_guide.html" class="glass-card text-center" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem 1rem; border-radius: 20px; background: white; border-bottom: 5px solid #ec4899; box-shadow: 0 10px 25px -5px rgba(236, 72, 153, 0.15); transition: transform 0.2s;">
+                        <div style="background: rgba(236, 72, 153, 0.1); width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                            <i class="fa-solid fa-route" style="font-size: 2rem; color: #ec4899;"></i>
+                        </div>
+                        <h3 style="color: #1e293b; margin: 0; font-size: 1.2rem;">แผนเที่ยวรายวัน</h3>
+                    </a>
+                    <a href="budget_tracker.html" class="glass-card text-center" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem 1rem; border-radius: 20px; background: white; border-bottom: 5px solid #8b5cf6; box-shadow: 0 10px 25px -5px rgba(139, 92, 246, 0.15); transition: transform 0.2s;">
+                        <div style="background: rgba(139, 92, 246, 0.1); width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                            <i class="fa-solid fa-wallet" style="font-size: 2rem; color: #8b5cf6;"></i>
+                        </div>
+                        <h3 style="color: #1e293b; margin: 0; font-size: 1.2rem;">แผนจัดการงบ</h3>
+                    </a>
+                    <a href="flight_tracker.html" class="glass-card text-center" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem 1rem; border-radius: 20px; background: white; border-bottom: 5px solid #3b82f6; box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.15); transition: transform 0.2s;">
+                        <div style="background: rgba(59, 130, 246, 0.1); width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                            <i class="fa-solid fa-plane" style="font-size: 2rem; color: #3b82f6;"></i>
+                        </div>
+                        <h3 style="color: #1e293b; margin: 0; font-size: 1.2rem;">ข้อมูลเที่ยวบิน</h3>
+                    </a>
+                    
+                    <a href="prep_list.html" class="glass-card text-center" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem 1rem; border-radius: 20px; background: white; border-bottom: 5px solid #0ea5e9; box-shadow: 0 10px 25px -5px rgba(14, 165, 233, 0.15); transition: transform 0.2s;">
+                        <div style="background: rgba(14, 165, 233, 0.1); width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                            <i class="fa-solid fa-suitcase" style="font-size: 2rem; color: #0ea5e9;"></i>
+                        </div>
+                        <h3 style="color: #1e293b; margin: 0; font-size: 1.2rem;">เช็คลิสต์ก่อนบิน</h3>
+                    </a>
+                    
+                    <a href="exchange_tracker.html" class="glass-card text-center" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem 1rem; border-radius: 20px; background: white; border-bottom: 5px solid #10b981; box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.15); transition: transform 0.2s;">
+                        <div style="background: rgba(16, 185, 129, 0.1); width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                            <i class="fa-solid fa-calculator" style="font-size: 2rem; color: #10b981;"></i>
+                        </div>
+                        <h3 style="color: #1e293b; margin: 0; font-size: 1.2rem;">เครื่องมือการเงิน</h3>
+                    </a>
+                    <a href="insurance_guide.html" class="glass-card text-center" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem 1rem; border-radius: 20px; background: white; border-bottom: 5px solid #f59e0b; box-shadow: 0 10px 25px -5px rgba(245, 158, 11, 0.15); transition: transform 0.2s;">
+                        <div style="background: rgba(245, 158, 11, 0.1); width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                            <i class="fa-solid fa-shield-heart" style="font-size: 2rem; color: #f59e0b;"></i>
+                        </div>
+                        <h3 style="color: #1e293b; margin: 0; font-size: 1.2rem;">ประกันเดินทาง</h3>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+<!-- Section: Overview -->
         <section id="overview" class="section">
             <div class="container">
                 <div class="section-header">
@@ -238,7 +298,7 @@ summary i {
             <div class="container">
                 <div class="section-header">
                     <h2><i class="fa-solid fa-wallet"></i> สรุปงบประมาณ (Budget)</h2>
-                    <p>สรุปค่าใช้จ่ายหลัก 40,000 บาท / ท่าน</p>
+                    <p>สรุปค่าใช้จ่ายหลัก 45,000 บาท / ท่าน</p>
                 </div>
                 <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
                     <div class="glass-card" style="border-left: 4px solid #4f46e5;">
@@ -317,7 +377,6 @@ summary i {
                                     <ul style="list-style: none; padding-left: 1.5rem; margin-top: 10px; font-size: 0.85rem; color: #64748b;">
                                         <li style="display:flex; justify-content:space-between; margin-bottom: 5px;"><span>ค่ามัดจำ + เติมเงินบัตร ICOCA</span><span>~1,500 บาท</span></li>
                                         <li style="display:flex; justify-content:space-between; margin-bottom: 5px;"><span>ตั๋วรถไฟเข้าเมือง Nankai Airport</span><span>~250 บาท</span></li>
-                                        <li style="display:flex; justify-content:space-between; margin-bottom: 5px;"><span>ตั๋วเคเบิลคาร์ Rokko (ไป-กลับ)</span><span>~350 บาท</span></li>
                                     </ul>
                                 </details>
                             </li>
@@ -338,11 +397,11 @@ summary i {
                             <!-- Item 8 -->
                             <li style="border-bottom: 1px dashed rgba(0,0,0,0.1); padding-bottom: 10px; margin-bottom: 10px;">
                                 <details style="cursor: pointer;">
-                                    <summary style="display:flex; justify-content:space-between; list-style: none; outline: none; transition: color 0.2s;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color=''">
-                                        <span><i class="fa-solid fa-chevron-down" style="font-size: 0.7rem; color: #94a3b8; margin-right: 5px;"></i> 👘 ค่าเข้าสถานที่ & กิโมโน</span><strong>~2,500 บาท</strong>
+                                    <summary style="display:flex; justify-content:space-between; cursor:pointer; font-weight: 600; color: #1e293b;">
+                                        <span><i class="fa-solid fa-chevron-down" style="font-size: 0.7rem; color: #94a3b8; margin-right: 5px;"></i> 👘 ค่าเข้าสถานที่ & กิโมโน</span><strong>~3,900 บาท</strong>
                                     </summary>
                                     <ul style="list-style: none; padding-left: 1.5rem; margin-top: 10px; font-size: 0.85rem; color: #64748b;">
-                                        <li style="display:flex; justify-content:space-between; margin-bottom: 5px;"><span>ค่าเข้า + เช่ากระดานเลื่อนลานหิมะ</span><span>~600 บาท</span></li>
+                                        <li style="display:flex; justify-content:space-between; margin-bottom: 5px;"><span>ตั๋วเข้า USJ (ซื้อล่วงหน้าผ่านแอป)</span><span>~2,000 บาท</span></li>
                                         <li style="display:flex; justify-content:space-between; margin-bottom: 5px;"><span>ค่าเช่าชุดกิโมโนพร้อมทำผม (เกียวโต)</span><span>~1,500 บาท</span></li>
                                         <li style="display:flex; justify-content:space-between; margin-bottom: 5px;"><span>ค่าเข้าปราสาทโอซาก้า / วัดน้ำใส</span><span>~400 บาท</span></li>
                                     </ul>
@@ -357,20 +416,20 @@ summary i {
                                     </summary>
                                     <ul style="list-style: none; padding-left: 1.5rem; margin-top: 10px; font-size: 0.85rem; color: #64748b;">
                                         <li style="display:flex; justify-content:space-between; margin-bottom: 5px;"><span>ค่ากินจิปาถะ & สตรีทฟู้ด (เฉลี่ยวันละ 1,200)</span><span>~4,800 บาท</span></li>
-                                        <li style="display:flex; justify-content:space-between; margin-bottom: 5px;"><span>เผื่อมื้อพิเศษ (เช่น เนื้อโกเบ)</span><span>~1,700 บาท</span></li>
+                                        <li style="display:flex; justify-content:space-between; margin-bottom: 5px;"><span>เผื่อมื้อพิเศษ (เช่น ยากินิคุเนื้อวากิว)</span><span>~1,700 บาท</span></li>
                                     </ul>
                                 </details>
                             </li>
 
                             <li style="padding-top: 15px; margin-top: 10px; color: #4f46e5; font-size: 1.2rem; font-weight: 700; display:flex; justify-content:space-between; border-top: 2px solid rgba(79, 70, 229, 0.2);">
-                                <span>รวมค่าใช้จ่ายคงที่</span><strong>~34,497 บาท</strong>
+                                    <span>รวมค่าใช้จ่ายคงที่</span><strong>~36,037 บาท</strong>
                             </li>
                         </ul>
                     </div>
                     
                     <div style="background: rgba(16, 185, 129, 0.05); padding: 2rem; border-radius: 20px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; border: 1px solid rgba(16, 185, 129, 0.1);">
                         <h3 style="color: #10b981; margin-bottom: 0.5rem; font-size: 1.2rem;"><i class="fa-solid fa-gift"></i> ยอดเงินเหลือสำหรับช้อปปิ้ง</h3>
-                        <p style="font-size: 3rem; font-weight: 700; color: #10b981; margin: 10px 0; font-family: 'Inter', sans-serif;">5,503 <span style="font-size: 1.5rem">THB</span></p>
+                        <p style="font-size: 3rem; font-weight: 700; color: #10b981; margin: 10px 0; font-family: 'Inter', sans-serif;">10,963 <span style="font-size: 1.5rem">THB</span></p>
                         <p style="font-size: 1rem; color: #64748b; margin-bottom: 20px;">เตรียมแลกเป็นเงินเยนเข้า YouTrip ได้เลยครับ</p>
                     </div>
                 </div>
@@ -401,8 +460,8 @@ summary i {
                         <div class="timeline-dot"></div>
                         <div class="timeline-date">Day 2: 13 มีนาคม 2027</div>
                         <a href="daily_guide.html#day2" class="glass-card" style="display: block; text-decoration: none;">
-                            <h3 style="color: var(--dark); margin-bottom: 10px;"><i class="fa-regular fa-snowflake" style="color: var(--primary);"></i> โกเบ & ร็อคโกะ (Kobe & Rokko)</h3>
-                            <p style="color: var(--text-muted); font-weight: 500;">นั่งรถไฟไปโกเบ ➔ ขึ้นเคเบิลคาร์ ➔ ลานหิมะร็อคโกะ (Rokko Snow Park) ➔ หอคอยพอร์ตทาวเวอร์ ➔ ดินเนอร์เนื้อโกเบ</p>
+                            <h3 style="color: var(--dark); margin-bottom: 10px;"><i class="fa-solid fa-wand-magic-sparkles" style="color: var(--primary);"></i> ตะลุยสวนสนุก USJ เต็มวัน</h3>
+                            <p style="color: var(--text-muted); font-weight: 500;">นั่งรถไฟตรงดิ่งไป USJ ➔ โซนมาริโอ้ ➔ ปราสาทแฮร์รี่ ➔ มินเนี่ยน ➔ ดินเนอร์ย่าน Namba</p>
                         </a>
                     </div>
                     
@@ -422,60 +481,14 @@ summary i {
                         <div class="timeline-date">Day 4: 15 มีนาคม 2027</div>
                         <a href="daily_guide.html#day4" class="glass-card" style="display: block; text-decoration: none;">
                             <h3 style="color: var(--dark); margin-bottom: 10px;"><i class="fa-solid fa-plane-departure" style="color: var(--primary);"></i> วันกลับ (Departure)</h3>
-                            <p style="color: var(--text-muted); font-weight: 500;">ตลาดปลาคุโรมง ➔ หอคอยซึเทนคาคุ (Shinsekai) ➔ <strong style="color: var(--primary);">ทำ Tax Refund ที่สนามบิน</strong> ➔ บินกลับไทย</p>
+                            <p style="color: var(--text-muted); font-weight: 500;">ศาลเจ้าสุมิโยชิ ➔ ตลาดปลาคุโรมง ➔ Namba Parks ➔ หอคอยซึเทนคาคุ ➔ <strong style="color: var(--primary);">ทำ Tax Refund ที่สนามบิน</strong> ➔ บินกลับไทย</p>
                         </a>
                     </div>
                 </div>
             </div>
         </section>
         
-        /<!-- Dashboard Navigation Grid \(Added Today\) -->/
-        <section class="section">
-            <div class="container">
-                <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
-                    <a href="newbie_guide.html" class="glass-card text-center" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem 1rem; border-radius: 20px; background: white; border-bottom: 5px solid #4f46e5; box-shadow: 0 10px 25px -5px rgba(79, 70, 229, 0.15); transition: transform 0.2s;">
-                        <div style="background: rgba(79, 70, 229, 0.1); width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
-                            <i class="fa-solid fa-book-open" style="font-size: 2rem; color: #4f46e5;"></i>
-                        </div>
-                        <h3 style="color: #1e293b; margin: 0; font-size: 1.2rem;">ไกด์มือใหม่</h3>
-                    </a>
-                    
-                    <a href="tax_guide.html" class="glass-card text-center" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem 1rem; border-radius: 20px; background: white; border-bottom: 5px solid #f59e0b; box-shadow: 0 10px 25px -5px rgba(245, 158, 11, 0.15); transition: transform 0.2s;">
-                        <div style="background: rgba(245, 158, 11, 0.1); width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
-                            <i class="fa-solid fa-bag-shopping" style="font-size: 2rem; color: #f59e0b;"></i>
-                        </div>
-                        <h3 style="color: #1e293b; margin: 0; font-size: 1.2rem;">คู่มือช้อป & คืนภาษี</h3>
-                    </a>
-                    
-                    <a href="daily_guide.html" class="glass-card text-center" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem 1rem; border-radius: 20px; background: white; border-bottom: 5px solid #ec4899; box-shadow: 0 10px 25px -5px rgba(236, 72, 153, 0.15); transition: transform 0.2s;">
-                        <div style="background: rgba(236, 72, 153, 0.1); width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
-                            <i class="fa-solid fa-route" style="font-size: 2rem; color: #ec4899;"></i>
-                        </div>
-                        <h3 style="color: #1e293b; margin: 0; font-size: 1.2rem;">แผนเที่ยวรายวัน</h3>
-                    </a>
-                    
-                    <a href="prep_list.html" class="glass-card text-center" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem 1rem; border-radius: 20px; background: white; border-bottom: 5px solid #0ea5e9; box-shadow: 0 10px 25px -5px rgba(14, 165, 233, 0.15); transition: transform 0.2s;">
-                        <div style="background: rgba(14, 165, 233, 0.1); width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
-                            <i class="fa-solid fa-suitcase" style="font-size: 2rem; color: #0ea5e9;"></i>
-                        </div>
-                        <h3 style="color: #1e293b; margin: 0; font-size: 1.2rem;">เช็คลิสต์ก่อนบิน</h3>
-                    </a>
-                    
-                    <a href="exchange_tracker.html" class="glass-card text-center" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem 1rem; border-radius: 20px; background: white; border-bottom: 5px solid #10b981; box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.15); transition: transform 0.2s;">
-                        <div style="background: rgba(16, 185, 129, 0.1); width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
-                            <i class="fa-solid fa-calculator" style="font-size: 2rem; color: #10b981;"></i>
-                        </div>
-                        <h3 style="color: #1e293b; margin: 0; font-size: 1.2rem;">เครื่องมือการเงิน</h3>
-                    </a>
-                    <a href="insurance_guide.html" class="glass-card text-center" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem 1rem; border-radius: 20px; background: white; border-bottom: 5px solid #f59e0b; box-shadow: 0 10px 25px -5px rgba(245, 158, 11, 0.15); transition: transform 0.2s;">
-                        <div style="background: rgba(245, 158, 11, 0.1); width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
-                            <i class="fa-solid fa-shield-heart" style="font-size: 2rem; color: #f59e0b;"></i>
-                        </div>
-                        <h3 style="color: #1e293b; margin: 0; font-size: 1.2rem;">ประกันเดินทาง</h3>
-                    </a>
-                </div>
-            </div>
-        </section>
+        
 
     </main>
 

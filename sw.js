@@ -1,4 +1,4 @@
-const CACHE_NAME = 'go-japan-cache-v1';
+const CACHE_NAME = 'go-japan-cache-v3';
 const urlsToCache = [
   './',
   './index.html',

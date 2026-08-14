@@ -20,7 +20,7 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css?v=1786547300874">
+    <link rel="stylesheet" href="css/style.css?v=1786729775604">
     <style>
         body {
             background-color: #f8fafc;
@@ -211,7 +211,6 @@
 <body>
 
     <header class="header">
-        <a href="index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> กลับ</a>
         <h1 style="margin-top: 20px; font-size: 1.8rem;"><i class="fa-brands fa-cc-visa"></i> YouTrip Exchange</h1>
         <p style="opacity: 0.9; margin-top: 5px;">ระบบช่วยตัดสินใจแลกเงินเยน (JPY)</p>
     </header>
@@ -232,6 +231,7 @@
                 ( เทียบเท่า 1 บาท = <span id="thb-to-jpy-rate">--.--</span> เยน )
             </div>
             <div style="font-size: 0.8rem; color: #94a3b8;"><i class="fa-solid fa-clock"></i> อัปเดตล่าสุด: <span id="update-time">--:--</span></div>
+
             
             <div id="status-badge" class="status-badge status-good">
                 <i class="fa-solid fa-circle-notch fa-spin"></i> วิเคราะห์...
@@ -326,6 +326,7 @@
         const GAUGE_MIN = 22.50;
         const GAUGE_MAX = 25.50;
         
+        let baseRatePer100 = 0;
         let currentRatePer100 = 0;
 
         async function fetchExchangeRate() {
@@ -335,9 +336,9 @@
                 
                 // API gives 1 JPY to THB, we want 100 JPY to THB
                 const rate1JPY = data.rates.THB;
-                currentRatePer100 = rate1JPY * 100;
+                baseRatePer100 = rate1JPY * 100;
                 
-                updateUI();
+                applyOffsetAndUpdate();
                 
                 // Hide loading
                 document.getElementById('loading').style.display = 'none';
@@ -460,10 +461,32 @@
         
         taxInput.addEventListener('input', calculateTax);
 
-        // Fetch on load
-        window.addEventListener('load', fetchExchangeRate);
+        function applyOffsetAndUpdate() {
+            if (baseRatePer100 === 0) return;
+            currentRatePer100 = baseRatePer100;
+            
+            updateUI();
+            
+            // Force re-trigger calculator if they have values
+            const jpyInput = document.getElementById('jpy-input');
+            const thbInput = document.getElementById('thb-input');
+            if (jpyInput && jpyInput.value) {
+                jpyInput.dispatchEvent(new Event('input'));
+            } else if (thbInput && thbInput.value) {
+                thbInput.dispatchEvent(new Event('input'));
+            }
+        }
 
-        // Register Service Worker for PWA Installation
+        // Fetch on load
+        window.addEventListener('load', () => {
+            // Clear inputs on page load so numbers don't get stuck
+            document.getElementById('thb-input').value = '';
+            document.getElementById('jpy-input').value = '';
+            const taxInputEl = document.getElementById('tax-input');
+            if(taxInputEl) taxInputEl.value = '';
+            
+            fetchExchangeRate();
+        });
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
                 navigator.serviceWorker.register('./sw_exchange.js')
