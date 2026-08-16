@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <!-- ป้องกันการแคช (Anti-Caching) -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - คู่มือและอื่นๆ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css?v=1786905098406">
+    <style>
+        .page-header {
+            background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+            color: white;
+            padding: 3rem 1rem 2rem;
+            text-align: center;
+            border-radius: 0 0 20px 20px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 15px rgba(79, 70, 229, 0.2);
+        }
+        .menu-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            padding: 0 1rem;
+            margin-bottom: 3rem;
+        }
+        .menu-card {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+            color: #1e293b;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-left: 5px solid #4f46e5;
+            transition: all 0.2s;
+        }
+        .menu-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+        }
+        .menu-icon {
+            font-size: 1.5rem;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f1f5f9;
+            border-radius: 10px;
+            color: #4f46e5;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-header">
+        <h1 style="font-size: 1.8rem; margin: 0 0 5px 0;"><i class="fa-solid fa-compass"></i> เมนูอื่นๆ</h1>
+        <p style="margin: 0; opacity: 0.9; font-size: 0.9rem;">คู่มือและตัวช่วยทั้งหมดสำหรับทริปนี้</p>
+    </div>
+
+    <main class="container">
+        <div class="menu-grid">
+            <a href="newbie_guide.html" class="menu-card" style="border-color: #3b82f6;">
+                <div class="menu-icon" style="color: #3b82f6; background: #eff6ff;"><i class="fa-solid fa-book-open"></i></div>
+                <div>
+                    <h3 style="margin: 0; font-size: 1.1rem;">ไกด์มือใหม่</h3>
+                    <p style="margin: 0; font-size: 0.85rem; color: #64748b;">การขึ้นรถไฟ มารยาทต่างๆ</p>
+                </div>
+                <i class="fa-solid fa-chevron-right" style="margin-left: auto; color: #cbd5e1;"></i>
+            </a>
+            
+            <a href="tax_guide.html" class="menu-card" style="border-color: #f59e0b;">
+                <div class="menu-icon" style="color: #f59e0b; background: #fffbeb;"><i class="fa-solid fa-bag-shopping"></i></div>
+                <div>
+                    <h3 style="margin: 0; font-size: 1.1rem;">คู่มือช้อปปิ้ง & Tax-Free</h3>
+                    <p style="margin: 0; font-size: 0.85rem; color: #64748b;">วิธียกเว้นภาษี 10%</p>
+                </div>
+                <i class="fa-solid fa-chevron-right" style="margin-left: auto; color: #cbd5e1;"></i>
+            </a>
+
+            <a href="insurance_guide.html" class="menu-card" style="border-color: #10b981;">
+                <div class="menu-icon" style="color: #10b981; background: #ecfdf5;"><i class="fa-solid fa-shield-halved"></i></div>
+                <div>
+                    <h3 style="margin: 0; font-size: 1.1rem;">ประกันเดินทาง</h3>
+                    <p style="margin: 0; font-size: 0.85rem; color: #64748b;">กรมธรรม์และเบอร์ฉุกเฉิน</p>
+                </div>
+                <i class="fa-solid fa-chevron-right" style="margin-left: auto; color: #cbd5e1;"></i>
+            </a>
+
+            <a href="immigration_en.html" class="menu-card" style="border-color: #ec4899;">
+                <div class="menu-icon" style="color: #ec4899; background: #fdf2f8;"><i class="fa-solid fa-passport"></i></div>
+                <div>
+                    <h3 style="margin: 0; font-size: 1.1rem;">ใบตม. (Visit Japan Web)</h3>
+                    <p style="margin: 0; font-size: 0.85rem; color: #64748b;">ตัวอย่างการกรอกข้อมูล</p>
+                </div>
+                <i class="fa-solid fa-chevron-right" style="margin-left: auto; color: #cbd5e1;"></i>
+            </a>
+            
+            <a href="exchange_tracker.html" class="menu-card" style="border-color: #8b5cf6;">
+                <div class="menu-icon" style="color: #8b5cf6; background: #f5f3ff;"><i class="fa-solid fa-yen-sign"></i></div>
+                <div>
+                    <h3 style="margin: 0; font-size: 1.1rem;">บันทึกแลกเงินเยน</h3>
+                    <p style="margin: 0; font-size: 0.85rem; color: #64748b;">เรทเงินที่แลกไว้</p>
+                </div>
+                <i class="fa-solid fa-chevron-right" style="margin-left: auto; color: #cbd5e1;"></i>
+            </a>
+        </div>
+    </main>
+</body>
+</html>

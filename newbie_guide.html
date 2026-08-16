@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Newbie Guide | คู่มือมือใหม่</title>
-    <link rel="stylesheet" href="css/style.css?v=1786729775604">
+    <link rel="stylesheet" href="css/style.css?v=1786905098406">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -44,7 +44,7 @@
 </head>
 <body style="background-color: #f8fafc; font-family: 'Prompt', sans-serif;">
     <div class="page-header">
-        <a href="index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> กลับหน้าหลัก</a>
+        
         <i class="fa-solid fa-book-open" style="font-size: 3rem; margin-bottom: 1rem;"></i>
         <h1 style="font-size: 1.8rem; font-family: 'Prompt', sans-serif;">คู่มือเอาตัวรอดสำหรับมือใหม่</h1>
         <p style="opacity: 0.9; margin-top: 0.5rem;">รวบรวมทริคและเทคนิคการเดินทางในญี่ปุ่น</p>
@@ -219,5 +219,48 @@
             </div>
         </div>
     </div>
+
+    
+    <!-- Bottom Navigation Bar -->
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item" id="nav-home">
+            <i class="fa-solid fa-house"></i>
+            <span>หน้าแรก</span>
+        </a>
+        <a href="daily_guide.html" class="nav-item" id="nav-plan">
+            <i class="fa-solid fa-calendar-days"></i>
+            <span>แผนเที่ยว</span>
+        </a>
+        <a href="budget_tracker.html" class="nav-item" id="nav-budget">
+            <i class="fa-solid fa-wallet"></i>
+            <span>งบ</span>
+        </a>
+        <a href="prep_list.html" class="nav-item" id="nav-prep">
+            <i class="fa-solid fa-suitcase"></i>
+            <span>เตรียมตัว</span>
+        </a>
+        <a href="menu.html" class="nav-item" id="nav-menu">
+            <i class="fa-solid fa-bars"></i>
+            <span>อื่นๆ</span>
+        </a>
+    </nav>
+    <script>
+        // Highlight active nav item
+        document.addEventListener('DOMContentLoaded', () => {
+            const path = window.location.pathname;
+            const page = path.split('/').pop() || 'index.html';
+            
+            if (page === 'index.html') {
+                document.getElementById('nav-home')?.classList.add('active');
+            } else if (page === 'daily_guide.html') {
+                document.getElementById('nav-plan')?.classList.add('active');
+            } else if (page === 'budget_tracker.html' || page === 'exchange_tracker.html') {
+                document.getElementById('nav-budget')?.classList.add('active');
+            } else if (page === 'prep_list.html') {
+                document.getElementById('nav-prep')?.classList.add('active');
+            } else if (['menu.html', 'newbie_guide.html', 'tax_guide.html', 'insurance_guide.html', 'immigration_en.html'].includes(page)) {
+                document.getElementById('nav-menu')?.classList.add('active');
+            }
+        });
+    </script>
 </body>
-</html>

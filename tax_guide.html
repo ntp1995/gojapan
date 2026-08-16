@@ -12,20 +12,50 @@
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css?v=1786729775604">
+    <link rel="stylesheet" href="css/style.css?v=1786905098406">
 </head>
 <body>
 
-    <nav class="navbar">
-        <a href="index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> กลับหน้าหลัก</a>
-        <h1 class="nav-title">คู่มือช้อปปิ้ง & ขอคืนภาษี</h1>
-    </nav>
+    <style>
+        .page-header {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            color: white;
+            padding: 3rem 1rem 2rem;
+            text-align: center;
+            border-radius: 0 0 20px 20px;
+            margin-bottom: 2rem;
+            position: relative;
+            box-shadow: 0 4px 15px rgba(245,158,11,0.2);
+        }
+        .back-btn {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 12px;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+            transition: all 0.2s ease;
+        }
+        .back-btn:hover {
+            background: rgba(255,255,255,0.3);
+        }
+    </style>
 
-    <main class="container" style="padding-top: 2rem;">
-        <div class="section-header">
-            <h2><i class="fa-solid fa-bag-shopping"></i> เคล็ดลับการซื้อของ (Tax-Free)</h2>
-            <p>รู้ไว้ก่อนช้อป จะได้ไม่พลาดใส่ของที่อยากใช้!</p>
-        </div>
+    <div class="page-header">
+        
+        <h1 style="font-size: 1.8rem; margin: 0 0 5px 0;"><i class="fa-solid fa-bag-shopping"></i> คู่มือช้อปปิ้ง & ขอคืนภาษี</h1>
+        <p style="margin: 0; opacity: 0.9; font-size: 0.9rem;">รู้ไว้ก่อนช้อป จะได้ไม่พลาดใส่ของที่อยากใช้!</p>
+    </div>
+
+    <main class="container">
 
         <div class="glass-card" style="margin-bottom: 2rem;">
             <h3 style="color: #ef4444; border-bottom: 2px solid #fecaca; padding-bottom: 10px; margin-bottom: 15px;">
@@ -98,5 +128,48 @@
 
     </main>
 
+
+    
+    <!-- Bottom Navigation Bar -->
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item" id="nav-home">
+            <i class="fa-solid fa-house"></i>
+            <span>หน้าแรก</span>
+        </a>
+        <a href="daily_guide.html" class="nav-item" id="nav-plan">
+            <i class="fa-solid fa-calendar-days"></i>
+            <span>แผนเที่ยว</span>
+        </a>
+        <a href="budget_tracker.html" class="nav-item" id="nav-budget">
+            <i class="fa-solid fa-wallet"></i>
+            <span>งบ</span>
+        </a>
+        <a href="prep_list.html" class="nav-item" id="nav-prep">
+            <i class="fa-solid fa-suitcase"></i>
+            <span>เตรียมตัว</span>
+        </a>
+        <a href="menu.html" class="nav-item" id="nav-menu">
+            <i class="fa-solid fa-bars"></i>
+            <span>อื่นๆ</span>
+        </a>
+    </nav>
+    <script>
+        // Highlight active nav item
+        document.addEventListener('DOMContentLoaded', () => {
+            const path = window.location.pathname;
+            const page = path.split('/').pop() || 'index.html';
+            
+            if (page === 'index.html') {
+                document.getElementById('nav-home')?.classList.add('active');
+            } else if (page === 'daily_guide.html') {
+                document.getElementById('nav-plan')?.classList.add('active');
+            } else if (page === 'budget_tracker.html' || page === 'exchange_tracker.html') {
+                document.getElementById('nav-budget')?.classList.add('active');
+            } else if (page === 'prep_list.html') {
+                document.getElementById('nav-prep')?.classList.add('active');
+            } else if (['menu.html', 'newbie_guide.html', 'tax_guide.html', 'insurance_guide.html', 'immigration_en.html'].includes(page)) {
+                document.getElementById('nav-menu')?.classList.add('active');
+            }
+        });
+    </script>
 </body>
-</html>

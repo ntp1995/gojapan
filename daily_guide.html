@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="th">
-<head>
+<!DOCTYPE html><html lang="th"><head>
     <!-- ป้องกันการแคช (Anti-Caching) -->
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
@@ -15,17 +13,16 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?v=1786729775604">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Prompt:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?v=1786905098406">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body style="background-color: #f8fafc;">
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="logo">
-                <i class="fa-solid fa-arrow-left"></i> กลับหน้าหลัก
-            </a>
+            <span class="logo"><i class="fa-solid fa-calendar-days"></i> แผนเที่ยว</span>
             <ul class="nav-links">
                 <li><a href="#day1">Day 1</a></li>
                 <li><a href="#day2">Day 2</a></li>
@@ -36,12 +33,14 @@
     </nav>
 
     <header class="hero" style="min-height: 30vh; padding-top: 100px;">
-        <div class="hero-bg" style="background-image: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.8)), url('https://upload.wikimedia.org/wikipedia/commons/4/47/Dotonbori%2C_Osaka%2C_at_night%2C_November_2016.jpg');"></div>
+        <div class="hero-bg" style="background-image: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.8)), url('images/offline/hero_bg.jpg');">
+        </div>
         <div class="hero-content">
             <h1 class="hero-title" style="font-size: 2.5rem;">Daily Survival Guide</h1>
             <p class="hero-subtitle">คู่มือรอดชีวิตรายวันแบบละเอียดทุกฝีก้าว</p>
         </div>
     </header>
+
 
     <main style="padding: 3rem 0;">
         <div class="container guide-container">
@@ -50,37 +49,40 @@
                 <h3>สารบัญรายวัน</h3>
                 <ul class="guide-nav">
                     <li><a href="#day0"><i class="fa-solid fa-bus"></i> Day 0: แพร่ - กทม.</a></li>
-                    <li><a href="#day1" class="active"><i class="fa-solid fa-plane-arrival"></i> Day 1: โอซาก้าแสงสี</a></li>
+                    <li><a href="#day1" class="active"><i class="fa-solid fa-plane-arrival"></i> Day 1: โอซาก้าแสงสี</a>
+                    </li>
                     <li><a href="#day2"><i class="fa-solid fa-wand-magic-sparkles"></i> Day 2: ลุยสวนสนุก USJ</a></li>
                     <li><a href="#day3"><i class="fa-solid fa-torii-gate"></i> Day 3: เกียวโต-อูจิ</a></li>
-                    <li><a href="#day4"><i class="fa-solid fa-plane-departure"></i> Day 4: ตลาดปลา & กลับไทย</a></li>
+                    <li><a href="#day4"><i class="fa-solid fa-plane-departure"></i> Day 4: ตลาดปลา &amp; กลับไทย</a></li>
                     <li><a href="#day5"><i class="fa-solid fa-house"></i> Day 5: ถึงบ้านเกิด</a></li>
                 </ul>
             </aside>
 
             <!-- Main Content -->
             <div class="guide-content">
-                
-                
+
+
                 <!-- Day 0 -->
                 <section id="day0" style="margin-bottom: 4rem;">
-                    <h2 style="color: var(--primary); border-bottom: 1px solid #e2e8f0; padding-bottom: 10px; margin-bottom: 1.5rem;">Day 0: ออกเดินทางจากแพร่ (11 มี.ค.)</h2>
-                    
+                    <h2 style="color: var(--primary); border-bottom: 1px solid #e2e8f0; padding-bottom: 10px; margin-bottom: 1.5rem;">
+                        Day 0: ออกเดินทางจากแพร่ (11 มี.ค.)</h2>
+
                     <div class="timeline">
                         <div class="timeline-item">
                             <div class="timeline-dot"></div>
                             <div class="timeline-date">09:56 - 18:14</div>
                             <div class="timeline-content glass-card">
                                 <h4>1. นั่งรถทัวร์ นครชัยแอร์ (แพร่ - กรุงเทพฯ)</h4>
-                                
+
                                 <div class="route-flow">
-                                    <span>📍 บขส.แพร่</span> ➔ 
-                                    <span><span class="badge badge-bus">🚌 รถทัวร์ NCA (Gold Class)</span></span> ➔ 
+                                    <span>📍 บขส.แพร่</span> ➔
+                                    <span><span class="badge badge-bus">🚌 รถทัวร์ NCA (Gold Class)</span></span> ➔
                                     <span>📍 ศูนย์นครชัยแอร์ กรุงเทพฯ</span>
                                 </div>
-                                
+
                                 <details>
-                                    <summary class="details-btn"><i class="fa-solid fa-chevron-down"></i> ดูรายละเอียดการเดินทาง</summary>
+                                    <summary class="details-btn"><i class="fa-solid fa-chevron-down"></i>
+                                        ดูรายละเอียดการเดินทาง</summary>
                                     <div class="details-content">
                                         <ul style="color: #475569; line-height: 1.6;">
                                             <li>ออกเดินทางจากแพร่สเตชั่น/บขส. (รอบ 09:56 น.)</li>
@@ -89,241 +91,305 @@
                                         </ul>
                                     </div>
                                 </details>
-                                
+
                                 <div class="emergency-box" style="margin-top: 15px;">
                                     <h5>🚨 คำเตือนสำคัญมาก!</h5>
-                                    <strong>ห้ามจองรอบดึก (20:35 น.) เด็ดขาด!</strong> เพราะรถจะถึงกรุงเทพฯ ตอนตี 4 ซึ่งคุณจะ <strong>ตกเครื่องบินแน่นอน</strong> (เครื่องออก 00:25 น. ของเช้าวันถัดไป) ต้องจองรอบ 09:56 น. เท่านั้น
+                                    <strong>ห้ามจองรอบดึก (20:35 น.) เด็ดขาด!</strong> เพราะรถจะถึงกรุงเทพฯ ตอนตี 4
+                                    ซึ่งคุณจะ <strong>ตกเครื่องบินแน่นอน</strong> (เครื่องออก 00:25 น. ของเช้าวันถัดไป)
+                                    ต้องจองรอบ 09:56 น. เท่านั้น
                                 </div>
                             </div>
-                       
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-date">19:00 - 20:30</div>
-                            <div class="timeline-content glass-card">
-                                <h4>2. เดินทางไปสนามบินสุวรรณภูมิ (BKK)</h4>
-                                
-                                <div class="route-flow">
-                                    <span>📍 ศูนย์นครชัยแอร์</span> ➔ 
-                                    <span><span class="badge badge-walk">🚕 แท็กซี่สั้นๆ</span></span> ➔ 
-                                    <span>📍 BTS หมอชิต</span> ➔ 
-                                    <span><span class="badge" style="background: #16a34a; color: white;">🚇 BTS (สีเขียว)</span></span> ➔ 
-                                    <span>📍 พญาไท</span> ➔ 
-                                    <span><span class="badge" style="background: #9333ea; color: white;">🚆 Airport Rail Link</span></span> ➔ 
-                                    <span>📍 สุวรรณภูมิ (ชั้น 4)</span>
-                                </div>
-                                
-                                <details>
-                                    <summary class="details-btn"><i class="fa-solid fa-chevron-down"></i> ดูรายละเอียดเส้นทางประหยัด</summary>
-                                    <div class="details-content">
-                                        <ol style="color: #475569; line-height: 1.6; margin-left: 1.5rem; margin-bottom: 1rem;">
-                                            <li>นั่งแท็กซี่หรือรถเมล์จากศูนย์นครชัยแอร์ไปที่ <strong>BTS หมอชิต</strong> (ค่ารถแท็กซี่ราวๆ 50-60 บาท)</li>
-                                            <li>ขึ้น BTS หมอชิต ไปลงที่สถานี <strong>พญาไท</strong> (47 บาท)</li>
-                                            <li>เดินตามป้ายทางเชื่อมเพื่อไปต่อรถไฟฟ้า <strong>Airport Rail Link (ARL) สถานีพญาไท</strong></li>
-                                            <li>นั่ง ARL ยาวไปสุดสายที่ <strong>สนามบินสุวรรณภูมิ</strong> (45 บาท) แล้วกดลิฟต์ขึ้นไปชั้น 4 (ผู้โดยสารขาออก)</li>
-                                        </ol>
-                                        <p style="color: #475569;"><strong>💡 คำแนะนำ:</strong> ช่วง 6-7 โมงเย็นคนบนรถไฟฟ้าจะเยอะมาก อาจจะหาที่วางกระเป๋าเดินทางลำบากนิดนึง ให้ยืนชิดมุมและจับกระเป๋าไว้ให้แน่นๆ นะครับ พอไปถึงสนามบินแล้วค่อยหาอะไรทานเป็นมื้อเย็นครับ</p>
-                                    </div>
-                                </details>
-                            </div>
-                        </div>
 
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-date">22:00 - 23:30</div>
-                            <div class="timeline-content glass-card">
-                                <h4>3. เช็คอินและโหลดสัมภาระ (VietJet)</h4>
-                                
-                                <div class="route-flow">
-                                    <span>📍 สุวรรณภูมิ ชั้น 4</span> ➔ 
-                                    <span><span class="badge badge-icoca">🛂 เคาน์เตอร์ VietJet (VZ)</span></span> ➔ 
-                                    <span>🧳 โหลดกระเป๋า</span>
-                                </div>
-                                
-                                <details>
-                                    <summary class="details-btn"><i class="fa-solid fa-chevron-down"></i> ดูรายละเอียดแบบเจาะลึก (เตรียมตัวให้พร้อม)</summary>
-                                    <div class="details-content">
-                                        <ul style="color: #475569; line-height: 1.6; margin-left: 1.5rem; margin-bottom: 0;">
-                                            <li><strong>ดูจอแสดงผล:</strong> ไปที่ชั้น 4 (ขาออก) มองหาจอทีวีใหญ่ๆ หาเที่ยวบิน <strong>VZ822</strong> เพื่อดูว่าเคาน์เตอร์เช็คอินอยู่แถวไหน (ปกติ VietJet จะอยู่แถวตัวอักษร V หรือ W ท้ายๆ อาคาร)</li>
-                                            <li><strong>เวลาเปิด:</strong> เคาน์เตอร์เปิดล่วงหน้า 3 ชั่วโมง (เปิดประมาณ 22:15 น.) แนะนำให้ไปต่อแถวรอเลยเพราะคนมักจะเยอะมาก</li>
-                                            <li><strong>เอกสารที่ต้องใช้:</strong> พาสปอร์ต (ตัวจริง), หน้าจอ QR Code ของ Visit Japan Web, และใบจองตั๋วเครื่องบิน (Itinerary) เผื่อเจ้าหน้าที่ขอดู</li>
-                                            <li><strong>เรื่องกระเป๋า (สำคัญมาก):</strong>
-                                                <ul style="margin-top: 5px; margin-bottom: 5px;">
-                                                    <li><strong>ถือขึ้นเครื่อง (Carry-on):</strong> ได้สูงสุด 1 ใบ + กระเป๋าใบเล็ก 1 ใบ <strong>รวมกันต้องไม่เกิน 7 กก.</strong> (สายการบินนี้ชั่งน้ำหนักเข้มงวดมาก)</li>
-                                                    <li><strong>โหลดลงใต้เครื่อง:</strong> แนะนำให้โหลดของเหลวที่เกิน 100 ml ลงให้หมด</li>
-                                                    <li><strong>พาวเวอร์แบงก์ (Powerbank):</strong> 🚨 <strong>ห้ามใส่กระเป๋าโหลดเด็ดขาด!</strong> ต้องพกติดตัวขึ้นเครื่องเท่านั้น</li>
-                                                </ul>
-                                            </li>
-                                            <li>เมื่อเช็คอินและโหลดกระเป๋าเสร็จ คุณจะได้ <strong>Boarding Pass (ตั๋วขึ้นเครื่อง)</strong> มาถือไว้ เป็นอันเสร็จสิ้นขั้นตอน</li>
-                                        </ul>
-                                    </div>
-                                </details>
-                            </div>
-                        </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">19:00 - 20:30</div>
+                                <div class="timeline-content glass-card">
+                                    <h4>2. เดินทางไปสนามบินสุวรรณภูมิ (BKK)</h4>
 
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-date">23:30 - 00:30</div>
-                            <div class="timeline-content glass-card">
-                                <h4>4. ผ่าน ตม. และเดินไปที่ Gate</h4>
-                                
-                                <div class="route-flow">
-                                    <span>📍 จุดตรวจความปลอดภัย</span> ➔ 
-                                    <span>🛂 ผ่าน ตม. ขาออก</span> ➔ 
-                                    <span>🚶 เดินไปที่ Gate</span>
-                                </div>
-                                
-                                <details>
-                                    <summary class="details-btn"><i class="fa-solid fa-chevron-down"></i> ดูเส้นทางเดินไป Gate แบบละเอียดยิบ</summary>
-                                    <div class="details-content">
-                                        <ol style="color: #475569; line-height: 1.6; margin-left: 1.5rem; margin-bottom: 0;">
-                                            <li><strong>ไปจุดสแกนสัมภาระ (X-Ray):</strong> พอได้ตั๋วมาแล้ว ให้เดินไปด้านหลังเคาน์เตอร์เช็คอิน (ฝั่งที่ติดกับกระจกอาคาร) จะมีบันไดเลื่อนให้ <strong>"ขึ้นบันไดเลื่อนไปชั้นลอย"</strong> เพื่อสแกนกระเป๋าถือและตรวจร่างกาย (ถอดเสื้อกันหนาว เข็มขัด ออกให้หมด)</li>
-                                            <li><strong>ผ่าน ตม. (Passport Control):</strong> พอสแกนของเสร็จ ให้ <strong>"ลงบันไดเลื่อน"</strong> กลับลงมา จะเจอจุดตรวจพาสปอร์ตคนไทย (ตม.) ให้ใช้เครื่องสแกนอัตโนมัติ (Auto Gate) สอดพาสปอร์ต ถ่ายรูป แสกนนิ้ว ก็ผ่านได้เลยครับ</li>
-                                            <li><strong>ทะลุเข้าดง Duty Free:</strong> พอหลุดจาก ตม. มาได้ คุณจะอยู่ในโซน Duty Free ของสนามบิน</li>
-                                            <li><strong>ตามล่าหา Gate:</strong> หยิบตั๋ว (Boarding Pass) ขึ้นมาดูว่าคุณได้ <strong>Gate อะไร (เช่น C1, E5, G2)</strong> แล้วเงยหน้ามองป้ายบอกทางสีเหลือง/น้ำเงินด้านบน เดินตามตัวอักษรนั้นไปเลยครับ
-                                                <br><em>*หากได้ Gate ที่อยู่ SAT-1 (เช่น S101-S128) ต้องเดินไปลงบันไดเลื่อนเพื่อนั่งรถไฟใต้ดิน (APM) ข้ามไปอีกตึกครับ</em>
-                                            </li>
-                                            <li><strong>🚨 กฎเหล็ก:</strong> สนามบินสุวรรณภูมิ <strong>"เดินไกลมากกกก" (บาง Gate เดิน 15-20 นาที)</strong> แนะนำให้เดินไปจนเห็นหน้า Gate ของตัวเองก่อน แล้วค่อยกลับมาหาที่นั่งพัก แวะเข้าห้องน้ำ หรือซื้อน้ำกินแถวนั้นครับ</li>
-                                        </ol>
+                                    <div class="route-flow">
+                                        <span>📍 ศูนย์นครชัยแอร์</span> ➔
+                                        <span><span class="badge badge-walk">🚕 แท็กซี่สั้นๆ</span></span> ➔
+                                        <span>📍 BTS หมอชิต</span> ➔
+                                        <span><span class="badge" style="background: #16a34a; color: white;">🚇 BTS
+                                                (สีเขียว)</span></span> ➔
+                                        <span>📍 พญาไท</span> ➔
+                                        <span><span class="badge" style="background: #9333ea; color: white;">🚆 Airport
+                                                Rail Link</span></span> ➔
+                                        <span>📍 สุวรรณภูมิ (ชั้น 4)</span>
                                     </div>
-                                </details>
-                            </div>
-                        </div>
 
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-date">00:30 - 01:15 <span style="font-size: 0.8rem; color:#ef4444;">(เช้า 12 มี.ค.)</span></div>
-                            <div class="timeline-content glass-card">
-                                <h4>5. ขึ้นเครื่อง (Boarding)</h4>
-                                
-                                <div class="route-flow">
-                                    <span>📍 Gate</span> ➔ 
-                                    <span><span class="badge badge-plane">✈️ VietJet (VZ822)</span></span> ➔ 
-                                    <span>📍 มุ่งหน้าสู่คันไซ</span>
+                                    <details>
+                                        <summary class="details-btn"><i class="fa-solid fa-chevron-down"></i>
+                                            ดูรายละเอียดเส้นทางประหยัด</summary>
+                                        <div class="details-content">
+                                            <ol style="color: #475569; line-height: 1.6; margin-left: 1.5rem; margin-bottom: 1rem;">
+                                                <li>นั่งแท็กซี่หรือรถเมล์จากศูนย์นครชัยแอร์ไปที่ <strong>BTS
+                                                        หมอชิต</strong> (ค่ารถแท็กซี่ราวๆ 50-60 บาท)</li>
+                                                <li>ขึ้น BTS หมอชิต ไปลงที่สถานี <strong>พญาไท</strong> (47 บาท)</li>
+                                                <li>เดินตามป้ายทางเชื่อมเพื่อไปต่อรถไฟฟ้า <strong>Airport Rail Link
+                                                        (ARL) สถานีพญาไท</strong></li>
+                                                <li>นั่ง ARL ยาวไปสุดสายที่ <strong>สนามบินสุวรรณภูมิ</strong> (45 บาท)
+                                                    แล้วกดลิฟต์ขึ้นไปชั้น 4 (ผู้โดยสารขาออก)</li>
+                                            </ol>
+                                            <p style="color: #475569;"><strong>💡 คำแนะนำ:</strong> ช่วง 6-7
+                                                โมงเย็นคนบนรถไฟฟ้าจะเยอะมาก อาจจะหาที่วางกระเป๋าเดินทางลำบากนิดนึง
+                                                ให้ยืนชิดมุมและจับกระเป๋าไว้ให้แน่นๆ นะครับ
+                                                พอไปถึงสนามบินแล้วค่อยหาอะไรทานเป็นมื้อเย็นครับ</p>
+                                        </div>
+                                    </details>
                                 </div>
-                                
-                                <details>
-                                    <summary class="details-btn"><i class="fa-solid fa-chevron-down"></i> ดูรายละเอียด</summary>
-                                    <div class="details-content">
-                                        <ul style="color: #475569; line-height: 1.6;">
-                                            <li>พนักงานจะเรียกขึ้นเครื่องล่วงหน้า 45 นาที (00:30 น.)</li>
-                                            <li>เครื่องออกตรงเวลา 01:15 น. นอนพักผ่อนบนเครื่องเตรียมลุยญี่ปุ่นได้เลย!</li>
-                                        </ul>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">22:00 - 23:30</div>
+                                <div class="timeline-content glass-card">
+                                    <h4>3. เช็คอินและโหลดสัมภาระ (VietJet)</h4>
+
+                                    <div class="route-flow">
+                                        <span>📍 สุวรรณภูมิ ชั้น 4</span> ➔
+                                        <span><span class="badge badge-icoca">🛂 เคาน์เตอร์ VietJet (VZ)</span></span> ➔
+                                        <span>🧳 โหลดกระเป๋า</span>
                                     </div>
-                                </details>
+
+                                    <details>
+                                        <summary class="details-btn"><i class="fa-solid fa-chevron-down"></i>
+                                            ดูรายละเอียดแบบเจาะลึก (เตรียมตัวให้พร้อม)</summary>
+                                        <div class="details-content">
+                                            <ul style="color: #475569; line-height: 1.6; margin-left: 1.5rem; margin-bottom: 0;">
+                                                <li><strong>ดูจอแสดงผล:</strong> ไปที่ชั้น 4 (ขาออก) มองหาจอทีวีใหญ่ๆ
+                                                    หาเที่ยวบิน <strong>VZ822</strong>
+                                                    เพื่อดูว่าเคาน์เตอร์เช็คอินอยู่แถวไหน (ปกติ VietJet
+                                                    จะอยู่แถวตัวอักษร V หรือ W ท้ายๆ อาคาร)</li>
+                                                <li><strong>เวลาเปิด:</strong> เคาน์เตอร์เปิดล่วงหน้า 3 ชั่วโมง
+                                                    (เปิดประมาณ 22:15 น.) แนะนำให้ไปต่อแถวรอเลยเพราะคนมักจะเยอะมาก</li>
+                                                <li><strong>เอกสารที่ต้องใช้:</strong> พาสปอร์ต (ตัวจริง), หน้าจอ QR
+                                                    Code ของ Visit Japan Web, และใบจองตั๋วเครื่องบิน (Itinerary)
+                                                    เผื่อเจ้าหน้าที่ขอดู</li>
+                                                <li><strong>เรื่องกระเป๋า (สำคัญมาก):</strong>
+                                                    <ul style="margin-top: 5px; margin-bottom: 5px;">
+                                                        <li><strong>ถือขึ้นเครื่อง (Carry-on):</strong> ได้สูงสุด 1 ใบ +
+                                                            กระเป๋าใบเล็ก 1 ใบ <strong>รวมกันต้องไม่เกิน 7 กก.</strong>
+                                                            (สายการบินนี้ชั่งน้ำหนักเข้มงวดมาก)</li>
+                                                        <li><strong>โหลดลงใต้เครื่อง:</strong>
+                                                            แนะนำให้โหลดของเหลวที่เกิน 100 ml ลงให้หมด</li>
+                                                        <li><strong>พาวเวอร์แบงก์ (Powerbank):</strong> 🚨
+                                                            <strong>ห้ามใส่กระเป๋าโหลดเด็ดขาด!</strong>
+                                                            ต้องพกติดตัวขึ้นเครื่องเท่านั้น</li>
+                                                    </ul>
+                                                </li>
+                                                <li>เมื่อเช็คอินและโหลดกระเป๋าเสร็จ คุณจะได้ <strong>Boarding Pass
+                                                        (ตั๋วขึ้นเครื่อง)</strong> มาถือไว้ เป็นอันเสร็จสิ้นขั้นตอน</li>
+                                            </ul>
+                                        </div>
+                                    </details>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">23:30 - 00:30</div>
+                                <div class="timeline-content glass-card">
+                                    <h4>4. ผ่าน ตม. และเดินไปที่ Gate</h4>
+
+                                    <div class="route-flow">
+                                        <span>📍 จุดตรวจความปลอดภัย</span> ➔
+                                        <span>🛂 ผ่าน ตม. ขาออก</span> ➔
+                                        <span>🚶 เดินไปที่ Gate</span>
+                                    </div>
+
+                                    <details>
+                                        <summary class="details-btn"><i class="fa-solid fa-chevron-down"></i>
+                                            ดูเส้นทางเดินไป Gate แบบละเอียดยิบ</summary>
+                                        <div class="details-content">
+                                            <ol style="color: #475569; line-height: 1.6; margin-left: 1.5rem; margin-bottom: 0;">
+                                                <li><strong>ไปจุดสแกนสัมภาระ (X-Ray):</strong> พอได้ตั๋วมาแล้ว
+                                                    ให้เดินไปด้านหลังเคาน์เตอร์เช็คอิน (ฝั่งที่ติดกับกระจกอาคาร)
+                                                    จะมีบันไดเลื่อนให้ <strong>"ขึ้นบันไดเลื่อนไปชั้นลอย"</strong>
+                                                    เพื่อสแกนกระเป๋าถือและตรวจร่างกาย (ถอดเสื้อกันหนาว เข็มขัด
+                                                    ออกให้หมด)</li>
+                                                <li><strong>ผ่าน ตม. (Passport Control):</strong> พอสแกนของเสร็จ ให้
+                                                    <strong>"ลงบันไดเลื่อน"</strong> กลับลงมา จะเจอจุดตรวจพาสปอร์ตคนไทย
+                                                    (ตม.) ให้ใช้เครื่องสแกนอัตโนมัติ (Auto Gate) สอดพาสปอร์ต ถ่ายรูป
+                                                    แสกนนิ้ว ก็ผ่านได้เลยครับ</li>
+                                                <li><strong>ทะลุเข้าดง Duty Free:</strong> พอหลุดจาก ตม. มาได้
+                                                    คุณจะอยู่ในโซน Duty Free ของสนามบิน</li>
+                                                <li><strong>ตามล่าหา Gate:</strong> หยิบตั๋ว (Boarding Pass)
+                                                    ขึ้นมาดูว่าคุณได้ <strong>Gate อะไร (เช่น C1, E5, G2)</strong>
+                                                    แล้วเงยหน้ามองป้ายบอกทางสีเหลือง/น้ำเงินด้านบน
+                                                    เดินตามตัวอักษรนั้นไปเลยครับ
+                                                    <br><em>*หากได้ Gate ที่อยู่ SAT-1 (เช่น S101-S128)
+                                                        ต้องเดินไปลงบันไดเลื่อนเพื่อนั่งรถไฟใต้ดิน (APM)
+                                                        ข้ามไปอีกตึกครับ</em>
+                                                </li>
+                                                <li><strong>🚨 กฎเหล็ก:</strong> สนามบินสุวรรณภูมิ
+                                                    <strong>"เดินไกลมากกกก" (บาง Gate เดิน 15-20 นาที)</strong>
+                                                    แนะนำให้เดินไปจนเห็นหน้า Gate ของตัวเองก่อน
+                                                    แล้วค่อยกลับมาหาที่นั่งพัก แวะเข้าห้องน้ำ หรือซื้อน้ำกินแถวนั้นครับ
+                                                </li>
+                                            </ol>
+                                        </div>
+                                    </details>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">00:30 - 01:15 <span style="font-size: 0.8rem; color:#ef4444;">(เช้า 12 มี.ค.)</span></div>
+                                <div class="timeline-content glass-card">
+                                    <h4>5. ขึ้นเครื่อง (Boarding)</h4>
+
+                                    <div class="route-flow">
+                                        <span>📍 Gate</span> ➔
+                                        <span><span class="badge badge-plane">✈️ VietJet (VZ822)</span></span> ➔
+                                        <span>📍 มุ่งหน้าสู่คันไซ</span>
+                                    </div>
+
+                                    <details>
+                                        <summary class="details-btn"><i class="fa-solid fa-chevron-down"></i>
+                                            ดูรายละเอียด</summary>
+                                        <div class="details-content">
+                                            <ul style="color: #475569; line-height: 1.6;">
+                                                <li>พนักงานจะเรียกขึ้นเครื่องล่วงหน้า 45 นาที (00:30 น.)</li>
+                                                <li>เครื่องออกตรงเวลา 01:15 น.
+                                                    นอนพักผ่อนบนเครื่องเตรียมลุยญี่ปุ่นได้เลย!</li>
+                                            </ul>
+                                        </div>
+                                    </details>
+                                </div>
                             </div>
                         </div>
- </div>
                     </div>
                 </section>
 
-
-                
                 <!-- Day 1 -->
                 <section id="day1" style="margin-bottom: 4rem;">
-                    <h2 style="color: var(--primary); border-bottom: 1px solid #e2e8f0; padding-bottom: 10px; margin-bottom: 1.5rem;">Day 1: แลนดิ้งโอซาก้า & รับขวัญเมืองแสงสี (12 มี.ค.)</h2>
-                    
+                    <h2 style="color: var(--primary); border-bottom: 1px solid #e2e8f0; padding-bottom: 10px; margin-bottom: 1.5rem;">
+                        Day 1: แลนดิ้งโอซาก้า &amp; รับขวัญเมืองแสงสี (12 มี.ค.)</h2>
+
                     <div class="timeline">
                         <div class="timeline-item">
                             <div class="timeline-dot"></div>
                             <div class="timeline-date">07:55 - 09:30</div>
                             <div class="timeline-content glass-card">
                                 <h4>1. ผ่าน ตม. และรับกระเป๋า (สนามบินคันไซ T1)</h4>
-                                
+
                                 <div class="route-flow">
-                                    <span>📍 ถึง Terminal 1</span> ➔ 
-                                    <span>📱 เปิด QR Visit Japan</span> ➔ 
-                                    <span>🛂 ผ่านตม.</span> ➔ 
+                                    <span>📍 ถึง Terminal 1</span> ➔
+                                    <span>📱 เปิด QR Visit Japan</span> ➔
+                                    <span>🛂 ผ่านตม.</span> ➔
                                     <span>🧳 รับกระเป๋า</span>
                                 </div>
-
                                 <details>
-                                    <summary class="details-btn"><i class="fa-solid fa-chevron-down"></i> ดูขั้นตอนตั้งแต่ลงเครื่องจนเดินออกจากเกตแบบละเอียดยิบ</summary>
+                                    <summary class="details-btn"><i class="fa-solid fa-chevron-down"></i>
+                                        ดูขั้นตอนตั้งแต่ลงเครื่องจนเดินออกจากเกตแบบละเอียดยิบ</summary>
                                     <div class="details-content">
                                         <ol style="color: #475569; line-height: 1.6; margin-left: 1.5rem; margin-bottom: 0;">
-                                            <li><strong>นั่งรถไฟโมโนเรล (Wing Shuttle):</strong> พอลงจากเครื่อง บางไฟลต์อาจจะจอดไกล คุณต้องเดินตามป้าย "Arrivals" ไปขึ้นรถไฟคันเล็กๆ (ฟรี) เพื่อนั่งเข้ามาที่ตึกหลักครับ (บางไฟลต์ก็จอดเทียบตึกหลักเลย ก็เดินตรงไปตม.ได้เลย)</li>
-                                            <li><strong>ด่านกักกันโรค & ตม.:</strong> 
+                                            <li><strong>นั่งรถไฟโมโนเรล (Wing Shuttle):</strong> พอลงจากเครื่อง
+                                                บางไฟลต์อาจจะจอดไกล คุณต้องเดินตามป้าย "Arrivals" ไปขึ้นรถไฟคันเล็กๆ
+                                                (ฟรี) เพื่อนั่งเข้ามาที่ตึกหลักครับ (บางไฟลต์ก็จอดเทียบตึกหลักเลย
+                                                ก็เดินตรงไปตม.ได้เลย)</li>
+                                            <li><strong>ด่านกักกันโรค &amp; ตม.:</strong>
                                                 <ul style="margin-top: 5px; margin-bottom: 5px;">
                                                     <li>เดินตามทางไปเรื่อยๆ จนถึงโถงใหญ่ของ ตม. (Immigration)</li>
-                                                    <li>เตรียมเปิดหน้า <strong>QR Code (เส้นขอบสีเหลือง) ของ Visit Japan Web</strong> รอตราประทับเลยครับ</li>
-                                                    <li>ที่ตู้ ตม. คุณจะต้อง สแกนนิ้วชี้ 2 ข้าง ถ่ายรูป และให้เจ้าหน้าที่ดู QR Code หรือพาสปอร์ตครับ</li>
+                                                    <li>เตรียมเปิดหน้า <strong>QR Code (เส้นขอบสีเหลือง) ของ Visit Japan
+                                                            Web</strong> รอตราประทับเลยครับ</li>
+                                                    <li>ที่ตู้ ตม. คุณจะต้อง สแกนนิ้วชี้ 2 ข้าง ถ่ายรูป
+                                                        และให้เจ้าหน้าที่ดู QR Code หรือพาสปอร์ตครับ</li>
                                                 </ul>
                                             </li>
-                                            <li><strong>รับกระเป๋า (Baggage Claim):</strong> ผ่าน ตม. ลงบันไดเลื่อนมาข้างล่าง มองหาจอมอนิเตอร์ หาเที่ยวบิน <strong>VZ822</strong> เพื่อดูว่ากระเป๋าเราจะโผล่มาที่สายพานเบอร์อะไร แล้วไปยืนรอรับได้เลย</li>
-                                            <li><strong>ศุลกากร (Customs):</strong> 
+                                            <li><strong>รับกระเป๋า (Baggage Claim):</strong> ผ่าน ตม.
+                                                ลงบันไดเลื่อนมาข้างล่าง มองหาจอมอนิเตอร์ หาเที่ยวบิน
+                                                <strong>VZ822</strong> เพื่อดูว่ากระเป๋าเราจะโผล่มาที่สายพานเบอร์อะไร
+                                                แล้วไปยืนรอรับได้เลย</li>
+                                            <li><strong>ศุลกากร (Customs):</strong>
                                                 <ul style="margin-top: 5px; margin-bottom: 5px;">
                                                     <li>พอได้กระเป๋าครบ ให้เดินไปที่ด่านศุลกากร (ทางออก)</li>
-                                                    <li>เปิด <strong>QR Code (เส้นขอบสีฟ้าอ่อน) ของ Visit Japan Web</strong> สแกนที่เครื่องอัตโนมัติ (Electronic Declaration Gate) ถ้าไฟเขียวก็เดินออกประตูไปเลย!</li>
+                                                    <li>เปิด <strong>QR Code (เส้นขอบสีฟ้าอ่อน) ของ Visit Japan
+                                                            Web</strong> สแกนที่เครื่องอัตโนมัติ (Electronic Declaration
+                                                        Gate) ถ้าไฟเขียวก็เดินออกประตูไปเลย!</li>
                                                 </ul>
                                             </li>
                                         </ol>
-                                        <p style="color: #475569; margin-top: 10px;"><strong>⏳ การเผื่อเวลา:</strong> ตม. ญี่ปุ่นช่วงเช้าคนอาจจะเยอะมาก (บางครั้งรอ 1-2 ชั่วโมง) หากออกมาล่าช้ากว่า 09:30 น. ไม่ต้องตกใจ รถไฟเข้าเมือง (Nankai) มีออกทุกๆ 15 นาที</p>
+                                        <p style="color: #475569; margin-top: 10px;"><strong>⏳ การเผื่อเวลา:</strong>
+                                            ตม. ญี่ปุ่นช่วงเช้าคนอาจจะเยอะมาก (บางครั้งรอ 1-2 ชั่วโมง)
+                                            หากออกมาล่าช้ากว่า 09:30 น. ไม่ต้องตกใจ รถไฟเข้าเมือง (Nankai) มีออกทุกๆ 15
+                                            นาที</p>
                                     </div>
                                 </details>
-
                                 <div class="emergency-box" style="margin-top: 15px;">
                                     <h5>🚨 Plan B: หากสแกน QR Code ไม่ผ่าน</h5>
-                                    เดินไปที่เคาน์เตอร์ด้านข้างเพื่อกรอกใบตม. และใบศุลกากรแบบกระดาษสีเหลืองแทน (อย่าลืมพกปากกาไปเอง)
+                                    เดินไปที่เคาน์เตอร์ด้านข้างเพื่อกรอกใบตม. และใบศุลกากรแบบกระดาษสีเหลืองแทน
+                                    (อย่าลืมพกปากกาไปเอง)
                                 </div>
                             </div>
                         </div>
-
                         <div class="timeline-item">
                             <div class="timeline-dot"></div>
-                            <div class="timeline-date">09:30 - 10:30</div>
+                            <div class="timeline-date">มื้อเช้า (Breakfast)</div>
                             <div class="timeline-content glass-card">
                                 <h4>2. เดินทางจากสนามบินเข้าเมืองไป Namba</h4>
-                                <a href="https://www.google.com/maps/search/?api=1&query=Kansai+Airport+Station" target="_blank" class="map-link">📍 เปิดแผนที่ (Google Maps)</a>
-                                
+                                <a href="https://www.google.com/maps/search/?api=1&amp;query=Kansai+Airport+Station" target="_blank" class="map-link">📍 เปิดแผนที่ (Google Maps)</a>
+
                                 <div class="route-flow">
-                                    <span>📍 สนามบินชั้น 1</span> ➔ 
-                                    <span><span class="badge badge-walk">🚶 ขึ้นชั้น 2 ไปตึกรถไฟ</span></span> ➔ 
-                                    <span><span class="badge badge-icoca">💳 ซื้อ/แตะ ICOCA</span></span> ➔ 
-                                    <span><span class="badge badge-train-nankai">🚇 Nankai Airport Express (สีส้ม)</span></span> ➔ 
+                                    <span>📍 สนามบินชั้น 1</span> ➔
+                                    <span><span class="badge badge-walk">🚶 ขึ้นชั้น 2 ไปตึกรถไฟ</span></span> ➔
+                                    <span><span class="badge badge-icoca">💳 ซื้อ/แตะ ICOCA</span></span> ➔
+                                    <span><span class="badge badge-train-nankai">🚇 Nankai Airport Express
+                                            (สีส้ม)</span></span> ➔
                                     <span>📍 Nankai Namba</span>
                                 </div>
-                                
+
                                 <details>
-                                    <summary class="details-btn"><i class="fa-solid fa-chevron-down"></i> ดูวิธีขึ้นรถไฟแบบละเอียด (ทีละก้าว)</summary>
+                                    <summary class="details-btn"><i class="fa-solid fa-chevron-down"></i>
+                                        ดูวิธีขึ้นรถไฟแบบละเอียด (ทีละก้าว)</summary>
                                     <div class="details-content">
                                         <ol style="margin-left: 1.5rem; color: #475569; margin-bottom: 1rem; line-height: 1.6;">
-                                            <li>เมื่อผ่านศุลกากรและรับกระเป๋าเสร็จ อยู่ชั้น 1 มองหาป้าย <strong>"Railways" (รถไฟ)</strong> ขึ้นบันไดเลื่อนไป <strong>ชั้น 2</strong></li>
-                                            <li>เดินออกจากประตูข้ามสะพานเชื่อมไปยังอาคารสถานีรถไฟ (Kansai Airport Station)</li>
-                                            <li>จะเห็น 2 ฝั่ง: <strong>ซ้ายสีน้ำเงิน JR</strong> / <strong>ขวาสีส้ม Nankai</strong></li>
-                                            <li><strong>บัตร ICOCA:</strong> ไปที่ตู้ขายตั๋ว JR (สีน้ำเงิน) เลือก "Purchase ICOCA" สอดแบงก์ 2,000-5,000 เยน (แนะนำเผื่อไว้เลย)</li>
-                                            <li>เดินมาฝั่ง <strong>สีส้ม (Nankai Line)</strong> แตะ ICOCA เข้าเกต (จะหัก 930 เยนปลายทาง)</li>
-                                            <li>ลงบันไดเลื่อน หาป้ายไฟหน้ารถ <strong>"Airport Express ปลายทาง Namba"</strong> (อย่าขึ้น Local)</li>
+                                            <li>เมื่อผ่านศุลกากรและรับกระเป๋าเสร็จ อยู่ชั้น 1 มองหาป้าย
+                                                <strong>"Railways" (รถไฟ)</strong> ขึ้นบันไดเลื่อนไป <strong>ชั้น
+                                                    2</strong></li>
+                                            <li>เดินออกจากประตูข้ามสะพานเชื่อมไปยังอาคารสถานีรถไฟ (Kansai Airport
+                                                Station)</li>
+                                            <li>จะเห็น 2 ฝั่ง: <strong>ซ้ายสีน้ำเงิน JR</strong> / <strong>ขวาสีส้ม
+                                                    Nankai</strong></li>
+                                            <li><strong>บัตร ICOCA:</strong> ไปที่ตู้ขายตั๋ว JR (สีน้ำเงิน) เลือก
+                                                "Purchase ICOCA" สอดแบงก์ 2,000-5,000 เยน (แนะนำเผื่อไว้เลย)</li>
+                                            <li>เดินมาฝั่ง <strong>สีส้ม (Nankai Line)</strong> แตะ ICOCA เข้าเกต (จะหัก
+                                                930 เยนปลายทาง)</li>
+                                            <li>ลงบันไดเลื่อน หาป้ายไฟหน้ารถ <strong>"Airport Express ปลายทาง
+                                                    Namba"</strong> (อย่าขึ้น Local)</li>
                                             <li>นั่งพักยาวๆ 45 นาที ลงสุดสายที่สถานี <strong>Nankai Namba</strong></li>
                                         </ol>
                                     </div>
                                 </details>
-
                                 <div class="emergency-box" style="margin-top: 15px;">
                                     <h5>🚨 Plan B: หากขึ้นรถไฟผิดขบวน</h5>
-                                    ถ้าเผลอขึ้นขบวน Local (รถธรรมดา) ไม่ต้องตกใจ รถจะไปสุดสายที่ Namba เหมือนกัน แค่จอดทุกป้ายใช้เวลา 1.5 ชม. ให้นั่งยาวไปเลย
+                                    ถ้าเผลอขึ้นขบวน Local (รถธรรมดา) ไม่ต้องตกใจ รถจะไปสุดสายที่ Namba เหมือนกัน
+                                    แค่จอดทุกป้ายใช้เวลา 1.5 ชม. ให้นั่งยาวไปเลย
                                 </div>
                             </div>
                         </div>
-
                         <div class="timeline-item">
                             <div class="timeline-dot"></div>
                             <div class="timeline-date">10:30 - 11:30</div>
                             <div class="timeline-content glass-card">
                                 <h4>3. ลากกระเป๋าไปฝากที่ 123 Guesthouse</h4>
-                                <a href="https://maps.app.goo.gl/ghKzm7av3rXCMsKL6" target="_blank" class="map-link">📍 เปิดแผนที่ (Google Maps)</a>
-                                
+                                <a href="https://maps.app.goo.gl/ghKzm7av3rXCMsKL6" target="_blank" class="map-link">📍
+                                    เปิดแผนที่ (Google Maps)</a>
                                 <div class="route-flow">
-                                    <span>📍 Nankai Namba</span> ➔ 
-                                    <span><span class="badge badge-walk">🚶 เดินลากกระเป๋า 10 นาที</span></span> ➔ 
+                                    <span>📍 Nankai Namba</span> ➔
+                                    <span><span class="badge badge-walk">🚶 เดินลากกระเป๋า 10 นาที</span></span> ➔
                                     <span>📍 123 Guesthouse</span>
                                 </div>
-
                                 <details>
-                                    <summary class="details-btn"><i class="fa-solid fa-chevron-down"></i> ดูวิธีเดินแบบละเอียด</summary>
+                                    <summary class="details-btn"><i class="fa-solid fa-chevron-down"></i>
+                                        ดูวิธีเดินแบบละเอียด</summary>
                                     <div class="details-content">
                                         <ul style="color: #475569; margin-left: 1.5rem; line-height: 1.6;">
-                                            <li>ออกจากสถานี Nankai Namba เปิด Google Maps ปักหมุดไปที่ 123 Guesthouse</li>
+                                            <li>ออกจากสถานี Nankai Namba เปิด Google Maps ปักหมุดไปที่ 123 Guesthouse
+                                            </li>
                                             <li>เดินทะลุซอยประมาณ 10 นาที (ทางเดินเรียบ ลากกระเป๋าสบาย)</li>
-                                            <li>เมื่อถึงที่พัก ให้แจ้งสตาฟฟ์ว่าขอฝากกระเป๋าก่อนเช็คอินตอนเย็น (Luggage Drop-off)</li>
+                                            <li>เมื่อถึงที่พัก ให้แจ้งสตาฟฟ์ว่าขอฝากกระเป๋าก่อนเช็คอินตอนเย็น (Luggage
+                                                Drop-off)</li>
                                             <li>หยิบเฉพาะของมีค่าและพาสปอร์ตติดตัวไปเที่ยว</li>
                                         </ul>
                                     </div>
@@ -331,40 +397,68 @@
                             </div>
                         </div>
 
+
+                        <div class="timeline-item">
+                            <div class="timeline-dot" style="background-color: #ec4899;"></div>
+                            <div class="timeline-date">มื้อเที่ยง (Lunch)</div>
+                            <div class="timeline-content glass-card" style="border-left: 4px solid #ec4899;">
+                                <h4>🍽️ มื้อเที่ยง: ซูชิสายพาน Daiki Suisan (Namba/Dotonbori) <span class="badge" style="background:#ef4444; color:white; font-size: 0.75rem; vertical-align: middle;">~1,500¥</span>
+                                </h4>
+                                <div style="margin: 15px 0; border-radius: 12px; overflow: hidden; height: 180px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                                    <img src="https://img.wongnai.com/p/1920x0/2024/02/04/7a182a169a194b8db2498cb9500e9da7.jpg" alt="Daiki Suisan" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy"></div>
+                                <p style="color: #475569; line-height: 1.6; margin-bottom: 1rem;">หลังจากฝากกระเป๋าเสร็จ
+                                    แวะเติมพลังด้วยซูชิสายพานคุณภาพเยี่ยมร้าน <b>Daiki Suisan (ไดกิซุยซัน)</b> ปลาสดมาก
+                                    คิวรันไว กินอิ่มจุกๆ แล้วค่อยนั่งรถไฟไปปราสาทโอซาก้าครับ</p>
+                                <a href="https://www.google.com/maps/search/?api=1&amp;query=Daiki+Suisan+Dotonbori" target="_blank" class="map-link">📍 พิกัดร้าน (Google Maps)</a>
+                            </div>
+                        </div>
                         <div class="timeline-item">
                             <div class="timeline-dot"></div>
-                            <div class="timeline-date">11:30 - 14:00</div>
+                            <div class="timeline-date">12:30 - 15:00</div>
                             <div class="timeline-content glass-card">
-                                <h4>4. เที่ยวปราสาทโอซาก้า (Osaka Castle) <span class="badge" style="background:#ef4444; color:white; font-size: 0.75rem; vertical-align: middle;">💴 600¥</span></h4>
-<div style="margin: 15px 0; border-radius: 12px; overflow: hidden; height: 180px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);"><img src="images/locations/osaka_castle.jpg" alt="Osaka Castle" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy"></div>
-                                <a href="https://maps.app.goo.gl/Zq3M3vFv3U8d8Xw68" target="_blank" class="map-link">📍 เปิดแผนที่ (Google Maps)</a>
-                                
+                                <h4>5. เที่ยวปราสาทโอซาก้า (Osaka Castle) <span class="badge" style="background:#ef4444; color:white; font-size: 0.75rem; vertical-align: middle;">💴
+                                        600¥</span></h4>
+                                <div style="margin: 15px 0; border-radius: 12px; overflow: hidden; height: 180px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                                    <img src="images/locations/osaka_castle.jpg" alt="Osaka Castle" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy"></div>
+                                <a href="https://maps.app.goo.gl/Zq3M3vFv3U8d8Xw68" target="_blank" class="map-link">📍
+                                    เปิดแผนที่ (Google Maps)</a>
+
                                 <div class="route-flow">
-                                    <span>📍 ที่พัก (ใกล้ Nippombashi)</span> ➔ 
-                                    <span><span class="badge badge-train-sakaisuji">🚇 Sakaisuji Line (น้ำตาล)</span></span> ➔ 
-                                    <span>📍 Sakaisuji-Hommachi</span> ➔ 
-                                    <span><span class="badge badge-train-chuo">🚇 Chuo Line (เขียว)</span></span> ➔ 
-                                    <span>📍 Tanimachi 4-chome</span> ➔ 
+                                    <span>📍 ที่พัก (ใกล้ Nippombashi)</span> ➔
+                                    <span><span class="badge badge-train-sakaisuji">🚇 Sakaisuji Line
+                                            (น้ำตาล)</span></span> ➔
+                                    <span>📍 Sakaisuji-Hommachi</span> ➔
+                                    <span><span class="badge badge-train-chuo">🚇 Chuo Line (เขียว)</span></span> ➔
+                                    <span>📍 Tanimachi 4-chome</span> ➔
                                     <span><span class="badge badge-walk">🚶 เดิน 15 นาที</span></span>
                                 </div>
 
                                 <details>
-                                    <summary class="details-btn"><i class="fa-solid fa-chevron-down"></i> ดูวิธีเดินทาง & วิธีซื้อตั๋วเข้าปราสาท</summary>
+                                    <summary class="details-btn"><i class="fa-solid fa-chevron-down"></i> ดูวิธีเดินทาง
+                                        &amp; วิธีซื้อตั๋วเข้าปราสาท</summary>
                                     <div class="details-content">
                                         <strong style="color: #4f46e5;">🚇 การเดินทาง (หัก ICOCA 240 เยน):</strong>
                                         <ol style="margin-left: 1.5rem; color: #475569; margin-bottom: 1rem; line-height: 1.6;">
                                             <li>เดินไปที่สถานีรถไฟใต้ดิน <strong>Nippombashi Station</strong></li>
-                                            <li>แตะ ICOCA เข้าเกต นั่งสายสีน้ำตาล (Sakaisuji Line) ไปลงที่ <strong>Sakaisuji-Hommachi</strong></li>
-                                            <li>เดินเปลี่ยนสายตามป้ายสีเขียว ไปขึ้น Chuo Line นั่งไป 1 ป้าย ลงที่ <strong>Tanimachi 4-chome (Tanimachi Yonchome)</strong></li>
+                                            <li>แตะ ICOCA เข้าเกต นั่งสายสีน้ำตาล (Sakaisuji Line) ไปลงที่
+                                                <strong>Sakaisuji-Hommachi</strong></li>
+                                            <li>เดินเปลี่ยนสายตามป้ายสีเขียว ไปขึ้น Chuo Line นั่งไป 1 ป้าย ลงที่
+                                                <strong>Tanimachi 4-chome (Tanimachi Yonchome)</strong></li>
                                             <li>ตอนแตะบัตร ICOCA ออกจากเกต ระบบจะหักเงิน 240 เยน</li>
-                                            <li>ออก Exit 1-B หรือ 9 เดินลัดสวนสาธารณะไปเรื่อยๆ จะเจอปราสาท (เดินประมาณ 15 นาที)</li>
+                                            <li>ออก Exit 1-B หรือ 9 เดินลัดสวนสาธารณะไปเรื่อยๆ จะเจอปราสาท (เดินประมาณ
+                                                15 นาที)</li>
                                         </ol>
-                                        <strong style="color: #ef4444;">🏰 วิธีซื้อตั๋วเข้าชมตัวปราสาท (600 เยน):</strong>
+                                        <strong style="color: #ef4444;">🏰 วิธีซื้อตั๋วเข้าชมตัวปราสาท (600
+                                            เยน):</strong>
                                         <ul style="margin-left: 1.5rem; color: #475569; margin-bottom: 0; line-height: 1.6;">
                                             <li>การเดินเล่นถ่ายรูปในสวนรอบๆ ปราสาท <strong>ฟรี</strong> ไม่เสียเงิน</li>
-                                            <li>แต่ถ้าจะเข้าไปดูพิพิธภัณฑ์ข้างในตัวปราสาท (Main Tower) ต้องซื้อตั๋วราคา 600 เยน</li>
-                                            <li>พอเดินไปถึงหน้าปราสาท จะมี <strong>ตู้ขายตั๋วอัตโนมัติ (Ticket Machine)</strong> ให้กดซื้อตั๋ว แนะนำให้พกเงินสด/เหรียญ หรือจะใช้บัตร ICOCA แตะจ่ายค่าตั๋วที่ตู้ก็ได้ครับ</li>
-                                            <li>พอตู้คายตั๋วกระดาษออกมา ก็นำไปยื่นให้เจ้าหน้าที่ตรงประตูทางเข้าปราสาทได้เลยครับ</li>
+                                            <li>แต่ถ้าจะเข้าไปดูพิพิธภัณฑ์ข้างในตัวปราสาท (Main Tower) ต้องซื้อตั๋วราคา
+                                                600 เยน</li>
+                                            <li>พอเดินไปถึงหน้าปราสาท จะมี <strong>ตู้ขายตั๋วอัตโนมัติ (Ticket
+                                                    Machine)</strong> ให้กดซื้อตั๋ว แนะนำให้พกเงินสด/เหรียญ
+                                                หรือจะใช้บัตร ICOCA แตะจ่ายค่าตั๋วที่ตู้ก็ได้ครับ</li>
+                                            <li>พอตู้คายตั๋วกระดาษออกมา
+                                                ก็นำไปยื่นให้เจ้าหน้าที่ตรงประตูทางเข้าปราสาทได้เลยครับ</li>
                                         </ul>
                                     </div>
                                 </details>
@@ -373,55 +467,92 @@
 
                         <div class="timeline-item">
                             <div class="timeline-dot"></div>
-                            <div class="timeline-date">14:00 - 15:30</div>
+                            <div class="timeline-date">15:30 - 16:15</div>
                             <div class="timeline-content glass-card">
-                                <h4>5. ถ่ายรูปศาลเจ้าหัวสิงโต (Namba Yasaka Shrine) <span class="badge" style="background:#22c55e; color:white; font-size: 0.75rem; vertical-align: middle;">🆓 ฟรี</span></h4>
-<div style="margin: 15px 0; border-radius: 12px; overflow: hidden; height: 180px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);"><img src="images/locations/namba_yasaka.jpg" alt="Namba Yasaka Shrine" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy"></div>
-                                <a href="https://maps.app.goo.gl/x8hH4UuK4F8Q6G1K9" target="_blank" class="map-link">📍 เปิดแผนที่ (Google Maps)</a>
-                                
+                                <h4>6. ถ่ายรูปศาลเจ้าหัวสิงโต (Namba Yasaka Shrine) <span class="badge" style="background:#22c55e; color:white; font-size: 0.75rem; vertical-align: middle;">🆓
+                                        ฟรี</span></h4>
+                                <div style="margin: 15px 0; border-radius: 12px; overflow: hidden; height: 180px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                                    <img src="images/locations/namba_yasaka.jpg" alt="Namba Yasaka Shrine" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy"></div>
+                                <a href="https://maps.app.goo.gl/x8hH4UuK4F8Q6G1K9" target="_blank" class="map-link">📍
+                                    เปิดแผนที่ (Google Maps)</a>
+
                                 <div class="route-flow">
-                                    <span>📍 ปราสาทโอซาก้า</span> ➔ 
-                                    <span><span class="badge badge-train-chuo">🚇 Chuo Line (เขียว)</span></span> ➔ 
-                                    <span>📍 Hommachi</span> ➔ 
-                                    <span><span class="badge badge-train-midosuji">🚇 Midosuji Line (แดง)</span></span> ➔ 
-                                    <span>📍 Namba</span> ➔ 
+                                    <span>📍 ปราสาทโอซาก้า</span> ➔
+                                    <span><span class="badge badge-train-chuo">🚇 Chuo Line (เขียว)</span></span> ➔
+                                    <span>📍 Hommachi</span> ➔
+                                    <span><span class="badge badge-train-midosuji">🚇 Midosuji Line (แดง)</span></span>
+                                    ➔
+                                    <span>📍 Namba</span> ➔
                                     <span><span class="badge badge-walk">🚶 เดิน 10 นาที</span></span>
                                 </div>
-
                                 <details>
-                                    <summary class="details-btn"><i class="fa-solid fa-chevron-down"></i> ดูเส้นทางแบบละเอียด</summary>
+                                    <summary class="details-btn"><i class="fa-solid fa-chevron-down"></i>
+                                        ดูเส้นทางแบบละเอียด</summary>
                                     <div class="details-content">
                                         <ol style="margin-left: 1.5rem; color: #475569; line-height: 1.6;">
                                             <li>เดินกลับมาขึ้นรถไฟที่สถานี <strong>Tanimachi 4-chome</strong></li>
                                             <li>นั่งสายสีเขียว (Chuo Line) ไปลง <strong>Hommachi</strong></li>
                                             <li>เปลี่ยนไปนั่งสายสีแดง (Midosuji Line) ไปลง <strong>Namba</strong></li>
-                                            <li>ออกทางออกทิศใต้ เดินตาม Google Maps ทะลุซอยเงียบๆ ประมาณ 10 นาที จะเจอศาลเจ้า</li>
+                                            <li>ออกทางออกทิศใต้ เดินตาม Google Maps ทะลุซอยเงียบๆ ประมาณ 10 นาที
+                                                จะเจอศาลเจ้า</li>
                                         </ol>
                                     </div>
                                 </details>
                             </div>
                         </div>
+<div class="timeline-item">
+    <div class="timeline-dot"></div>
+    <div class="timeline-date">16:15 - 18:00</div>
+    <div class="timeline-content glass-card">
+        <h4>เดินเล่นดงโมเดล/ของเล่น Den Den Town <span class="badge" style="background:#22c55e; color:white; font-size: 0.75rem; vertical-align: middle;">🆓 เดินฟรี</span></h4>
+        <div style="margin: 15px 0; border-radius: 12px; overflow: hidden; height: 180px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);"><img src="images/offline/1786905060058_3_DenDen1-L.jpg" alt="Den Den Town" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy"></div>
+        <a href="https://maps.app.goo.gl/hGzNnS5y9LpK6N8T6" target="_blank" class="map-link">📍 เปิดแผนที่ (Google Maps)</a>
+        
+        <div class="route-flow">
+            <span>📍 Namba Yasaka Shrine</span> ➔ 
+            <span><span class="badge badge-walk">🚶 เดิน 10-15 นาที</span></span> ➔ 
+            <span>📍 Den Den Town</span>
+        </div>
+
+        <details open="">
+            <summary class="details-btn"><i class="fa-solid fa-chevron-down"></i> ดูคำแนะนำการช้อปปิ้ง</summary>
+            <div class="details-content">
+                <ul style="color: #475569; line-height: 1.6; margin-left: 1.5rem; margin-bottom: 0;">
+                    <li><strong>แหล่งละลายทรัพย์โอตาคุ:</strong> เดินเท้าทะลุซอยจากศาลเจ้ามาประมาณ 10-15 นาที ก็จะถึงดงโมเดล/ของเล่น Den Den Town เดินช้อปฟิกเกอร์ต่อได้เลย</li>
+                    <li><strong>คำเตือนเรื่องเวลา:</strong> ร้านส่วนใหญ่จะเริ่มปิดตอน 20:00 น. ดังนั้นแวะมาเวลานี้กำลังดีครับ ถ่ายรูปและเดินดูของให้จุใจก่อนไปโซนอื่น</li>
+                </ul>
+            </div>
+        </details>
+    </div>
+</div>
+
 
                         <div class="timeline-item">
                             <div class="timeline-dot"></div>
-                            <div class="timeline-date">15:30 - ค่ำ</div>
+                            <div class="timeline-date">18:00 - 19:30</div>
                             <div class="timeline-content glass-card">
-                                <h4>6. ช้อปปิ้ง ชินไซบาชิ & ดองกี้ & ฟิกเกอร์ <span class="badge" style="background:#22c55e; color:white; font-size: 0.75rem; vertical-align: middle;">🆓 เดินฟรี</span></h4>
-<div style="margin: 15px 0; border-radius: 12px; overflow: hidden; height: 180px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);"><img src="images/locations/dotonbori.jpg" alt="Dotonbori" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy"></div>
-                                
+                                <h4>8. ช้อปปิ้ง ชินไซบาชิ &amp; ดองกี้ &amp; ฟิกเกอร์ <span class="badge" style="background:#22c55e; color:white; font-size: 0.75rem; vertical-align: middle;">🆓
+                                        เดินฟรี</span></h4>
+                                <div style="margin: 15px 0; border-radius: 12px; overflow: hidden; height: 180px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                                    <img src="images/locations/dotonbori.jpg" alt="Dotonbori" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy"></div>
+
                                 <div class="route-flow">
-                                    <span>📍 ศาลเจ้าหัวสิงโต</span> ➔ 
-                                    <span><span class="badge badge-walk">🚶 เดินกลับ Namba (10 นาที)</span></span> ➔ 
+                                    <span>📍 ศาลเจ้าหัวสิงโต</span> ➔
+                                    <span><span class="badge badge-walk">🚶 เดินกลับ Namba (10 นาที)</span></span> ➔
                                     <span>🛍️ Shinsaibashi / Dotonbori / Den Den Town</span>
                                 </div>
-
                                 <details>
-                                    <summary class="details-btn"><i class="fa-solid fa-chevron-down"></i> ดูลายแทงช้อปปิ้ง (Uniqlo, Donki, ฟิกเกอร์)</summary>
+                                    <summary class="details-btn"><i class="fa-solid fa-chevron-down"></i>
+                                        ดูลายแทงช้อปปิ้ง (Uniqlo, Donki, ฟิกเกอร์)</summary>
                                     <div class="details-content">
                                         <ul style="color: #475569; margin-left: 1.5rem; line-height: 1.6;">
-                                            <li><strong>Uniqlo สาขา Shinsaibashi:</strong> ร้านใหญ่ของเยอะมาก แนะนำแวะซื้อเสื้อผ้าและอุปกรณ์กันหนาวได้เลย</li>
-                                            <li><strong>Don Quijote (ดองกี้):</strong> สาขา Dotonbori (ที่มีชิงช้าสวรรค์) เปิดดึกมาก ซื้อของฝาก ขนม เครื่องสำอาง (เตรียมทำ Tax Refund ถ้าซื้อเกิน 5,000 เยน)</li>
-                                            <li><strong>Den Den Town (Nippombashi):</strong> ถ้าอยากดูโมเดลหรือฟิกเกอร์ เดินมาเส้นนี้ได้เลย มีร้านของเล่นเรียงรายตลอดทาง</li>
+                                            <li><strong>Uniqlo สาขา Shinsaibashi:</strong> ร้านใหญ่ของเยอะมาก
+                                                แนะนำแวะซื้อเสื้อผ้าและอุปกรณ์กันหนาวได้เลย</li>
+                                            <li><strong>Don Quijote (ดองกี้):</strong> สาขา Dotonbori
+                                                (ที่มีชิงช้าสวรรค์) เปิดดึกมาก ซื้อของฝาก ขนม เครื่องสำอาง (เตรียมทำ Tax
+                                                Refund ถ้าซื้อเกิน 5,000 เยน)</li>
+                                            <li><strong>Den Den Town (Nippombashi):</strong> ถ้าอยากดูโมเดลหรือฟิกเกอร์
+                                                เดินมาเส้นนี้ได้เลย มีร้านของเล่นเรียงรายตลอดทาง</li>
                                         </ul>
                                     </div>
                                 </details>
@@ -431,62 +562,91 @@
                 </section>
 
 
-                
                 <!-- Day 2 -->
                 <section id="day2" style="margin-bottom: 4rem;">
-                    <h2 style="color: var(--primary); border-bottom: 1px solid #e2e8f0; padding-bottom: 10px; margin-bottom: 1.5rem;">Day 2: ตะลุยโลกเวทมนตร์และมาริโอ้ที่ USJ (13 มี.ค.)</h2>
-                    
+                    <h2 style="color: var(--primary); border-bottom: 1px solid #e2e8f0; padding-bottom: 10px; margin-bottom: 1.5rem;">
+                        Day 2: ตะลุยโลกเวทมนตร์และมาริโอ้ที่ USJ (13 มี.ค.)</h2>
+
                     <div class="timeline">
+
+                        <div class="timeline-item">
+                            <div class="timeline-dot" style="background-color: #ec4899;"></div>
+                            <div class="timeline-date">มื้อเช้า (Breakfast)</div>
+                            <div class="timeline-content glass-card" style="border-left: 4px solid #ec4899;">
+                                <h4>🍽️ มื้อเช้า: ร้านสะดวกซื้อ (เตรียมเสบียง) <span class="badge" style="background:#ef4444; color:white; font-size: 0.75rem; vertical-align: middle;">~500¥</span>
+                                </h4>
+                                <p style="color: #475569; line-height: 1.6; margin-bottom: 0;">วันนี้ต้องใช้พลังงานเยอะ
+                                    แนะนำให้แวะซื้อข้าวปั้นหรือขนมปังที่ FamilyMart หรือ 7-11 หน้าสถานีรถไฟกินก่อนเข้า
+                                    USJ ครับ (ช่วยประหยัดเงินมื้อเช้าไปได้เยอะมากๆ)</p>
+                            </div>
+                        </div>
                         <div class="timeline-item">
                             <div class="timeline-dot"></div>
                             <div class="timeline-date">07:00 - 08:00</div>
                             <div class="timeline-content glass-card">
                                 <h4>1. นั่งรถไฟตรงดิ่งไป USJ</h4>
-                                <a href="https://maps.app.goo.gl/3iHtz3U5U7V7sK7G6" target="_blank" class="map-link">📍 เปิดแผนที่ (Google Maps)</a>
-                                
+                                <a href="https://maps.app.goo.gl/3iHtz3U5U7V7sK7G6" target="_blank" class="map-link">📍
+                                    เปิดแผนที่ (Google Maps)</a>
+
                                 <div class="route-flow">
-                                    <span>📍 Osaka Namba (Hanshin)</span> ➔ 
-                                    <span><span class="badge badge-train-jr" style="background:#f59e0b;">🚇 Hanshin Namba Line</span></span> ➔ 
-                                    <span>📍 Nishikujo</span> ➔ 
-                                    <span><span class="badge badge-train-jr" style="background:#0284c7;">🚇 JR Yumesaki Line</span></span> ➔ 
+                                    <span>📍 Osaka Namba (Hanshin)</span> ➔
+                                    <span><span class="badge badge-train-jr" style="background:#f59e0b;">🚇 Hanshin
+                                            Namba Line</span></span> ➔
+                                    <span>📍 Nishikujo</span> ➔
+                                    <span><span class="badge badge-train-jr" style="background:#0284c7;">🚇 JR Yumesaki
+                                            Line</span></span> ➔
                                     <span>📍 Universal City</span>
                                 </div>
 
                                 <details>
-                                    <summary class="details-btn"><i class="fa-solid fa-chevron-down"></i> ดูเส้นทางแบบละเอียด (ต่อรถแค่ครั้งเดียว)</summary>
+                                    <summary class="details-btn"><i class="fa-solid fa-chevron-down"></i>
+                                        ดูเส้นทางแบบละเอียด (ต่อรถแค่ครั้งเดียว)</summary>
                                     <div class="details-content">
                                         <ol style="margin-left: 1.5rem; color: #475569; line-height: 1.6; margin-bottom: 0;">
-                                            <li>จากที่พัก ให้เดินไปที่สถานี <strong>Osaka Namba</strong> (ฝั่งรถไฟ Hanshin)</li>
-                                            <li>แตะบัตร ICOCA เข้าเกต นั่งสาย Hanshin Namba Line ไปลงที่สถานี <strong>Nishikujo</strong></li>
-                                            <li>ออกจากเกต Hanshin แล้วแตะ ICOCA เข้าเกต JR <strong>(สถานี Nishikujo ของ JR จะอยู่ติดกันเลย)</strong></li>
-                                            <li>ขึ้นสาย JR Yumesaki Line (รถไฟมักจะเพ้นท์ลาย USJ) นั่งไปสุดสายที่ <strong>Universal City</strong></li>
+                                            <li>จากที่พัก ให้เดินไปที่สถานี <strong>Osaka Namba</strong> (ฝั่งรถไฟ
+                                                Hanshin)</li>
+                                            <li>แตะบัตร ICOCA เข้าเกต นั่งสาย Hanshin Namba Line ไปลงที่สถานี
+                                                <strong>Nishikujo</strong></li>
+                                            <li>ออกจากเกต Hanshin แล้วแตะ ICOCA เข้าเกต JR <strong>(สถานี Nishikujo ของ
+                                                    JR จะอยู่ติดกันเลย)</strong></li>
+                                            <li>ขึ้นสาย JR Yumesaki Line (รถไฟมักจะเพ้นท์ลาย USJ) นั่งไปสุดสายที่
+                                                <strong>Universal City</strong></li>
                                             <li>เบ็ดเสร็จใช้เวลาแค่ประมาณ 20 นาที และแตะ ICOCA รวดเดียวจบ!</li>
                                         </ol>
                                         <div class="emergency-box" style="margin-top: 15px;">
                                             <h5>🚨 ทริคความไว</h5>
-                                            <strong>ต้องไปถึงหน้าประตู USJ อย่างช้า 07:30 น. นะครับ!</strong> เพราะคนจะไปต่อคิวรอเข้าเยอะมาก และสวนสนุกมักจะ "เปิดประตูก่อนเวลาจริง" เสมอครับ
+                                            <strong>ต้องไปถึงหน้าประตู USJ อย่างช้า 07:30 น. นะครับ!</strong>
+                                            เพราะคนจะไปต่อคิวรอเข้าเยอะมาก และสวนสนุกมักจะ "เปิดประตูก่อนเวลาจริง"
+                                            เสมอครับ
                                         </div>
                                     </div>
                                 </details>
                             </div>
                         </div>
-
                         <div class="timeline-item">
                             <div class="timeline-dot"></div>
                             <div class="timeline-date">08:00 - 10:00</div>
                             <div class="timeline-content glass-card">
-                                <h4>2. กดคิว & วิ่งเข้าโซน Mario (Super Nintendo World)</h4>
-                                <div style="margin: 15px 0; border-radius: 12px; overflow: hidden; height: 180px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Super_Nintendo_World_USJ_2022.jpg/800px-Super_Nintendo_World_USJ_2022.jpg" alt="Super Nintendo World" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy"></div>
-                                
+                                <h4>2. กดคิว &amp; วิ่งเข้าโซน Mario (Super Nintendo World)</h4>
+                                <div style="margin: 15px 0; border-radius: 12px; overflow: hidden; height: 180px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                                    <img src="images/offline/1786905060058_5_super-nintendo-world-mario-usj-japan-guide.jpg" alt="Super Nintendo World" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy"></div>
+
                                 <details>
-                                    <summary class="details-btn"><i class="fa-solid fa-chevron-down"></i> ทริคกดคิว Mario แบบไม่ต้องเสียเงินซื้อ Express</summary>
+                                    <summary class="details-btn"><i class="fa-solid fa-chevron-down"></i> ทริคกดคิว
+                                        Mario แบบไม่ต้องเสียเงินซื้อ Express</summary>
                                     <div class="details-content">
                                         <ul style="color: #475569; margin-left: 1.5rem; line-height: 1.6; margin-bottom: 0;">
-                                            <li>โหลดแอป USJ ไว้ตั้งแต่ที่ไทย และกด "Register Park Tickets" สแกน QR Code ตั๋วเข้าของทุกคนในแก๊งไว้ในมือถือเครื่องเดียว</li>
-                                            <li><strong>เมื่อสแกนตั๋วผ่านประตูเข้ามาปุ๊บ:</strong> หยิบมือถือขึ้นมา เข้าแอป USJ ทันที เลือกเมนู <strong>Area Timed Entry Ticket</strong> ➔ เลือกโซน Super Nintendo World</li>
+                                            <li>โหลดแอป USJ ไว้ตั้งแต่ที่ไทย และกด "Register Park Tickets" สแกน QR Code
+                                                ตั๋วเข้าของทุกคนในแก๊งไว้ในมือถือเครื่องเดียว</li>
+                                            <li><strong>เมื่อสแกนตั๋วผ่านประตูเข้ามาปุ๊บ:</strong> หยิบมือถือขึ้นมา
+                                                เข้าแอป USJ ทันที เลือกเมนู <strong>Area Timed Entry Ticket</strong> ➔
+                                                เลือกโซน Super Nintendo World</li>
                                             <li>เลือกรอบเวลาที่ต้องการ (แนะนำให้เลือกรอบเช้าๆ) แล้วกด Confirm</li>
-                                            <li>เมื่อถึงเวลาตามคิว ให้เดินไปที่ทางเข้าโซนมาริโอ้ แล้วโชว์ QR Code คิวให้พนักงานดูครับ</li>
-                                            <li><strong>Note:</strong> ถ้าไปถึงเช้ามากๆ (ทันคนกลุ่มแรกๆ) พนักงานอาจจะเปิดให้เดินเข้าโซนมาริโอ้ได้เลยโดยไม่ต้องกดคิว (เรียกว่าช่วง Free Entry) ให้รีบพุ่งตัวไปเลยครับ!</li>
+                                            <li>เมื่อถึงเวลาตามคิว ให้เดินไปที่ทางเข้าโซนมาริโอ้ แล้วโชว์ QR Code
+                                                คิวให้พนักงานดูครับ</li>
+                                            <li><strong>Note:</strong> ถ้าไปถึงเช้ามากๆ (ทันคนกลุ่มแรกๆ)
+                                                พนักงานอาจจะเปิดให้เดินเข้าโซนมาริโอ้ได้เลยโดยไม่ต้องกดคิว (เรียกว่าช่วง
+                                                Free Entry) ให้รีบพุ่งตัวไปเลยครับ!</li>
                                         </ul>
                                     </div>
                                 </details>
@@ -494,54 +654,106 @@
                         </div>
 
                         <div class="timeline-item">
+                            <div class="timeline-dot" style="background-color: #ec4899;"></div>
+                            <div class="timeline-date">มื้อเที่ยง (Lunch)</div>
+                            <div class="timeline-content glass-card" style="border-left: 4px solid #ec4899;">
+                                <h4>🍽️ มื้อเที่ยง: Kinopio's Cafe หรือ Three Broomsticks <span class="badge" style="background:#ef4444; color:white; font-size: 0.75rem; vertical-align: middle;">~2,500¥</span>
+                                </h4>
+                                <p style="color: #475569; line-height: 1.6; margin-bottom: 0;">มื้อเที่ยงใน USJ
+                                    แนะนำคาเฟ่มาริโอ้ <b>Kinopio's Cafe</b> (ต้องรีบกดคิวผ่านแอป USJ ตั้งแต่เช้า)
+                                    หรือร้านอาหารในโซนแฮร์รี่ <b>Three Broomsticks</b> ได้ฟีลลิ่งเวทมนตร์สุดๆ ครับ</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
                             <div class="timeline-dot"></div>
-                            <div class="timeline-date">10:00 - 18:00</div>
+                            <div class="timeline-date">10:00 - 20:00</div>
                             <div class="timeline-content glass-card">
-                                <h4>3. ตะลุยสวนสนุก & โลกเวทมนตร์ Harry Potter</h4>
-                                <div style="margin: 15px 0; border-radius: 12px; overflow: hidden; height: 180px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/The_Wizarding_World_of_Harry_Potter_at_Universal_Studios_Japan_01.jpg/800px-The_Wizarding_World_of_Harry_Potter_at_Universal_Studios_Japan_01.jpg" alt="Harry Potter USJ" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy"></div>
-                                
+                                <h4>3. ตะลุยสวนสนุก &amp; โลกเวทมนตร์ Harry Potter</h4>
+                                <div style="margin: 15px 0; border-radius: 12px; overflow: hidden; height: 180px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                                    <img src="images/offline/1786905060058_6_Universal-Studios-Japan-The-Wizarding-World-of-Harry-Potter-36.jpg" alt="Harry Potter USJ" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy"></div>
+
                                 <div class="route-flow">
-                                    <span>🍄 Mario</span> ➔ 
-                                    <span>🪄 Harry Potter</span> ➔ 
-                                    <span>🍌 Minions</span> ➔ 
+                                    <span>🍄 Mario</span> ➔
+                                    <span>🪄 Harry Potter</span> ➔
+                                    <span>🍌 Minions</span> ➔
                                     <span>🦖 Jurassic</span>
                                 </div>
-
                                 <details>
-                                    <summary class="details-btn"><i class="fa-solid fa-chevron-down"></i> ลายแทงเครื่องเล่นและของกินห้ามพลาด</summary>
+                                    <summary class="details-btn"><i class="fa-solid fa-chevron-down"></i>
+                                        ลายแทงเครื่องเล่นและของกินห้ามพลาด</summary>
                                     <div class="details-content">
                                         <ul style="color: #475569; margin-left: 1.5rem; line-height: 1.6;">
-                                            <li><strong>Harry Potter and the Forbidden Journey:</strong> เครื่องเล่นที่ปราสาทฮอกวอตส์ ห้ามพลาดเด็ดขาด! (และอย่าลืมชิม บัตเตอร์เบียร์)</li>
-                                            <li><strong>Mario Kart: Koopa's Challenge:</strong> แข่งรถมาริโอ้คาร์ทสมจริงสุดๆ</li>
-                                            <li><strong>Minion Mayhem:</strong> โซนมินเนี่ยนน่ารักมาก เหมาะสำหรับทุกวัย</li>
-                                            <li><strong>The Flying Dinosaur:</strong> สำหรับสายโหด รถไฟเหาะตีลังกาแบบห้อยหัว เสียวสุดใน USJ</li>
-                                            <li><strong>มื้อเที่ยง:</strong> ของกินในโซนต่างๆ เช่น น่องไก่งวงชิ้นโต, พิซซ่ามาริโอ้, ซาลาเปามินเนี่ยน (เตรียมงบค่ากินในนี้ไว้สัก 2,000-3,000 เยนนะครับ)</li>
+                                            <li><strong>Harry Potter and the Forbidden Journey:</strong>
+                                                เครื่องเล่นที่ปราสาทฮอกวอตส์ ห้ามพลาดเด็ดขาด! (และอย่าลืมชิม
+                                                บัตเตอร์เบียร์)</li>
+                                            <li><strong>Mario Kart: Koopa's Challenge:</strong>
+                                                แข่งรถมาริโอ้คาร์ทสมจริงสุดๆ</li>
+                                            <li><strong>Minion Mayhem:</strong> โซนมินเนี่ยนน่ารักมาก เหมาะสำหรับทุกวัย
+                                            </li>
+                                            <li><strong>The Flying Dinosaur:</strong> สำหรับสายโหด
+                                                รถไฟเหาะตีลังกาแบบห้อยหัว เสียวสุดใน USJ</li>
+                                            <li><strong>มื้อเที่ยง:</strong> ของกินในโซนต่างๆ เช่น น่องไก่งวงชิ้นโต,
+                                                พิซซ่ามาริโอ้, ซาลาเปามินเนี่ยน (เตรียมงบค่ากินในนี้ไว้สัก 2,000-3,000
+                                                เยนนะครับ)</li>
                                         </ul>
                                     </div>
                                 </details>
                             </div>
                         </div>
 
+
                         <div class="timeline-item">
                             <div class="timeline-dot"></div>
-                            <div class="timeline-date">19:00 - 21:00</div>
+                            <div class="timeline-date">21:00 - 22:00</div>
+                            <div class="timeline-content glass-card" style="border-left: 4px solid #f59e0b;">
+                                <h4>4. แช่ออนเซ็น (Tattoo Friendly) ที่ Healthy Spa Tateba ♨️ <span class="badge" style="background:#ef4444; color:white; font-size: 0.75rem; vertical-align: middle;">~520¥</span>
+                                </h4>
+                                <div style="margin: 15px 0; border-radius: 12px; overflow: hidden; height: 180px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                                    <img src="https://tattoo-ja.com/_next/image?url=https%3A%2F%2Ftdtodpretqubitduause.supabase.co%2Fstorage%2Fv1%2Fobject%2Fpublic%2Ffacility_images%2Ffacility_images%2F64%2Fmain.webp%3Fv%3D1732498857473&amp;w=1400&amp;q=75" alt="Healthy Spa Tateba" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy"></div>
+                                <p style="color: #475569; line-height: 1.6; margin-bottom: 1rem;">หลังจากกลับจาก USJ
+                                    แวะมาแช่น้ำร้อนให้สบายตัวที่ <b>Healthy Spa Tateba (ย่าน Sakuragawa/Namba)</b>
+                                    ที่นี่เป็นโรงอาบน้ำสาธารณะขนาดใหญ่ที่ <strong>อนุญาตให้คนมีรอยสักเข้าแช่บ่อรวมได้
+                                        100%</strong> มีทั้งบ่อร้อน บ่อวน และซาวน่า (เปิดดึกถึงตี 5)</p>
+                                <a href="https://www.google.com/maps/search/?api=1&amp;query=Healthy+Spa+Tateba+Osaka" target="_blank" class="map-link">📍 เปิดแผนที่ (Google Maps)</a>
+
+                                <div class="route-flow" style="margin-top: 15px;">
+                                    <span>📍 Universal City</span> ➔
+                                    <span style="color:var(--primary);"><i class="fa-solid fa-train"></i> JR Loop Line
+                                        (ลง Nishikujo)</span> ➔
+                                    <span style="color:var(--primary);"><i class="fa-solid fa-train"></i> Hanshin
+                                        Line</span> ➔
+                                    <span>📍 Sakuragawa Station</span> ➔ เดิน 9 นาทีถึงร้าน
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-date">21:00 - 22:30</div>
                             <div class="timeline-content glass-card">
-                                <h4>4. เดินทางกลับ & ดินเนอร์เนื้อย่าง (Yakiniku) ย่าน Namba</h4>
-                                
+                                <h4>5. เดินทางกลับ &amp; ดินเนอร์เนื้อย่าง (Yakiniku) ย่าน Namba</h4>
+
                                 <div class="route-flow">
-                                    <span>📍 Universal City</span> ➔ 
-                                    <span><span class="badge badge-train-jr" style="background:#0284c7;">🚇 JR Yumesaki</span></span> ➔ 
-                                    <span>📍 Nishikujo</span> ➔ 
-                                    <span><span class="badge badge-train-jr" style="background:#f59e0b;">🚇 Hanshin</span></span> ➔ 
+                                    <span>📍 Onsen Ikkyu</span> ➔
+                                    <span><span class="badge badge-bus" style="background:#8b5cf6;">🚌
+                                            ฟรีบัส</span></span> ➔
+                                    <span>📍 Nishikujo</span> ➔
+                                    <span><span class="badge badge-train-jr" style="background:#f59e0b;">🚇
+                                            Hanshin</span></span> ➔
                                     <span>📍 Namba</span>
                                 </div>
 
                                 <details>
-                                    <summary class="details-btn"><i class="fa-solid fa-chevron-down"></i> แนะนำร้านมื้อเย็นหลังลุยสวนสนุก</summary>
+                                    <summary class="details-btn"><i class="fa-solid fa-chevron-down"></i>
+                                        แนะนำร้านมื้อเย็นรอบดึก</summary>
                                     <div class="details-content">
                                         <p style="color: #475569; line-height: 1.6; margin-bottom: 0;">
-                                            นั่งรถไฟกลับมาที่ Namba (เส้นทางเดิม) หลังจากใช้พลังงานไปทั้งวัน แนะนำให้จัด <strong>Yakiniku (เนื้อย่าง)</strong> แถวๆ ที่พักครับ ย่าน Namba/Dotonbori มีร้านปิ้งย่างเด็ดๆ เยอะมาก เช่น <br>
-                                            - <strong>Rikimaru (บุฟเฟ่ต์)</strong> หรือ <strong>Aburiya</strong> กินเนื้อนุ่มๆ เติมพลังให้เต็มอิ่ม หรือถ้าอยากจัดเนื้อวากิวพรีเมียมก็มีร้านในโอซาก้าให้เลือกเพียบครับ!
+                                            นั่งรถไฟกลับมาที่ Namba (เส้นทางเดิม) หลังจากใช้พลังงานไปทั้งวัน แนะนำให้จัด
+                                            <strong>Yakiniku (เนื้อย่าง)</strong> แถวๆ ที่พักครับ ย่าน Namba/Dotonbori
+                                            มีร้านปิ้งย่างเด็ดๆ ที่ปิดดึกเยอะมาก เช่น <br>
+                                            - <strong>Rikimaru (บุฟเฟ่ต์)</strong> หรือ <strong>Aburiya</strong>
+                                            กินเนื้อนุ่มๆ เติมพลังให้เต็มอิ่ม
+                                            หรือถ้าอยากจัดเนื้อวากิวพรีเมียมก็มีร้านในโอซาก้าให้เลือกเพียบครับ!
                                         </p>
                                     </div>
                                 </details>
@@ -549,36 +761,42 @@
                         </div>
                     </div>
                 </section>
-                
+
+
                 <!-- Day 3 -->
                 <section id="day3" style="margin-bottom: 4rem;">
-                    <h2 style="color: var(--primary); border-bottom: 1px solid #e2e8f0; padding-bottom: 10px; margin-bottom: 1.5rem;">Day 3: เกียวโต & เมืองอูจิ (14 มี.ค.)</h2>
-                    
+                    <h2 style="color: var(--primary); border-bottom: 1px solid #e2e8f0; padding-bottom: 10px; margin-bottom: 1.5rem;">
+                        Day 3: เกียวโต &amp; เมืองอูจิ (14 มี.ค.)</h2>
+
                     <div class="timeline">
                         <div class="timeline-item">
                             <div class="timeline-dot"></div>
                             <div class="timeline-date">07:30 - 09:00</div>
                             <div class="timeline-content glass-card">
                                 <h4>1. นั่งรถไฟข้ามเมืองไป Uji</h4>
-                                
+
                                 <div class="route-flow">
-                                    <span>📍 Namba</span> ➔ 
-                                    <span><span class="badge badge-train-midosuji">🚇 Midosuji (แดง)</span></span> ➔ 
-                                    <span>📍 Yodoyabashi</span> ➔ 
-                                    <span><span class="badge badge-train-midosuji">🚇 Keihan (แดงด่วนพิเศษ)</span></span> ➔ 
-                                    <span>📍 Chushojima</span> ➔ 
-                                    <span><span class="badge badge-train-chuo">🚇 Keihan Uji (เขียวอ่อน)</span></span> ➔ 
+                                    <span>📍 Namba</span> ➔
+                                    <span><span class="badge badge-train-midosuji">🚇 Midosuji (แดง)</span></span> ➔
+                                    <span>📍 Yodoyabashi</span> ➔
+                                    <span><span class="badge badge-train-midosuji">🚇 Keihan
+                                            (แดงด่วนพิเศษ)</span></span> ➔
+                                    <span>📍 Chushojima</span> ➔
+                                    <span><span class="badge badge-train-chuo">🚇 Keihan Uji (เขียวอ่อน)</span></span> ➔
                                     <span>📍 Keihan-Uji</span>
                                 </div>
-
                                 <details>
-                                    <summary class="details-btn"><i class="fa-solid fa-chevron-down"></i> ดูเส้นทางรถไฟแบบละเอียด</summary>
+                                    <summary class="details-btn"><i class="fa-solid fa-chevron-down"></i>
+                                        ดูเส้นทางรถไฟแบบละเอียด</summary>
                                     <div class="details-content">
                                         <ol style="margin-left: 1.5rem; color: #475569; margin-bottom: 1rem; line-height: 1.6;">
-                                            <li>สถานี <strong>Namba</strong> นั่ง 🔴 <strong>Midosuji (แดง)</strong> ลง <strong>Yodoyabashi</strong> (หัก 240 เยน)</li>
+                                            <li>สถานี <strong>Namba</strong> นั่ง 🔴 <strong>Midosuji (แดง)</strong> ลง
+                                                <strong>Yodoyabashi</strong> (หัก 240 เยน)</li>
                                             <li>เดินตามป้าย <strong>Keihan Railway</strong> เข้าเกต</li>
-                                            <li>ขึ้น <strong>Limited Express (รถด่วนพิเศษ สีแดง)</strong> นั่งยาวลง <strong>Chushojima</strong></li>
-                                            <li>เปลี่ยนสายที่ชานชาลาเป็น <strong>Keihan Uji Line (สีเขียวอ่อน)</strong> โดยขึ้นขบวน <strong>Local (สีดำ/เทา)</strong></li>
+                                            <li>ขึ้น <strong>Limited Express (รถด่วนพิเศษ สีแดง)</strong> นั่งยาวลง
+                                                <strong>Chushojima</strong></li>
+                                            <li>เปลี่ยนสายที่ชานชาลาเป็น <strong>Keihan Uji Line (สีเขียวอ่อน)</strong>
+                                                โดยขึ้นขบวน <strong>Local (สีดำ/เทา)</strong></li>
                                             <li>ลงสุดสาย <strong>Keihan-Uji</strong> (แตะออกหัก 420 เยน)</li>
                                         </ol>
                                     </div>
@@ -586,147 +804,149 @@
 
                                 <div class="emergency-box" style="margin-top: 15px;">
                                     <h5>🚨 Plan B: ถ้านั่ง Limited Express เลยป้าย</h5>
-                                    รถด่วนจอดน้อยมาก ถ้าเผลอหลับเลย Chushojima ให้ลงสถานีถัดไปที่รถจอด ข้ามชานชาลามาฝั่งตรงข้าม นั่งขบวน <strong>Local</strong> ย้อนกลับมา
+                                    รถด่วนจอดน้อยมาก ถ้าเผลอหลับเลย Chushojima ให้ลงสถานีถัดไปที่รถจอด
+                                    ข้ามชานชาลามาฝั่งตรงข้าม นั่งขบวน <strong>Local</strong> ย้อนกลับมา
                                 </div>
                             </div>
                         </div>
 
                         <div class="timeline-item">
+                            <div class="timeline-dot" style="background-color: #ec4899;"></div>
+                            <div class="timeline-date">มื้อเช้า (Breakfast)</div>
+                            <div class="timeline-content glass-card" style="border-left: 4px solid #ec4899;">
+                                <h4>🍽️ มื้อเช้า/สาย: Nakamura Tokichi Honten (Uji) <span class="badge" style="background:#ef4444; color:white; font-size: 0.75rem; vertical-align: middle;">~1,500¥</span>
+                                </h4>
+                                <p style="color: #475569; line-height: 1.6; margin-bottom: 1rem;">มาถึงเมืองมัจฉะทั้งที
+                                    ห้ามพลาด <b>Nakamura Tokichi Honten</b> (โซบะชาเขียวและพาร์เฟต์ชาเขียวระดับตำนาน)
+                                    แนะนำให้ไปกดคิวก่อนไปเดินเที่ยววัดครับ</p>
+                                <a href="https://www.google.com/maps/search/?api=1&amp;query=Nakamura+Tokichi+Honten+Uji" target="_blank" class="map-link">📍 พิกัดร้าน (Google Maps)</a>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
                             <div class="timeline-dot"></div>
                             <div class="timeline-date">09:30 - 11:30</div>
                             <div class="timeline-content glass-card">
-                                <h4>2. วัดเบียวโดอิน (Byodoin) <span class="badge" style="background:#ef4444; color:white; font-size: 0.75rem; vertical-align: middle;">💴 600¥</span></h4>
-<div style="margin: 15px 0; border-radius: 12px; overflow: hidden; height: 180px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Byodoin_Phoenix_Hall_Uji_2009.jpg/800px-Byodoin_Phoenix_Hall_Uji_2009.jpg" alt="Byodoin Temple" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy"></div>
-                                <a href="https://www.google.com/maps/search/?api=1&query=Byodoin+Temple" target="_blank" class="map-link">📍 เปิดแผนที่ (Google Maps)</a>
-                                
+                                <h4>3. วัดเบียวโดอิน (Byodoin) <span class="badge" style="background:#ef4444; color:white; font-size: 0.75rem; vertical-align: middle;">💴
+                                        600¥</span></h4>
+                                <div style="margin: 15px 0; border-radius: 12px; overflow: hidden; height: 180px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                                    <img src="images/offline/1786905060058_8_spot02_pic04.png" alt="Byodoin Temple" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy"></div>
+                                <a href="https://www.google.com/maps/search/?api=1&amp;query=Byodoin+Temple" target="_blank" class="map-link">📍 เปิดแผนที่ (Google Maps)</a>
+
+
                                 <div class="route-flow">
-                                    <span>📍 Keihan-Uji</span> ➔ 
-                                    <span><span class="badge badge-walk">🚶 เดินข้ามสะพานอูจิ (10 นาที)</span></span> ➔ 
+                                    <span>📍 Keihan-Uji</span> ➔
+                                    <span><span class="badge badge-walk">🚶 เดินข้ามสะพานอูจิ (10 นาที)</span></span> ➔
                                     <span>📍 วัดเบียวโดอิน</span>
                                 </div>
-
                                 <details>
-                                    <summary class="details-btn"><i class="fa-solid fa-chevron-down"></i> ดูกิจกรรมที่อูจิ</summary>
+                                    <summary class="details-btn"><i class="fa-solid fa-chevron-down"></i>
+                                        ดูกิจกรรมที่อูจิ</summary>
                                     <div class="details-content">
                                         <ul style="color: #475569; margin-left: 1.5rem; line-height: 1.6;">
-                                            <li>เดินข้าม <strong>สะพานอูจิ (Uji Bridge)</strong> เลี้ยวซ้ายเข้าถนน Omotesando</li>
+                                            <li>เดินข้าม <strong>สะพานอูจิ (Uji Bridge)</strong> เลี้ยวซ้ายเข้าถนน
+                                                Omotesando</li>
                                             <li>เข้าชมวัดเบียวโดอิน (รูปบนเหรียญ 10 เยน) ค่าเข้า 600 เยน</li>
-                                            <li>ขากลับเดินมา <strong>ถนนชาเขียว</strong> ซื้อไอศกรีมมัทฉะ ชาแท้ และของฝาก</li>
+                                            <li>ขากลับเดินมา <strong>ถนนชาเขียว</strong> ซื้อไอศกรีมมัทฉะ ชาแท้
+                                                และของฝาก</li>
                                         </ul>
                                     </div>
                                 </details>
                             </div>
                         </div>
-
                         <div class="timeline-item">
                             <div class="timeline-dot"></div>
                             <div class="timeline-date">11:30 - 14:00</div>
                             <div class="timeline-content glass-card">
-                                <h4>3. ศาลเจ้าจิ้งจอก (Fushimi Inari) <span class="badge" style="background:#22c55e; color:white; font-size: 0.75rem; vertical-align: middle;">🆓 ฟรี</span></h4>
-<div style="margin: 15px 0; border-radius: 12px; overflow: hidden; height: 180px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Fushimi_Inari_Taisha_Senbon_Torii.jpg/800px-Fushimi_Inari_Taisha_Senbon_Torii.jpg" alt="Fushimi Inari Taisha" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy"></div>
-                                <a href="https://www.google.com/maps/search/?api=1&query=Fushimi+Inari+Taisha" target="_blank" class="map-link">📍 เปิดแผนที่ (Google Maps)</a>
-                                
+                                <h4>4. ศาลเจ้าจิ้งจอก (Fushimi Inari) <span class="badge" style="background:#22c55e; color:white; font-size: 0.75rem; vertical-align: middle;">🆓
+                                        ฟรี</span></h4>
+                                <div style="margin: 15px 0; border-radius: 12px; overflow: hidden; height: 180px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                                    <img src="images/offline/1786905060058_9_2-9.jpg" alt="Fushimi Inari Taisha" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy"></div>
+                                <a href="https://www.google.com/maps/search/?api=1&amp;query=Fushimi+Inari+Taisha" target="_blank" class="map-link">📍 เปิดแผนที่ (Google Maps)</a>
+
+
                                 <div class="route-flow">
-                                    <span>📍 Keihan-Uji</span> ➔ 
-                                    <span><span class="badge badge-train-chuo">🚇 Keihan Uji</span></span> ➔ 
-                                    <span>📍 Chushojima</span> ➔ 
-                                    <span><span class="badge badge-train-jr" style="background:#64748b;">🚇 Keihan (Local สีเทา)</span></span> ➔ 
+                                    <span>📍 Keihan-Uji</span> ➔
+                                    <span><span class="badge badge-train-chuo">🚇 Keihan Uji</span></span> ➔
+                                    <span>📍 Chushojima</span> ➔
+                                    <span><span class="badge badge-train-jr" style="background:#64748b;">🚇 Keihan
+                                            (Local สีเทา)</span></span> ➔
                                     <span>📍 Fushimi-Inari</span>
                                 </div>
-
                                 <div class="emergency-box" style="margin-top: 15px; border-color: #ef4444; background: rgba(239,68,68,0.1);">
                                     <h5>🚨 คำเตือนสำคัญมาก! (สถานี Chushojima)</h5>
-                                    <strong>ห้ามขึ้นรถขบวน Limited Express สีแดงเด็ดขาด!</strong> เพราะรถด่วนจะไม่จอดที่ศาลเจ้าจิ้งจอก ให้รอขึ้นเฉพาะขบวน <strong>Local (สีเทา-ดำ)</strong> เท่านั้น
+                                    <strong>ห้ามขึ้นรถขบวน Limited Express สีแดงเด็ดขาด!</strong>
+                                    เพราะรถด่วนจะไม่จอดที่ศาลเจ้าจิ้งจอก ให้รอขึ้นเฉพาะขบวน <strong>Local
+                                        (สีเทา-ดำ)</strong> เท่านั้น
                                 </div>
 
-                                <details style="margin-top: 15px;">
-                                    <summary class="details-btn"><i class="fa-solid fa-chevron-down"></i> ดูรายละเอียดเส้นทาง</summary>
-                                    <div class="details-content">
-                                        <ol style="margin-left: 1.5rem; color: #475569; margin-bottom: 1rem; line-height: 1.6;">
-                                            <li>ขึ้นรถสายสีเขียวเดิม ย้อนกลับมาลง <strong>Chushojima</strong></li>
-                                            <li>เปลี่ยนสายมุ่งหน้าเกียวโต (Demachiyanagi) ขึ้นขบวน <strong>Local สีดำ/เทา</strong></li>
-                                            <li>ลง <strong>Fushimi-Inari</strong> แตะออก (หัก 320 เยน) จะเจอเสาแดงหน้าสถานี</li>
-                                            <li>แวะทานข้าวเที่ยงที่ถนนทางเดินเข้าศาลเจ้า</li>
-                                        </ol>
-                                    </div>
-                                </details>
                             </div>
                         </div>
 
+                        <div class="timeline-item">
+                            <div class="timeline-dot" style="background-color: #ec4899;"></div>
+                            <div class="timeline-date">มื้อเที่ยง (Lunch)</div>
+                            <div class="timeline-content glass-card" style="border-left: 4px solid #ec4899;">
+                                <h4>🍽️ มื้อเที่ยง: Nezameya (Fushimi Inari) <span class="badge" style="background:#ef4444; color:white; font-size: 0.75rem; vertical-align: middle;">~2,500¥</span>
+                                </h4>
+                                <p style="color: #475569; line-height: 1.6; margin-bottom: 1rem;">
+                                    เดินลงมาจากศาลเจ้าจิ้งจอก แวะเติมพลังด้วยข้าวหน้าปลาไหลย่างเตาถ่านที่ร้านเก่าแก่
+                                    <b>Nezameya (เนซาเมะยะ)</b> หรือเดินกิน Street food ชิลๆ หน้าศาลเจ้าครับ</p>
+                                <a href="https://www.google.com/maps/search/?api=1&amp;query=Nezameya+Kyoto" target="_blank" class="map-link">📍 พิกัดร้าน Nezameya</a>
+                            </div>
+                        </div>
                         <div class="timeline-item">
                             <div class="timeline-dot"></div>
                             <div class="timeline-date">14:00 - 17:00</div>
                             <div class="timeline-content glass-card">
-                                <h4>4. เช่ากิโมโน & วัดน้ำใส (Kiyomizu-dera) <span class="badge" style="background:#ef4444; color:white; font-size: 0.75rem; vertical-align: middle;">💴 วัด 400¥</span></h4>
-<div style="margin: 15px 0; border-radius: 12px; overflow: hidden; height: 180px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Kiyomizu-dera_Main_Hall_2019.jpg/800px-Kiyomizu-dera_Main_Hall_2019.jpg" alt="Kiyomizu-dera" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy"></div>
-                                
+                                <h4>6. เช่ากิโมโน &amp; วัดน้ำใส (Kiyomizu-dera) <span class="badge" style="background:#ef4444; color:white; font-size: 0.75rem; vertical-align: middle;">💴
+                                        วัด 400¥</span></h4>
+                                <div style="margin: 15px 0; border-radius: 12px; overflow: hidden; height: 180px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                                    <img src="images/offline/1786905060058_10_Kyoto-Kiyomizu-dera-Temple-35.jpg.webp" alt="Kiyomizu-dera" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy"></div>
+
                                 <div class="route-flow">
-                                    <span>📍 Fushimi-Inari</span> ➔ 
-                                    <span><span class="badge badge-train-jr" style="background:#64748b;">🚇 Keihan (Local สีเทา)</span></span> ➔ 
-                                    <span>📍 Kiyomizu-Gojo</span> ➔ 
-                                    <span><span class="badge badge-walk">🚶 เดินขึ้นเขา (เช่าชุด)</span></span> ➔ 
+                                    <span>📍 Fushimi-Inari</span> ➔
+                                    <span><span class="badge badge-train-jr" style="background:#64748b;">🚇 Keihan
+                                            (Local สีเทา)</span></span> ➔
+                                    <span>📍 Kiyomizu-Gojo</span> ➔
+                                    <span><span class="badge badge-walk">🚶 เดินขึ้นเขา (เช่าชุด)</span></span> ➔
                                     <span>📍 วัดน้ำใส</span>
                                 </div>
-
                                 <details>
-                                    <summary class="details-btn"><i class="fa-solid fa-chevron-down"></i> ดูวิธีเดินขึ้นวัดและเช่าชุด</summary>
+                                    <summary class="details-btn"><i class="fa-solid fa-chevron-down"></i>
+                                        ดูวิธีเดินขึ้นวัดและเช่าชุด</summary>
                                     <div class="details-content">
                                         <ol style="margin-left: 1.5rem; color: #475569; margin-bottom: 1rem; line-height: 1.6;">
-                                            <li>สถานี Fushimi-Inari ขึ้นรถขบวน <strong>Local สีดำ/เทา มุ่งหน้าทางเดิมไป 3 ป้าย</strong></li>
+                                            <li>สถานี Fushimi-Inari ขึ้นรถขบวน <strong>Local สีดำ/เทา มุ่งหน้าทางเดิมไป
+                                                    3 ป้าย</strong></li>
                                             <li>ลง <strong>Kiyomizu-Gojo</strong> ออก Exit 4 แตะออก (หัก 220 เยน)</li>
-                                            <li>เดินตาม ถ. Gojozaka ทิศตะวันออก (ทางขึ้นเนิน) แวะเช่าชุดกิโมโน (3,000-5,000 เยน ใช้เวลา 1 ชม.)</li>
-                                            <li>เดินผ่าน ถ. นินเน็นซากะ ทะลุซันเน็นซากะ เข้าวัดน้ำใส (ค่าเข้า 400 เยน) ถ่ายรูประเบียงไม้</li>
-                                            <li>คืนชุด และเดินลงเขากลับมาสถานี <strong>Kiyomizu-Gojo</strong> ที่เดิม</li>
+                                            <li>เดินตาม ถ. Gojozaka ทิศตะวันออก (ทางขึ้นเนิน) แวะเช่าชุดกิโมโน
+                                                (3,000-5,000 เยน ใช้เวลา 1 ชม.)</li>
+                                            <li>เดินผ่าน ถ. นินเน็นซากะ ทะลุซันเน็นซากะ เข้าวัดน้ำใส (ค่าเข้า 400 เยน)
+                                                ถ่ายรูประเบียงไม้</li>
+                                            <li>คืนชุด และเดินลงเขากลับมาสถานี <strong>Kiyomizu-Gojo</strong> ที่เดิม
+                                            </li>
                                         </ol>
                                     </div>
                                 </details>
                             </div>
                         </div>
 
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-date">18:00 - ค่ำ</div>
-                            <div class="timeline-content glass-card">
-                                <h4>5. กลับโอซาก้า & เดิน Den Den Town (ฟิกเกอร์) <span class="badge" style="background:#22c55e; color:white; font-size: 0.75rem; vertical-align: middle;">🆓 เดินฟรี</span></h4>
-                                
-                                <div class="route-flow">
-                                    <span>📍 Kiyomizu-Gojo</span> ➔ 
-                                    <span><span class="badge badge-train-midosuji">🚇 Keihan (แดง)</span></span> ➔ 
-                                    <span>📍 Kitahama</span> ➔ 
-                                    <span><span class="badge badge-train-sakaisuji">🚇 Sakaisuji (น้ำตาล)</span></span> ➔ 
-                                    <span>📍 Ebisucho</span> ➔ 
-                                    <span>🛍️ Den Den Town</span>
-                                </div>
-
-                                <details>
-                                    <summary class="details-btn"><i class="fa-solid fa-chevron-down"></i> อ่านลายแทงขุมทรัพย์ฟิกเกอร์</summary>
-                                    <div class="details-content">
-                                        <ol style="margin-left: 1.5rem; color: #475569; margin-bottom: 1rem; line-height: 1.6;">
-                                            <li>สถานี Kiyomizu-Gojo มุ่งหน้า Yodoyabashi (กลับโอซาก้า) รอขึ้น <strong>Limited Express (สีแดง)</strong> ยิงยาวกลับเลย</li>
-                                            <li>ลงสถานี <strong>Kitahama</strong> แตะออก (หัก 420 เยน) เปลี่ยนไปลงใต้ดินสาย 🟤 <strong>Sakaisuji (น้ำตาล)</strong></li>
-                                            <li>ลงสถานี <strong>Ebisucho (Exit 1-A)</strong> (หัก 240 เยน) โผล่มาย่าน <strong>Den Den Town</strong> ทันที</li>
-                                            <li><strong><i class="fa-solid fa-robot"></i> สวรรค์ของคนรักฟิกเกอร์:</strong> แวะร้าน <em>Super Kids Land</em> (กันพลา) หรือ <em>Mandarake</em> (มือสอง)</li>
-                                        </ol>
-                                        <div class="emergency-box" style="margin-top: 10px;">
-                                            <strong>🚨 คำเตือน:</strong> ร้านค้าย่าน Den Den Town ส่วนใหญ่จะปิดตอน 20:00 น. รีบพุ่งตัวด่วน!
-                                        </div>
-                                    </div>
-                                </details>
-                            </div>
-                        </div>
+                        
 
                         <div class="timeline-item">
                             <div class="timeline-dot"></div>
                             <div class="timeline-date">20:30 (Option)</div>
                             <div class="timeline-content glass-card">
-                                <h4>6. ชมวิว Umeda Sky Building (ถ้ายังมีแรง) <span class="badge" style="background:#ef4444; color:white; font-size: 0.75rem; vertical-align: middle;">💴 1,500¥</span></h4>
-<div style="margin: 15px 0; border-radius: 12px; overflow: hidden; height: 180px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Umeda_Sky_Building_2019.jpg/800px-Umeda_Sky_Building_2019.jpg" alt="Umeda Sky Building" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy"></div>
-                                
+                                <h4>7. ชมวิว Umeda Sky Building (ถ้ายังมีแรง) <span class="badge" style="background:#ef4444; color:white; font-size: 0.75rem; vertical-align: middle;">💴
+                                        1,500¥</span></h4>
+                                <div style="margin: 15px 0; border-radius: 12px; overflow: hidden; height: 180px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                                    <img src="images/offline/1786905060058_11_Osaka-Umeda-Sky-55.jpg" alt="Umeda Sky Building" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy"></div>
+
                                 <div class="route-flow">
-                                    <span>📍 Namba</span> ➔ 
-                                    <span><span class="badge badge-train-midosuji">🚇 Midosuji (แดง)</span></span> ➔ 
-                                    <span>📍 Umeda</span> ➔ 
-                                    <span><span class="badge badge-walk">🚶 ลอดอุโมงค์เดิน 15 นาที</span></span> ➔ 
+                                    <span>📍 Namba</span> ➔
+                                    <span><span class="badge badge-train-midosuji">🚇 Midosuji (แดง)</span></span> ➔
+                                    <span>📍 Umeda</span> ➔
+                                    <span><span class="badge badge-walk">🚶 ลอดอุโมงค์เดิน 15 นาที</span></span> ➔
                                     <span>🌃 Umeda Sky</span>
                                 </div>
                             </div>
@@ -734,235 +954,309 @@
                     </div>
                 </section>
 
-
-                
                 <!-- Day 4 -->
-<section id="day4" style="margin-bottom: 4rem;">
-    <h2 style="color: var(--primary); border-bottom: 1px solid #e2e8f0; padding-bottom: 10px; margin-bottom: 1.5rem;"><i class="fa-solid fa-plane-departure"></i> Day 4: สุมิโยชิ & ตลาดปลา & กลับไทย (15 มี.ค.)</h2>
+                <section id="day4" style="margin-bottom: 4rem;">
+                    <h2 style="color: var(--primary); border-bottom: 1px solid #e2e8f0; padding-bottom: 10px; margin-bottom: 1.5rem;">
+                        <i class="fa-solid fa-plane-departure"></i> Day 4: สุมิโยชิ &amp; ตลาดปลา &amp; กลับไทย (15 มี.ค.)</h2>
+                    <div class="timeline">
+                        <!-- 08:00 - 08:30 Check-out -->
 
-    <div class="timeline">
-        <!-- 08:00 - 08:30 Check-out -->
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date">08:00 - 08:30</div>
-            <div class="timeline-content glass-card">
-                <h4>1. เช็คเอาท์แต่เช้า & ฝากกระเป๋า</h4>
-                <div class="route-flow" style="margin-top: 10px;">
-                    <span>📍 123 Guesthouse</span> ➔
-                    <span><span class="badge badge-walk">🚶 ฝากกระเป๋าไว้ที่พัก</span></span> ➔
-                    <span>📍 พร้อมเที่ยวตัวปลิว!</span>
-                </div>
-                <details style="margin-top: 10px;">
-                    <summary class="details-btn"><i class="fa-solid fa-chevron-down"></i> คำแนะนำ</summary>
-                    <div class="details-content">
-                        <ul style="color: #475569; margin-left: 1.5rem; line-height: 1.6;">
-                            <li>จัดการฝากสัมภาระใบใหญ่ทั้งหมดไว้ที่เกสต์เฮาส์ (หรือตู้ล็อกเกอร์สถานี Namba) พกไปแค่กระเป๋าใบเล็กและพาสปอร์ตตัวจริงสำหรับทำ Tax Refund</li>
-                        </ul>
-                    </div>
-                </details>
-            </div>
-        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot" style="background-color: #ec4899;"></div>
+                            <div class="timeline-date">มื้อเช้า (Breakfast)</div>
+                            <div class="timeline-content glass-card" style="border-left: 4px solid #ec4899;">
+                                <h4>🍽️ มื้อเช้า: ร้านสะดวกซื้อ (ง่ายๆ ประหยัด) <span class="badge" style="background:#ef4444; color:white; font-size: 0.75rem; vertical-align: middle;">~500¥</span>
+                                </h4>
+                                <p style="color: #475569; line-height: 1.6; margin-bottom: 0;">
+                                    มื้อเช้าวันนี้แวะซื้อกาแฟกระป๋องหรือเบเกอรี่จากร้านสะดวกซื้อกินเบาๆ เพื่อประหยัดงบ
+                                    และเก็บท้องไว้ไปจัดหนักที่ตลาดปลาตอนสายๆ ครับ</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-date">08:00 - 08:30</div>
+                            <div class="timeline-content glass-card">
+                                <h4>1. เช็คเอาท์แต่เช้า &amp; ฝากกระเป๋า</h4>
+                                <div class="route-flow" style="margin-top: 10px;">
+                                    <span>📍 123 Guesthouse</span> ➔
+                                    <span><span class="badge badge-walk">🚶 ฝากกระเป๋าไว้ที่พัก</span></span> ➔
+                                    <span>📍 พร้อมเที่ยวตัวปลิว!</span>
+                                </div>
+                                <details style="margin-top: 10px;">
+                                    <summary class="details-btn"><i class="fa-solid fa-chevron-down"></i> คำแนะนำ
+                                    </summary>
+                                    <div class="details-content">
+                                        <ul style="color: #475569; margin-left: 1.5rem; line-height: 1.6;">
+                                            <li>จัดการฝากสัมภาระใบใหญ่ทั้งหมดไว้ที่เกสต์เฮาส์ (หรือตู้ล็อกเกอร์สถานี
+                                                Namba) พกไปแค่กระเป๋าใบเล็กและพาสปอร์ตตัวจริงสำหรับทำ Tax Refund</li>
+                                        </ul>
+                                    </div>
+                                </details>
+                            </div>
+                        </div>
 
-        <!-- 08:30 - 10:00 Sumiyoshi Taisha -->
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date">08:30 - 10:00</div>
-            <div class="timeline-content glass-card">
-                <h4>2. ศาลเจ้าสุมิโยชิ ไทฉะ (Sumiyoshi Taisha) <span class="badge" style="background:#22c55e; color:white; font-size: 0.75rem; vertical-align: middle;">🆓 ฟรี</span></h4>
-<div style="margin: 15px 0; border-radius: 12px; overflow: hidden; height: 180px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Sumiyoshi_Taisha_Sorihashi.jpg/800px-Sumiyoshi_Taisha_Sorihashi.jpg" alt="Sumiyoshi Taisha" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy"></div>
-                <a href="https://www.google.com/maps/search/?api=1&query=Sumiyoshi+Taisha" target="_blank" class="map-link">📍 เปิดแผนที่ (Google Maps)</a>
-                
-                <div class="route-flow">
-                    <span>📍 สถานี Namba (Nankai)</span> ➔
-                    <span><span class="badge badge-train" style="background: #0ea5e9;">🚃 Nankai Main Line (Local)</span></span> ➔
-                    <span>📍 สถานี Sumiyoshi-Taisha</span>
-                </div>
-                                                <details>
-                                    <summary class="details-btn"><i class="fa-solid fa-chevron-down"></i> ไฮไลท์และวิธีเดินทาง</summary>
+                        <!-- 08:30 - 10:00 Sumiyoshi Taisha -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-date">08:30 - 10:00</div>
+                            <div class="timeline-content glass-card">
+                                <h4>2. ศาลเจ้าสุมิโยชิ ไทฉะ (Sumiyoshi Taisha) <span class="badge" style="background:#22c55e; color:white; font-size: 0.75rem; vertical-align: middle;">🆓
+                                        ฟรี</span></h4>
+                                <div style="margin: 15px 0; border-radius: 12px; overflow: hidden; height: 180px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                                    <img src="images/offline/1786905060058_12_Sumiyoshi-Taisha-Osaka-01.jpg.webp" alt="Sumiyoshi Taisha" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy"></div>
+                                <a href="https://www.google.com/maps/search/?api=1&amp;query=Sumiyoshi+Taisha" target="_blank" class="map-link">📍 เปิดแผนที่ (Google Maps)</a>
+
+                                <div class="route-flow">
+                                    <span>📍 สถานี Namba (Nankai)</span> ➔
+                                    <span><span class="badge badge-train" style="background: #0ea5e9;">🚃 Nankai Main
+                                            Line (Local)</span></span> ➔
+                                    <span>📍 สถานี Sumiyoshi-Taisha</span>
+                                </div>
+                                <details>
+                                    <summary class="details-btn"><i class="fa-solid fa-chevron-down"></i>
+                                        ไฮไลท์และวิธีเดินทาง</summary>
                                     <div class="details-content">
                                         <strong style="color: #4f46e5;">🚇 การเดินทาง (หัก ICOCA 220 เยน):</strong>
                                         <ul style="color: #475569; margin-left: 1.5rem; line-height: 1.6; margin-bottom: 1rem;">
-                                            <li>เดินไปที่สถานี <strong>Nankai Namba</strong> (อยู่ตรงข้ามห้าง Takashimaya) แตะ ICOCA เข้าเกต</li>
-                                            <li>ขึ้นรถไฟ Nankai Main Line <strong>(ต้องเป็นขบวน Local เท่านั้น ห้ามขึ้น Express)</strong></li>
-                                            <li>นั่งไปประมาณ 10 นาที ลงที่สถานี <strong>Sumiyoshi-Taisha</strong> แตะออกหัก 220 เยน</li>
+                                            <li>เดินไปที่สถานี <strong>Nankai Namba</strong> (อยู่ตรงข้ามห้าง
+                                                Takashimaya) แตะ ICOCA เข้าเกต</li>
+                                            <li>ขึ้นรถไฟ Nankai Main Line <strong>(ต้องเป็นขบวน Local เท่านั้น ห้ามขึ้น
+                                                    Express)</strong></li>
+                                            <li>นั่งไปประมาณ 10 นาที ลงที่สถานี <strong>Sumiyoshi-Taisha</strong>
+                                                แตะออกหัก 220 เยน</li>
                                             <li>เดินออกจากสถานีปุ๊บจะเจอศาลเจ้าเลยครับ</li>
                                         </ul>
                                         <strong style="color: #ef4444;">⛩️ ไฮไลท์ (เข้าฟรี):</strong>
                                         <ul style="color: #475569; margin-left: 1.5rem; line-height: 1.6; margin-bottom: 0;">
-                                            <li>ไฮไลท์คือ <strong>"สะพานแดงโค้ง Sorihashi"</strong> ถ่ายรูปตอนเช้าแสงสวยและคนน้อยมากครับ</li>
-                                            <li>เป็น 1 ในศาลเจ้าที่เก่าแก่ที่สุดของญี่ปุ่น ขอพรเรื่องความปลอดภัยและการเดินทางก่อนกลับไทยได้ดีมากครับ</li>
+                                            <li>ไฮไลท์คือ <strong>"สะพานแดงโค้ง Sorihashi"</strong>
+                                                ถ่ายรูปตอนเช้าแสงสวยและคนน้อยมากครับ</li>
+                                            <li>เป็น 1 ในศาลเจ้าที่เก่าแก่ที่สุดของญี่ปุ่น
+                                                ขอพรเรื่องความปลอดภัยและการเดินทางก่อนกลับไทยได้ดีมากครับ</li>
                                         </ul>
                                     </div>
                                 </details>
-            </div>
-        </div>
+                            </div>
+                        </div>
 
-        <!-- 10:30 - 11:15 Kuromon Market -->
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date">10:30 - 11:15</div>
-            <div class="timeline-content glass-card">
-                <h4>3. เดินโฉบตลาดปลาคุโรมง (Kuromon Market) <span class="badge" style="background:#22c55e; color:white; font-size: 0.75rem; vertical-align: middle;">🆓 เดินฟรี</span></h4>
-<div style="margin: 15px 0; border-radius: 12px; overflow: hidden; height: 180px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Kuromon_Ichiba_Market_01.jpg/800px-Kuromon_Ichiba_Market_01.jpg" alt="Kuromon Market" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy"></div>
-                <a href="https://www.google.com/maps/search/?api=1&query=Kuromon+Market" target="_blank" class="map-link">📍 เปิดแผนที่ (Google Maps)</a>
-                
-                <div class="route-flow">
-                    <span>📍 สถานี Sumiyoshi-Taisha</span> ➔
-                    <span><span class="badge badge-train" style="background: #0ea5e9;">🚃 Nankai Main Line</span></span> ➔
-                    <span>📍 Namba</span> ➔
-                    <span><span class="badge badge-walk">🚶 เดิน 10 นาที</span></span> ➔
-                    <span>🐟 ตลาดปลา Kuromon</span>
-                </div>
-                                                <details open>
-                                    <summary class="details-btn"><i class="fa-solid fa-chevron-down"></i> แวะถ่ายรูปเอาฟีล</summary>
+                        <!-- 10:30 - 11:15 Kuromon Market -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-date">10:30 - 11:15</div>
+                            <div class="timeline-content glass-card">
+                                <h4>3. เดินโฉบตลาดปลาคุโรมง (Kuromon Market) <span class="badge" style="background:#22c55e; color:white; font-size: 0.75rem; vertical-align: middle;">🆓
+                                        เดินฟรี</span></h4>
+                                <div style="margin: 15px 0; border-radius: 12px; overflow: hidden; height: 180px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                                    <img src="images/offline/1786905060058_13_NTJtrv1084-en_kuromon_market_0.webp" alt="Kuromon Market" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy"></div>
+                                <a href="https://www.google.com/maps/search/?api=1&amp;query=Kuromon+Market" target="_blank" class="map-link">📍 เปิดแผนที่ (Google Maps)</a>
+
+                                <div class="route-flow">
+                                    <span>📍 สถานี Sumiyoshi-Taisha</span> ➔
+                                    <span><span class="badge badge-train" style="background: #0ea5e9;">🚃 Nankai Main
+                                            Line</span></span> ➔
+                                    <span>📍 Namba</span> ➔
+                                    <span><span class="badge badge-walk">🚶 เดิน 10 นาที</span></span> ➔
+                                    <span>🐟 ตลาดปลา Kuromon</span>
+                                </div>
+                                <details open="">
+                                    <summary class="details-btn"><i class="fa-solid fa-chevron-down"></i>
+                                        แวะถ่ายรูปเอาฟีล</summary>
                                     <div class="details-content">
                                         <strong style="color: #4f46e5;">🚇 การเดินทาง (หัก ICOCA 220 เยน):</strong>
                                         <ul style="color: #475569; margin-left: 1.5rem; line-height: 1.6; margin-bottom: 1rem;">
-                                            <li>นั่งรถไฟ Nankai Local ขบวนเดิมกลับมาที่สถานี <strong>Namba</strong> (หัก 220 เยน)</li>
-                                            <li>เดินเท้าต่อไปทางทิศตะวันออกประมาณ 10 นาที จะเจอทางเข้าตลาดปลา Kuromon</li>
+                                            <li>นั่งรถไฟ Nankai Local ขบวนเดิมกลับมาที่สถานี <strong>Namba</strong> (หัก
+                                                220 เยน)</li>
+                                            <li>เดินเท้าต่อไปทางทิศตะวันออกประมาณ 10 นาที จะเจอทางเข้าตลาดปลา Kuromon
+                                            </li>
                                         </ul>
                                         <strong style="color: #059669;">📸 ทริคเซฟงบ:</strong>
                                         <ul style="color: #475569; margin-left: 1.5rem; line-height: 1.6; margin-bottom: 0;">
-                                            <li>เดินทะลุตลาดดูบรรยากาศปลาดิบยักษ์ ปูยักษ์ ถ่ายรูปเก๋ๆ กับร้านค้าสไตล์ญี่ปุ่น</li>
-                                            <li>เราแค่มาเดินเล่นเอาฟีลลิ่ง แนะนำว่าไม่ต้องซื้ออาหารทะเลแพงๆ ที่นี่ เก็บเหรียญไปกินมื้อเที่ยงราคาประหยัดที่ Namba Parks แทนครับ!</li>
+                                            <li>เดินทะลุตลาดดูบรรยากาศปลาดิบยักษ์ ปูยักษ์ ถ่ายรูปเก๋ๆ
+                                                กับร้านค้าสไตล์ญี่ปุ่น</li>
+                                            <li>เราแค่มาเดินเล่นเอาฟีลลิ่ง แนะนำว่าไม่ต้องซื้ออาหารทะเลแพงๆ ที่นี่
+                                                เก็บเหรียญไปกินมื้อเที่ยงราคาประหยัดที่ Namba Parks แทนครับ!</li>
                                         </ul>
                                     </div>
                                 </details>
-            </div>
-        </div>
+                            </div>
+                        </div>
 
-        <!-- 11:30 - 12:45 Namba Parks & Lunch -->
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date">11:30 - 12:45</div>
-            <div class="timeline-content glass-card">
-                <h4>4. Namba Parks & มื้อเที่ยงสุดประหยัด <span class="badge" style="background:#22c55e; color:white; font-size: 0.75rem; vertical-align: middle;">🆓 ฟรี</span></h4>
-                <a href="https://www.google.com/maps/search/?api=1&query=Namba+Parks" target="_blank" class="map-link">📍 เปิดแผนที่ (Google Maps)</a>
-                
-                <div class="route-flow">
-                    <span>📍 ตลาดปลา Kuromon</span> ➔
-                    <span><span class="badge badge-walk">🚶 เดินกลับมาทาง Namba (10 นาที)</span></span> ➔
-                    <span>📍 Namba Parks</span>
-                </div>
-                                                <details>
-                                    <summary class="details-btn"><i class="fa-solid fa-chevron-down"></i> เซฟงบ & สายชิลล์ & พิกัดร้าน</summary>
+                        <!-- 11:30 - 12:45 Namba Parks & Lunch -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-date">11:30 - 12:45</div>
+                            <div class="timeline-content glass-card">
+                                <h4>4. Namba Parks &amp; มื้อเที่ยงสุดประหยัด
+                                    <div style="margin: 15px 0; border-radius: 12px; overflow: hidden; height: 180px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                                        <img src="images/offline/1786905060058_14_namba-parks-osaka.jpg" alt="Namba Parks" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy"></div> <span class="badge" style="background:#22c55e; color:white; font-size: 0.75rem; vertical-align: middle;">🆓
+                                        ฟรี</span>
+                                </h4>
+                                <a href="https://www.google.com/maps/search/?api=1&amp;query=Namba+Parks" target="_blank" class="map-link">📍 เปิดแผนที่ (Google Maps)</a>
+
+                                <div class="route-flow">
+                                    <span>📍 ตลาดปลา Kuromon</span> ➔
+                                    <span><span class="badge badge-walk">🚶 เดินกลับมาทาง Namba (10 นาที)</span></span>
+                                    ➔
+                                    <span>📍 Namba Parks</span>
+                                </div>
+                                <details>
+                                    <summary class="details-btn"><i class="fa-solid fa-chevron-down"></i> เซฟงบ &amp;
+                                        สายชิลล์ &amp; พิกัดร้าน</summary>
                                     <div class="details-content">
                                         <strong style="color: #4f46e5;">🚶 การเดินทาง:</strong>
-                                        <p style="color: #475569; line-height: 1.6; margin-bottom: 1rem;">เดินจากตลาดปลา Kuromon กลับมาทางสถานี Nankai Namba จะเจอตึก Namba Parks อลังการอยู่ติดกันเลยครับ (เดินฟรี 10 นาที)</p>
-                                        
-                                        <strong style="color: #059669;">🌳 ถ่ายรูปฟรี:</strong>
-                                        <p style="color: #475569; line-height: 1.6; margin-bottom: 1rem;">เดินชิลล์บนสวนลอยฟ้าสุดอลังการของ Namba Parks ทรงหุบเขาแกรนด์แคนยอน (ฟรี 100%)</p>
+                                        <p style="color: #475569; line-height: 1.6; margin-bottom: 1rem;">เดินจากตลาดปลา
+                                            Kuromon กลับมาทางสถานี Nankai Namba จะเจอตึก Namba Parks
+                                            อลังการอยู่ติดกันเลยครับ (เดินฟรี 10 นาที)</p>
 
-                                        <strong style="color: #ef4444;">🍛 มื้อเที่ยงสุดประหยัด (งบ 500-1,000 เยน):</strong>
+                                        <strong style="color: #059669;">🌳 ถ่ายรูปฟรี:</strong>
+                                        <p style="color: #475569; line-height: 1.6; margin-bottom: 1rem;">
+                                            เดินชิลล์บนสวนลอยฟ้าสุดอลังการของ Namba Parks ทรงหุบเขาแกรนด์แคนยอน (ฟรี
+                                            100%)</p>
+                                        <strong style="color: #ef4444;">🍛 มื้อเที่ยงสุดประหยัด (งบ 500-1,000
+                                            เยน):</strong>
                                         <ul style="color: #475569; margin-left: 1.5rem; line-height: 1.6; margin-bottom: 0;">
-                                            <li><strong>Matsuya (สาขา Namba):</strong> <a href="https://maps.app.goo.gl/9yB2JzH2Xv9KxR9s7" target="_blank" style="color:#2563eb; text-decoration:underline;">📍 พิกัด</a> ข้าวหน้าเนื้อหน้าหมู กดสั่งที่ตู้ จ่ายเหรียญ/ICOCA ได้เลย</li>
-                                            <li><strong>Sukiya (สาขา Namba):</strong> <a href="https://maps.app.goo.gl/uX3L5t2J7z4P7v3a7" target="_blank" style="color:#2563eb; text-decoration:underline;">📍 พิกัด</a> ร้านข้าวหน้าเนื้อคู่แข่ง อร่อย ได้เยอะ เสิร์ฟไวมาก</li>
+                                            <li><strong>Matsuya (สาขา Namba):</strong> <a href="https://maps.app.goo.gl/9yB2JzH2Xv9KxR9s7" target="_blank" style="color:#2563eb; text-decoration:underline;">📍 พิกัด</a>
+                                                ข้าวหน้าเนื้อหน้าหมู กดสั่งที่ตู้ จ่ายเหรียญ/ICOCA ได้เลย</li>
+                                            <li><strong>Sukiya (สาขา Namba):</strong> <a href="https://maps.app.goo.gl/uX3L5t2J7z4P7v3a7" target="_blank" style="color:#2563eb; text-decoration:underline;">📍 พิกัด</a>
+                                                ร้านข้าวหน้าเนื้อคู่แข่ง อร่อย ได้เยอะ เสิร์ฟไวมาก</li>
                                         </ul>
                                     </div>
                                 </details>
-            </div>
-        </div>
+                            </div>
+                        </div>
 
-        <!-- 13:00 - 14:30 Shinsekai -->
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date">13:00 - 14:30</div>
-            <div class="timeline-content glass-card">
-                <h4>5. ย่านชินเซไก (Shinsekai) & หอคอย Tsutenkaku <span class="badge" style="background:#22c55e; color:white; font-size: 0.75rem; vertical-align: middle;">🆓 ฟรี (ขึ้นหอคอย 900¥)</span></h4>
-<div style="margin: 15px 0; border-radius: 12px; overflow: hidden; height: 180px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Tsutenkaku_20190504.jpg/800px-Tsutenkaku_20190504.jpg" alt="Tsutenkaku" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy"></div>
-                <a href="https://www.google.com/maps/search/?api=1&query=Tsutenkaku+Shinsekai" target="_blank" class="map-link">📍 เปิดแผนที่ (Google Maps)</a>
-                
-                <div class="route-flow">
-                    <span>📍 สถานี Namba</span> ➔
-                    <span><span class="badge badge-train-midosuji" style="background: #ef4444;">🚇 Midosuji Line</span></span> ➔
-                    <span>📍 สถานี Dobutsuen-mae</span> ➔
-                    <span><span class="badge badge-walk">🚶 เดิน 5 นาที</span></span>
-                </div>
-                                                <details>
-                                    <summary class="details-btn"><i class="fa-solid fa-chevron-down"></i> วิธีเดินทาง & กิจกรรมส่งท้าย</summary>
+                        <!-- 13:00 - 14:30 Shinsekai -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-date">13:00 - 14:30</div>
+                            <div class="timeline-content glass-card">
+                                <h4>5. ย่านชินเซไก (Shinsekai) &amp; หอคอย Tsutenkaku <span class="badge" style="background:#22c55e; color:white; font-size: 0.75rem; vertical-align: middle;">🆓
+                                        ฟรี (ขึ้นหอคอย 900¥)</span></h4>
+                                <div style="margin: 15px 0; border-radius: 12px; overflow: hidden; height: 180px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                                    <div style="margin: 15px 0; border-radius: 12px; overflow: hidden; height: 180px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                                        <img src="images/offline/1786905060058_15_shinsekai-20-1067x800.jpg" alt="Shinsekai" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy"></div>
+                                    <img src="images/offline/1786905060058_16_Osaka-Tsutenkaku-Tower-13.jpg" alt="Tsutenkaku" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+                                </div>
+                                <a href="https://www.google.com/maps/search/?api=1&amp;query=Tsutenkaku+Shinsekai" target="_blank" class="map-link">📍 เปิดแผนที่ (Google Maps)</a>
+
+                                <div class="route-flow">
+                                    <span>📍 สถานี Namba</span> ➔
+                                    <span><span class="badge badge-train-midosuji" style="background: #ef4444;">🚇
+                                            Midosuji Line</span></span> ➔
+                                    <span>📍 สถานี Dobutsuen-mae</span> ➔
+                                    <span><span class="badge badge-walk">🚶 เดิน 5 นาที</span></span>
+                                </div>
+                                <details>
+                                    <summary class="details-btn"><i class="fa-solid fa-chevron-down"></i> วิธีเดินทาง &amp;
+                                        กิจกรรมส่งท้าย</summary>
                                     <div class="details-content">
                                         <strong style="color: #4f46e5;">🚇 การเดินทาง (หัก ICOCA 190 เยน):</strong>
                                         <ol style="color: #475569; margin-left: 1.5rem; line-height: 1.6; margin-bottom: 1rem;">
-                                            <li>จาก Namba นั่งรถไฟใต้ดินสายสีแดง (Midosuji Line) หรือสายสีน้ำตาล (Sakaisuji Line) นั่งไปลงที่สถานี <strong>Dobutsuen-mae หรือ Ebisucho</strong> ก็ได้ครับ</li>
+                                            <li>จาก Namba นั่งรถไฟใต้ดินสายสีแดง (Midosuji Line) หรือสายสีน้ำตาล
+                                                (Sakaisuji Line) นั่งไปลงที่สถานี <strong>Dobutsuen-mae หรือ
+                                                    Ebisucho</strong> ก็ได้ครับ</li>
                                             <li>แตะ ICOCA หักเงิน 190 เยน แล้วเดินโผล่ขึ้นมาเจอหอคอยเลย</li>
                                         </ol>
                                         <strong style="color: #ef4444;">🍡 กิจกรรมส่งท้าย:</strong>
                                         <ul style="color: #475569; margin-left: 1.5rem; line-height: 1.6; margin-bottom: 0;">
-                                            <li>ย่านเมืองเก่าสไตล์ Retro แวะถ่ายรูปคู่กับหอคอยซึเทนคาคุ (Tsutenkaku) และป้ายไฟปลาปักเป้ายักษ์ <strong>(ถ่ายรูปฟรี)</strong></li>
+                                            <li>ย่านเมืองเก่าสไตล์ Retro แวะถ่ายรูปคู่กับหอคอยซึเทนคาคุ (Tsutenkaku)
+                                                และป้ายไฟปลาปักเป้ายักษ์ <strong>(ถ่ายรูปฟรี)</strong></li>
                                             <li>ถ้าจะขึ้นไปชมวิวบนหอคอย มีค่าเข้า 900 เยน (ต่อคิวซื้อตั๋วข้างล่าง)</li>
-                                            <li>แนะนำแวะกิน <strong>คุชิคัตสึ (Kushikatsu)</strong> ของทอดเสียบไม้จุ่มซอสต้นตำรับโอซาก้า ร้าน <strong>Daruma (ที่มีหุ่นหน้าบึ้ง)</strong> <a href="https://maps.app.goo.gl/r5jL4n8X5y6M8n3e8" target="_blank" style="color:#2563eb; text-decoration:underline;">📍 พิกัด</a> สั่งง่าย จ่ายผ่าน YouTrip ได้</li>
+                                            <li>แนะนำแวะกิน <strong>คุชิคัตสึ (Kushikatsu)</strong>
+                                                ของทอดเสียบไม้จุ่มซอสต้นตำรับโอซาก้า ร้าน <strong>Daruma
+                                                    (ที่มีหุ่นหน้าบึ้ง)</strong> <a href="https://maps.app.goo.gl/r5jL4n8X5y6M8n3e8" target="_blank" style="color:#2563eb; text-decoration:underline;">📍 พิกัด</a>
+                                                สั่งง่าย จ่ายผ่าน YouTrip ได้</li>
                                             <li>ช้อปปิ้งของฝากและขนมจุกจิกส่งท้ายก่อนกลับไปเอาของที่เกสต์เฮาส์</li>
                                         </ul>
                                     </div>
                                 </details>
-            </div>
-        </div>
+                            </div>
+                        </div>
 
-        <!-- 15:00 - 16:00 Airport -->
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date">15:00 - 16:00</div>
-            <div class="timeline-content glass-card" style="border-left: 4px solid var(--accent);">
-                <h4>6. รับกระเป๋า & เดินทางสู่สนามบินคันไซ (KIX)</h4>
-                
-                <div class="route-flow">
-                    <span>📍 123 Guesthouse</span> ➔
-                    <span><span class="badge badge-walk">🚶 รับกระเป๋าเดินไปสถานี Namba</span></span> ➔
-                    <span><span class="badge badge-train" style="background: #0ea5e9;">🚆 Nankai Airport Exp.</span></span> ➔
-                    <span>📍 สนามบิน KIX</span>
-                </div>
-                                                <details open>
-                                    <summary class="details-btn" style="color: var(--accent);"><i class="fa-solid fa-triangle-exclamation"></i> การเดินทางไป KIX (เผื่อเวลา)</summary>
+                        <!-- 15:00 - 16:00 Airport -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-date">15:00 - 16:00</div>
+                            <div class="timeline-content glass-card" style="border-left: 4px solid var(--accent);">
+                                <h4>6. รับกระเป๋า &amp; เดินทางสู่สนามบินคันไซ (KIX)</h4>
+
+                                <div class="route-flow">
+                                    <span>📍 123 Guesthouse</span> ➔
+                                    <span><span class="badge badge-walk">🚶 รับกระเป๋าเดินไปสถานี Namba</span></span> ➔
+                                    <span><span class="badge badge-train" style="background: #0ea5e9;">🚆 Nankai Airport
+                                            Exp.</span></span> ➔
+                                    <span>📍 สนามบิน KIX</span>
+                                </div>
+                                <details open="">
+                                    <summary class="details-btn" style="color: var(--accent);"><i class="fa-solid fa-triangle-exclamation"></i> การเดินทางไป KIX (เผื่อเวลา)
+                                    </summary>
                                     <div class="details-content">
-                                        <strong style="color: #4f46e5;">🚆 นั่ง Nankai ไปสนามบิน (หัก ICOCA 930 เยน):</strong>
+                                        <strong style="color: #4f46e5;">🚆 นั่ง Nankai ไปสนามบิน (หัก ICOCA 930
+                                            เยน):</strong>
                                         <ul style="color: #475569; margin-left: 1.5rem; line-height: 1.6; margin-bottom: 1rem;">
-                                            <li>กลับมารับกระเป๋าที่เกสต์เฮาส์ ลากไปที่สถานี <strong>Nankai Namba</strong></li>
-                                            <li>แตะ ICOCA เข้าเกต เดินไปขึ้นขบวน <strong>Nankai Airport Express</strong> (ขบวนสีเงินคาดส้ม) มุ่งหน้า KIX</li>
-                                            <li>ใช้เวลาประมาณ 45 นาที ไปถึงสนามบิน Kansai Airport (แตะออก หัก 930 เยน)</li>
+                                            <li>กลับมารับกระเป๋าที่เกสต์เฮาส์ ลากไปที่สถานี <strong>Nankai
+                                                    Namba</strong></li>
+                                            <li>แตะ ICOCA เข้าเกต เดินไปขึ้นขบวน <strong>Nankai Airport Express</strong>
+                                                (ขบวนสีเงินคาดส้ม) มุ่งหน้า KIX</li>
+                                            <li>ใช้เวลาประมาณ 45 นาที ไปถึงสนามบิน Kansai Airport (แตะออก หัก 930 เยน)
+                                            </li>
                                         </ul>
                                         <strong style="color: #ef4444;">⏱️ การเผื่อเวลา:</strong>
                                         <ul style="color: #475569; margin-left: 1.5rem; line-height: 1.6; margin-bottom: 0;">
-                                            <li>ควรเผื่อเวลากลับมารับกระเป๋าตอนบ่าย 3 โมงตรง เพื่อให้ทันรถไฟรอบ 15:15 น.</li>
-                                            <li>ไปถึงสนามบินตอน 16:00 น. เพื่อให้มีเวลาทำเรื่อง <strong>Tax Refund (กฎใหม่ปี 2026)</strong> ที่ Terminal 1 ก่อนเครื่องออก 19:15 น.</li>
+                                            <li>ควรเผื่อเวลากลับมารับกระเป๋าตอนบ่าย 3 โมงตรง เพื่อให้ทันรถไฟรอบ 15:15 น.
+                                            </li>
+                                            <li>ไปถึงสนามบินตอน 16:00 น. เพื่อให้มีเวลาทำเรื่อง <strong>Tax Refund
+                                                    (กฎใหม่ปี 2026)</strong> ที่ Terminal 1 ก่อนเครื่องออก 19:15 น.</li>
                                         </ul>
                                     </div>
                                 </details>
-            </div>
-        </div>
+                            </div>
+                        </div>
 
-        <!-- 16:00+ Flight -->
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date">16:00+</div>
-            <div class="timeline-content glass-card">
-                <h4>7. ขั้นตอนที่สนามบิน & บินกลับไทย</h4>
-                <div class="route-flow">
-                    <span>📍 KIX Terminal 1</span> ➔
-                    <span><span class="badge badge-icoca" style="background: #f59e0b;">💸 Tax Refund Kiosk</span></span> ➔
-                    <span><span class="badge badge-bus">🚌 Free Shuttle Bus</span></span> ➔
-                    <span>📍 KIX Terminal 2 (Peach)</span>
-                </div>
-                                                <details>
-                                    <summary class="details-btn"><i class="fa-solid fa-chevron-down"></i> ลำดับการทำเรื่อง & วิธีเช็คอิน T2</summary>
+                        <!-- 16:00+ Flight -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-date">16:00+</div>
+                            <div class="timeline-content glass-card">
+                                <h4>7. ขั้นตอนที่สนามบิน &amp; บินกลับไทย</h4>
+                                <div class="route-flow">
+                                    <span>📍 KIX Terminal 1</span> ➔
+                                    <span><span class="badge badge-icoca" style="background: #f59e0b;">💸 Tax Refund
+                                            Kiosk</span></span> ➔
+                                    <span><span class="badge badge-bus">🚌 Free Shuttle Bus</span></span> ➔
+                                    <span>📍 KIX Terminal 2 (Peach)</span>
+                                </div>
+                                <details>
+                                    <summary class="details-btn"><i class="fa-solid fa-chevron-down"></i>
+                                        ลำดับการทำเรื่อง &amp; วิธีเช็คอิน T2</summary>
                                     <div class="details-content">
-                                        <strong style="color: #ef4444;">⚠️ เที่ยวบิน Peach (MM091) ออกจาก Terminal 2 เท่านั้น!</strong>
+                                        <strong style="color: #ef4444;">⚠️ เที่ยวบิน Peach (MM091) ออกจาก Terminal 2
+                                            เท่านั้น!</strong>
                                         <ol style="color: #475569; margin-left: 1.5rem; line-height: 1.6; margin-bottom: 1rem;">
-                                            <li><strong>ทำ Tax Refund ที่ T1:</strong> เมื่อรถไฟมาถึงสถานี KIX (ซึ่งเชื่อมกับ T1) ให้ไปมองหาตู้ Kiosk ทำ Tax Refund ให้เรียบร้อย <strong>(ต้องทำก่อนโหลดกระเป๋า!)</strong></li>
-                                            <li><strong>นั่ง Shuttle Bus ฟรีไป T2:</strong> ให้เดินไปที่ตึก Aeroplaza จะมีป้ายชี้ทางไปขึ้น Shuttle Bus ฟรีเพื่อนั่งไป Terminal 2 (ใช้เวลาวิ่งประมาณ 10 นาที)</li>
-                                            <li><strong>เช็คอินที่ตู้ Kiosk T2:</strong> พอถึง T2 ให้เดินไปที่ตู้เช็คอินอัตโนมัติของ Peach สแกนบาร์โค้ดการจองเพื่อปริ้นท์ Boarding Pass และ Tag กระเป๋า</li>
-                                            <li><strong>โหลดกระเป๋า & เข้าเกต:</strong> นำกระเป๋าไปโหลดที่เคาน์เตอร์ แล้วผ่านด่านสแกนสัมภาระ รอขึ้นเครื่องรอบ <strong>19:15 น.</strong> ได้เลยครับ</li>
+                                            <li><strong>ทำ Tax Refund ที่ T1:</strong> เมื่อรถไฟมาถึงสถานี KIX
+                                                (ซึ่งเชื่อมกับ T1) ให้ไปมองหาตู้ Kiosk ทำ Tax Refund ให้เรียบร้อย
+                                                <strong>(ต้องทำก่อนโหลดกระเป๋า!)</strong></li>
+                                            <li><strong>นั่ง Shuttle Bus ฟรีไป T2:</strong> ให้เดินไปที่ตึก Aeroplaza
+                                                จะมีป้ายชี้ทางไปขึ้น Shuttle Bus ฟรีเพื่อนั่งไป Terminal 2
+                                                (ใช้เวลาวิ่งประมาณ 10 นาที)</li>
+                                            <li><strong>เช็คอินที่ตู้ Kiosk T2:</strong> พอถึง T2
+                                                ให้เดินไปที่ตู้เช็คอินอัตโนมัติของ Peach สแกนบาร์โค้ดการจองเพื่อปริ้นท์
+                                                Boarding Pass และ Tag กระเป๋า</li>
+                                            <li><strong>โหลดกระเป๋า &amp; เข้าเกต:</strong> นำกระเป๋าไปโหลดที่เคาน์เตอร์
+                                                แล้วผ่านด่านสแกนสัมภาระ รอขึ้นเครื่องรอบ <strong>19:15 น.</strong>
+                                                ได้เลยครับ</li>
                                         </ol>
                                     </div>
                                 </details>
-            </div>
-        </div>
-    </div>
-</section>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-<!-- Day 5 -->
+                <!-- Day 5 -->
                 <section id="day5" style="margin-bottom: 4rem;">
-                    <h2 style="color: var(--primary); border-bottom: 1px solid #e2e8f0; padding-bottom: 10px; margin-bottom: 1.5rem;">Day 5: เดินทางกลับแพร่ (16 มี.ค.)</h2>
-                    
+                    <h2 style="color: var(--primary); border-bottom: 1px solid #e2e8f0; padding-bottom: 10px; margin-bottom: 1.5rem;">
+                        Day 5: เดินทางกลับแพร่ (16 มี.ค.)</h2>
+
                     <div class="timeline">
                         <div class="timeline-item">
                             <div class="timeline-dot"></div>
@@ -970,33 +1264,39 @@
                             <div class="timeline-content glass-card">
                                 <h4>1. ถึงสนามบินสุวรรณภูมิ</h4>
                                 <div class="route-flow">
-                                    <span>📍 BKK (23:55)</span> ➔ 
-                                    <span>🛂 ผ่านตม. & รับกระเป๋า</span> ➔ 
+                                    <span>📍 BKK (23:55)</span> ➔
+                                    <span>🛂 ผ่านตม. &amp; รับกระเป๋า</span> ➔
                                     <span>🏨 โรงแรมใกล้สนามบิน</span>
                                 </div>
-                                <p style="color: #475569; margin-top: 10px;">พักผ่อนให้เต็มที่ก่อนเดินทางกลับแพร่ในวันรุ่งขึ้น</p>
+                                <p style="color: #475569; margin-top: 10px;">
+                                    พักผ่อนให้เต็มที่ก่อนเดินทางกลับแพร่ในวันรุ่งขึ้น</p>
                             </div>
                         </div>
-
                         <div class="timeline-item">
                             <div class="timeline-dot"></div>
                             <div class="timeline-date">เช้า/บ่าย</div>
                             <div class="timeline-content glass-card">
                                 <h4>2. เดินทางกลับแพร่โดยสวัสดิภาพ</h4>
                                 <div class="route-flow">
-                                    <span>📍 ที่พักกทม.</span> ➔ 
-                                    <span><span class="badge badge-bus">🚌 นครชัยแอร์</span></span> ➔ 
+                                    <span>📍 ที่พักกทม.</span> ➔
+                                    <span><span class="badge badge-bus">🚌 นครชัยแอร์</span></span> ➔
                                     <span>📍 จ.แพร่</span>
                                 </div>
-                                                                <details>
-                                    <summary class="details-btn"><i class="fa-solid fa-chevron-down"></i> วิธีเดินทางไปศูนย์นครชัยแอร์</summary>
+                                <details>
+                                    <summary class="details-btn"><i class="fa-solid fa-chevron-down"></i>
+                                        วิธีเดินทางไปศูนย์นครชัยแอร์</summary>
                                     <div class="details-content">
                                         <strong style="color: #4f46e5;">🚆 BKK ➔ ศูนย์นครชัยแอร์ (หมอชิต):</strong>
                                         <ol style="color: #475569; margin-left: 1.5rem; line-height: 1.6; margin-bottom: 0;">
-                                            <li>ออกจากที่พัก นั่ง <strong>Airport Rail Link (ARL)</strong> ไปลงที่สถานีพญาไท (ซื้อเหรียญโดยสารที่ตู้ 45 บาท)</li>
-                                            <li>เปลี่ยนสายไปขึ้น <strong>BTS พญาไท</strong> นั่งไปลงที่ <strong>BTS หมอชิต</strong> (ซื้อบัตรที่ตู้ 47 บาท)</li>
-                                            <li>จาก BTS หมอชิต เรียกแท็กซี่หรือวินมอเตอร์ไซค์ไปที่ <strong>"ศูนย์บริการนครชัยแอร์ (NCA)"</strong> (ค่ารถประมาณ 60-80 บาท)</li>
-                                            <li>ขึ้นรถทัวร์นครชัยแอร์ มุ่งหน้ากลับจังหวัดแพร่โดยสวัสดิภาพครับ! ขอบคุณที่ใช้บริการไกด์ของเราครับ 🙏</li>
+                                            <li>ออกจากที่พัก นั่ง <strong>Airport Rail Link (ARL)</strong>
+                                                ไปลงที่สถานีพญาไท (ซื้อเหรียญโดยสารที่ตู้ 45 บาท)</li>
+                                            <li>เปลี่ยนสายไปขึ้น <strong>BTS พญาไท</strong> นั่งไปลงที่ <strong>BTS
+                                                    หมอชิต</strong> (ซื้อบัตรที่ตู้ 47 บาท)</li>
+                                            <li>จาก BTS หมอชิต เรียกแท็กซี่หรือวินมอเตอร์ไซค์ไปที่
+                                                <strong>"ศูนย์บริการนครชัยแอร์ (NCA)"</strong> (ค่ารถประมาณ 60-80 บาท)
+                                            </li>
+                                            <li>ขึ้นรถทัวร์นครชัยแอร์ มุ่งหน้ากลับจังหวัดแพร่โดยสวัสดิภาพครับ!
+                                                ขอบคุณที่ใช้บริการไกด์ของเราครับ 🙏</li>
                                         </ol>
                                     </div>
                                 </details>
@@ -1006,7 +1306,8 @@
                 </section>
 
 
-                
+
+
 
             </div>
         </div>
@@ -1014,13 +1315,14 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2027 TripPlanner. Crafted with <i class="fa-solid fa-heart" style="color: #ff4757;"></i> for your perfect journey.</p>
+            <p>© 2027 TripPlanner. Crafted with <i class="fa-solid fa-heart" style="color: #ff4757;"></i> for your
+                perfect journey.</p>
         </div>
     </footer>
 
     <!-- Scroll Spy Script for Sidebar -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const sections = document.querySelectorAll('section');
             const navLinks = document.querySelectorAll('.guide-nav li a');
 
@@ -1043,5 +1345,47 @@
         });
     </script>
 
-</body>
-</html>
+
+    <!-- Bottom Navigation Bar -->
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item" id="nav-home">
+            <i class="fa-solid fa-house"></i>
+            <span>หน้าแรก</span>
+        </a>
+        <a href="daily_guide.html" class="nav-item" id="nav-plan">
+            <i class="fa-solid fa-calendar-days"></i>
+            <span>แผนเที่ยว</span>
+        </a>
+        <a href="budget_tracker.html" class="nav-item" id="nav-budget">
+            <i class="fa-solid fa-wallet"></i>
+            <span>งบ</span>
+        </a>
+        <a href="prep_list.html" class="nav-item" id="nav-prep">
+            <i class="fa-solid fa-suitcase"></i>
+            <span>เตรียมตัว</span>
+        </a>
+        <a href="menu.html" class="nav-item" id="nav-menu">
+            <i class="fa-solid fa-bars"></i>
+            <span>อื่นๆ</span>
+        </a>
+    </nav>
+    <script>
+        // Highlight active nav item
+        document.addEventListener('DOMContentLoaded', () => {
+            const path = window.location.pathname;
+            const page = path.split('/').pop() || 'index.html';
+
+            if (page === 'index.html') {
+                document.getElementById('nav-home')?.classList.add('active');
+            } else if (page === 'daily_guide.html') {
+                document.getElementById('nav-plan')?.classList.add('active');
+            } else if (page === 'budget_tracker.html' || page === 'exchange_tracker.html') {
+                document.getElementById('nav-budget')?.classList.add('active');
+            } else if (page === 'prep_list.html') {
+                document.getElementById('nav-prep')?.classList.add('active');
+            } else if (['menu.html', 'newbie_guide.html', 'tax_guide.html', 'insurance_guide.html', 'immigration_en.html'].includes(page)) {
+                document.getElementById('nav-menu')?.classList.add('active');
+            }
+        });
+    </script>
+</body></html>

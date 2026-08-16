@@ -174,7 +174,7 @@
 </head>
 <body>
     <div style="max-width: 800px; margin: 0 auto;">
-        <a href="index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to Main Guide</a>
+        
     </div>
 
     <div class="a4-container">
@@ -272,5 +272,48 @@
 
         <button onclick="window.print()" class="print-btn"><i class="fa-solid fa-print"></i> Print or Save as PDF</button>
     </div>
+
+    
+    <!-- Bottom Navigation Bar -->
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item" id="nav-home">
+            <i class="fa-solid fa-house"></i>
+            <span>หน้าแรก</span>
+        </a>
+        <a href="daily_guide.html" class="nav-item" id="nav-plan">
+            <i class="fa-solid fa-calendar-days"></i>
+            <span>แผนเที่ยว</span>
+        </a>
+        <a href="budget_tracker.html" class="nav-item" id="nav-budget">
+            <i class="fa-solid fa-wallet"></i>
+            <span>งบ</span>
+        </a>
+        <a href="prep_list.html" class="nav-item" id="nav-prep">
+            <i class="fa-solid fa-suitcase"></i>
+            <span>เตรียมตัว</span>
+        </a>
+        <a href="menu.html" class="nav-item" id="nav-menu">
+            <i class="fa-solid fa-bars"></i>
+            <span>อื่นๆ</span>
+        </a>
+    </nav>
+    <script>
+        // Highlight active nav item
+        document.addEventListener('DOMContentLoaded', () => {
+            const path = window.location.pathname;
+            const page = path.split('/').pop() || 'index.html';
+            
+            if (page === 'index.html') {
+                document.getElementById('nav-home')?.classList.add('active');
+            } else if (page === 'daily_guide.html') {
+                document.getElementById('nav-plan')?.classList.add('active');
+            } else if (page === 'budget_tracker.html' || page === 'exchange_tracker.html') {
+                document.getElementById('nav-budget')?.classList.add('active');
+            } else if (page === 'prep_list.html') {
+                document.getElementById('nav-prep')?.classList.add('active');
+            } else if (['menu.html', 'newbie_guide.html', 'tax_guide.html', 'insurance_guide.html', 'immigration_en.html'].includes(page)) {
+                document.getElementById('nav-menu')?.classList.add('active');
+            }
+        });
+    </script>
 </body>
-</html>

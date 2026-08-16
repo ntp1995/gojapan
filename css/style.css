@@ -23,6 +23,7 @@ body {
     color: var(--dark);
     line-height: 1.6;
     overflow-x: hidden;
+    padding-bottom: 75px;
 }
 
 a {
@@ -998,4 +999,62 @@ details[open] .details-btn i.fa-chevron-down {
     .bp-details { gap: 15px; }
     .bp-airport h2 { font-size: 1.8rem; }
     .bp-barcode { display: none; } /* Hide barcode on very small screens to save space */
+}
+
+
+/* --- Bottom Navigation (PWA style) --- */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0 calc(10px + env(safe-area-inset-bottom, 0px));
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.06);
+    z-index: 1000;
+    border-top: 1px solid rgba(226, 232, 240, 0.8);
+}
+.bottom-nav .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.7rem;
+    font-weight: 600;
+    gap: 5px;
+    flex: 1;
+    transition: all 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+.bottom-nav .nav-item i {
+    font-size: 1.3rem;
+    margin-bottom: 2px;
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.bottom-nav .nav-item.active {
+    color: var(--primary);
+}
+.bottom-nav .nav-item.active i {
+    transform: translateY(-2px) scale(1.1);
+}
+.bottom-nav .nav-item:active {
+    transform: scale(0.95);
+}
+
+/* Hide top nav links on mobile to encourage bottom nav usage */
+
+
+
+/* Fix Anchor Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+section[id^="day"] {
+    scroll-margin-top: 100px;
 }
